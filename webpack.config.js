@@ -1,11 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     context: path.resolve(__dirname),
     entry: './src/index.tsx',
     output: {
+        path: path.join(__dirname, 'dist'),
         filename: 'main.js',
         chunkFilename: "[name].bundle.js",
         publicPath: '/'
@@ -50,5 +53,9 @@ module.exports = {
                 use: 'source-map-loader'
             }
         ]
-    }
+    },
+    plugins: [new HtmlWebpackPlugin({
+        template: 'assets/index.html',
+        title:"Max-Ershov-Site"
+    })]
 };

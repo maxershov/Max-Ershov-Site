@@ -12,7 +12,7 @@ const App = () => {
                 <Link to="/contacts">Contacts Page</Link>
               </nav>
               <Switch>
-                <Route exact path="/test" component={MainPage} />
+                <Route exact path="/main" component={MainPage} />
                 <Route exact path="/contacts" component={ContactsPage} />
               </Switch>
             </div>
