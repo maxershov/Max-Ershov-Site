@@ -5,7 +5,7 @@
     "main": "src/index.tsx",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack-dev-server --config ./webpack.config.js --open",
+        "dev": "webpack-dev-server --config ./webpack.config.js --open --hot",
         "lint": "eslint src/* --ext .ts,.tsx --fix"
     },
     "repository": {

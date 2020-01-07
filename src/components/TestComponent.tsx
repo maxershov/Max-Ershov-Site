@@ -10,7 +10,7 @@ export function TestComponent ({
     return (
       <div>
         {title}
-        <p>Hi from inside test component</p>
+        <p>Hi from inside test compon</p>
       </div>
     )
 }
