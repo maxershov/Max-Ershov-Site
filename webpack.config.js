@@ -7,9 +7,8 @@ module.exports = {
     entry: './src/index.tsx',
     output: {
         filename: 'main.js',
-        chunkFilename: "[name].bundle.js"
-        // path: path.join(__dirname, 'dist'),
-        // publicPath: '/'
+        chunkFilename: "[name].bundle.js",
+        publicPath: '/'
     },
 
     devServer: {
@@ -18,6 +17,7 @@ module.exports = {
         watchContentBase: true,
         progress: true,
         contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: true // on 404 load publicPath => for BrowserRouter on refresh
         // publicPath: '/'
     },
 
