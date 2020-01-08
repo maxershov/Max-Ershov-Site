@@ -1,16 +1,19 @@
 import * as React from 'react';
+import ContactFields from "./ContactFields";
 
-export interface ContactsPageProps {
-    title?: string
-}
+const  ContactsPage: React.FC = () => {
+  return (
+    <div className="Contact">
+      <h3>Contact me:</h3>
+      {/* < TODO Add small logos> */}
+      <a href="https://twitter.com/">Twitter</a>
+      <a href="https://facebook.com/">Facebook</a>
+      <a href="https://github.com/">Github</a>
+      <ContactFields />
+      <p>or just say HI</p>
+      <button type="button">SAY HI</button>
+    </div>
+  )
+};
 
-export function ContactsPage ({
-    title = "contacts page prop",
-}: ContactsPageProps){
-    return (
-      <div>
-        {title}
-        <p>Hi from inside contacts page</p>
-      </div>
-    )
-}
+export default ContactsPage;
