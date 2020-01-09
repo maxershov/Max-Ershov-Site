@@ -7,6 +7,7 @@ module.exports = {
     mode: 'development',
     context: path.resolve(__dirname),
     entry: './src/index.tsx',
+    devtool: 'inline-source-map',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'main.js',
@@ -17,7 +18,6 @@ module.exports = {
         port: 8080,
         open: true,
         hot: true,
-        writeToDisk: true,
         compress: true,
         watchContentBase: true,
         progress: true,
@@ -42,8 +42,18 @@ module.exports = {
                 exclude: [/node_modules/]
             },
             {
+                test: /\.css$/,
+                include: path.join(__dirname, 'src/components'),
+                use: [
+                  'style-loader',
+                  {
+                    loader: 'css-loader'
+                  }
+                ]
+              },
+            {
                 loader: require.resolve('file-loader'),
-                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.css$/],
                 options: {
                     name: 'static/media/[name].[hash:8].[ext]',
                     esModule: false,

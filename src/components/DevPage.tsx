@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import * as githubLogo from "../images/GitHub-Mark-32px.png";
 
 const DevPage: React.FC = () => {
   return (
@@ -12,6 +12,7 @@ const DevPage: React.FC = () => {
         <li>ESLint</li>
       </ul>
       <h3>You can found all the source code in my </h3>
+      <img style={{ height: "1em" }} alt="githubLogo" src={githubLogo} />
       <a href="https://github.com/">github repository</a>
     </div>
   )

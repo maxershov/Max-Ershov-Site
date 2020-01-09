@@ -4,11 +4,13 @@ import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import DevPage from "./DevPage";
 
+require("./App.css")
+
 const App = () => {
   return (
     <Router>
       <div>
-        <nav>
+        <nav className="Links">
           <Link to="/main">Main Page</Link>
           <Link to="/dev">Development Page</Link>
           <Link to="/contacts">Contacts Page</Link>
