@@ -1,6 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-unused-vars */
 const path = require('path');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -13,24 +13,20 @@ module.exports = {
         chunkFilename: "[name].bundle.js",
         publicPath: '/'
     },
-
     devServer: {
         port: 8080,
+        open: true,
+        hot: true,
+        writeToDisk: true,
         compress: true,
         watchContentBase: true,
         progress: true,
         contentBase: path.join(__dirname, 'dist'),
-        historyApiFallback: true // on 404 load publicPath => for BrowserRouter on refresh
-        // publicPath: '/'
+        historyApiFallback: true, // on 404 load publicPath => for BrowserRouter on refresh
     },
-
-    // Enable sourcemaps for debugging webpack's output.
-    devtool: 'inline-source-map',
-
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: ['.ts', '.tsx', '.js', '.json'],
-        modules: ['node_modules']
+        modules: ['node_modules'],
     },
 
     module: {
@@ -40,13 +36,20 @@ module.exports = {
                 use: [
                     'babel-loader',
                     {
-                        loader: 'ts-loader'
+                        loader: require.resolve('ts-loader')
                     }
                 ],
                 exclude: [/node_modules/]
             },
-
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            {
+                loader: require.resolve('file-loader'),
+                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+                options: {
+                    name: 'static/media/[name].[hash:8].[ext]',
+                    esModule: false,
+                    //   fix problem with img [object Module] in browser
+                },
+            },
             {
                 enforce: 'pre',
                 test: /\.js$/,
@@ -55,7 +58,7 @@ module.exports = {
         ]
     },
     plugins: [new HtmlWebpackPlugin({
-        template: 'assets/index.html',
-        title:"Max-Ershov-Site"
+        template: path.join(__dirname, 'src', 'assets', 'index.html'),
+        title: "Max-Ershov-Site"
     })]
 };
