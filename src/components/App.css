@@ -1,3 +1,7 @@
+.App-container {
+    display: grid;
+}
+
 .Links {
     display: flex;
     justify-content: space-between;
@@ -10,8 +14,8 @@ a:active {
     color: black;
 }
 
-#CRM-img,
-#site-img {
+#img-CRM,
+#img-Site {
     width: 25rem;
     height: auto;
 }
