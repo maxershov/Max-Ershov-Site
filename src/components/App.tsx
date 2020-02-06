@@ -10,7 +10,7 @@ import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import ProjectsPage from "./ProjectsPage";
 
-require("./App.css");
+require("./App.scss");
 
 
 const App = () => {

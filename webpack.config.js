@@ -42,18 +42,16 @@ module.exports = {
                 exclude: [/node_modules/]
             },
             {
-                test: /\.css$/,
-                include: path.join(__dirname, 'src/components'),
+                test: /\.s[ac]ss$/,
                 use: [
                   'style-loader',
-                  {
-                    loader: 'css-loader'
-                  }
-                ]
+                  'css-loader',
+                  'sass-loader',
+                ],
               },
             {
                 loader: require.resolve('file-loader'),
-                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.css$/],
+                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.s[ac]ss$/],
                 options: {
                     name: 'static/media/[name].[hash:8].[ext]',
                     esModule: false,
