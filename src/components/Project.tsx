@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as githubLogo from "../images/GitHub-Mark-32px.png";
+import {herokuImg} from "./IconsList";
 
 export interface ProjectProps {
   name?: string;
@@ -41,7 +42,10 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
             GitHub repo
           </a>
         </div>
-        <p>{heroku}</p>
+        <p>
+          <img alt="herokuImg" src={herokuImg} />
+          {heroku}
+        </p>
       </div>
     </>
   );

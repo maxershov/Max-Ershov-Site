@@ -1,13 +1,13 @@
-import * as React from "react";
 import * as CRMimg from "../images/CRM.png";
 import * as siteImg from "../images/site.png";
-import * as icn from "./IconList";
+import * as icn from "./IconsList";
+// import * as heroku from "../images/heroku.svg";
 
   // JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
 
 const objCRM = {
   name: "CRM",
-  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.reactRouterImg, icn.postcssImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.expressImg, icn.ieImg],
+  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.herokuImg, icn.reactRouterImg, icn.postcssImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.ieImg],
   linkHub: "https://github.com",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
