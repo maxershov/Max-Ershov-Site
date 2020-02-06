@@ -1,24 +1,16 @@
-import * as React from "react";
 import * as CRMimg from "../images/CRM.png";
 import * as siteImg from "../images/site.png";
-import * as icn from "./IconList";
-
-  // JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
 
 const objCRM = {
   name: "CRM",
-  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.reactRouterImg, icn.postcssImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.expressImg, icn.ieImg],
   linkHub: "https://github.com",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
-  id:"CRM",
   idImg: "img-CRM",
   text: [
-    "Desktop version: Electron",
-    "Framework: React",
-    "Store: Redux",
+    "Desktop version: Electron with React and Redux",
     "Bundle and compilation: Webpack with custom config and Babel",
-    "Routing: react-router-dom",
+    "Routing: React-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer",
@@ -30,34 +22,12 @@ const objCRM = {
 
 const objThis = {
   name: "This Site",
-  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg ],
   linkHub: "https://github.com",
   linkLive: "",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["React, TypeScript", "Routing: react-router-dom", "CSS: .SCSS"],
+  text: ["React, TypeScript, react-router-dom"],
   heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
 };
 export { objCRM, objThis };
-
-
-// const objCRM = {
-//   name: "CRM",
-//   linkHub: "https://github.com",
-//   linkLive: "https://react-crm-maxe.herokuapp.com/",
-//   src: CRMimg,
-//   id:"CRM",
-//   idImg: "img-CRM",
-//   text: [
-//     "Desktop version: Electron with React and Redux",
-//     "Bundle and compilation: Webpack with custom config and Babel",
-//     "Routing: react-router-dom",
-//     "CSS: postCSS(variables, autoprefixer)",
-//     "Linting: ESLint with Airbnb config",
-//     "Testing: Jest, Puppeteer",
-//     "Backend: Express.js",
-//     "Browserlist: >1% and IE11"
-//   ],
-//   heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
-// };

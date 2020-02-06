@@ -15,7 +15,6 @@
         "./node_modules",
         "./build",
         "./dist",
-        "./src/**/*.css",
-        "./src/**/*.svg",
+        "./src/**/*.css"
     ]
 }

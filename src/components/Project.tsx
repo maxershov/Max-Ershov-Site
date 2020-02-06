@@ -1,9 +1,8 @@
 import * as React from "react";
-import * as githubLogo from "../images/GitHub-Mark-32px.png";
+
 
 export interface ProjectProps {
   name?: string;
-  icons?: string[];
   linkHub?: string;
   linkLive?: string;
   idImg?: string;
@@ -15,31 +14,22 @@ export interface ProjectProps {
 
 
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
-  const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
+  const { name, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
     <>
-      <div id={id} className="projects__content">
+      <div id={id} className="object-container">
         <h3>{name}</h3>
-        {icons.map(function(icon, i) {
-          return <img className="__logo" src={icon} />
-        })}
         <a href={linkHub}>
           <img id={idImg} alt={idImg} src={src} />
         </a>
         <ul>
-          {text.map(function(line, i) {
-            return <li key={i}>{line}</li>;
+          {text.map(line => {
+            return <li>{line}</li>;
           })}
         </ul>
-        <div className="anchors">
-          <a href={linkLive}>
-            <img style={{ height: "1em" }} alt="githubLogo" src={githubLogo} />
-            Live Web version
-          </a>
-          <a href={linkHub}>
-            <img style={{ height: "1em" }} alt="githubLogo" src={githubLogo} />
-            GitHub repo
-          </a>
+        <div className="anchor-container">
+          <a href={linkLive}>Live Web version</a>
+          <a href={linkHub}>GitHub repo</a>
         </div>
         <p>{heroku}</p>
       </div>
