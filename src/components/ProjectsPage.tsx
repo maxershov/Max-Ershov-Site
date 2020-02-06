@@ -6,8 +6,10 @@ const ProjectsPage: React.FC = () => {
   return (
     <>
       <h2>My Projects:</h2>
-      <Project {...objCRM} />
-      <Project {...objThis} />
+      <div className="projects">
+        <Project {...objCRM} />
+        <Project {...objThis} />
+      </div>
     </>
   );
 };

@@ -7,14 +7,23 @@ import ContactFields from "./ContactFields";
 
 const ContactsPage: React.FC = () => {
   return (
-    <div className="Contact">
+    <div className="contacts">
       <h3>Contact me:</h3>
-      <img style={{ height: "1em" }} alt="twitterLogo" src={twitterLogo} />
-      <a href="https://twitter.com/">Twitter</a>
-      <img style={{ height: "1em" }} alt="facebookLogo" src={facebookLogo} />
-      <a href="https://facebook.com/">Facebook</a>
-      <img style={{ height: "1em" }} alt="githubLogo" src={githubLogo} />
-      <a href="https://github.com/">Github</a>
+      <div className="anchors">
+        <a href="https://twitter.com/">
+          <img style={{ height: "1em" }} alt="twitterLogo" src={twitterLogo} />
+      Twitter
+        </a>
+        <a href="https://facebook.com/">
+          <img style={{ height: "1em" }} alt="facebookLogo" src={facebookLogo} />
+      Facebook
+        </a>
+      
+        <a href="https://github.com/">
+          <img style={{ height: "1em" }} alt="githubLogo" src={githubLogo} />
+      Github
+        </a>
+      </div>
       <ContactFields />
       <p>or just say HI</p>
       <button type="button">SAY HI</button>

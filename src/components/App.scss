@@ -1,21 +1,56 @@
-.App-container {
-  display: grid;
+* {
+  box-sizing: border-box;
 }
 
-.Links {
-  display: flex;
-  justify-content: space-between;
+.app {
+  .app__links {
+    display: flex;
+    justify-content: space-between;
 
-  a,
-  a:visited,
-  a:hover,
-  a:active {
-    color: black;
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      color: black;
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  .projects__content {
+    h3 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: circle;
+    }
+  }
+
+  .__logo {
+    margin: 0 0.125rem;
   }
 }
 
 #img-CRM,
 #img-Site {
-  width: 25rem;
-  height: auto;
+  // width: 45vw;
+  // height: auto;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.anchors {
+  display: flex;
+  justify-content: left;
+
+  a {
+    margin: 0 0.4rem;
+    text-decoration: none;
+    color: rgb(28, 71, 201);
+  }
 }
