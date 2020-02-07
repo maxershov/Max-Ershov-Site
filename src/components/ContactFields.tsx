@@ -4,11 +4,11 @@ import * as React from 'react';
 const ContactFields: React.FC = () => {
   return (
     <div>
-      <h3>Send msg to author</h3>
+      <h3>Send message to author</h3>
       <form>
-        <input type="text" />
-        <input type="text" />
-        <textarea />
+        <input placeholder="Name" type="text" />
+        <input placeholder="Contact adress" type="text" />
+        <textarea placeholder="Message" />
         <button type="submit">Send message</button>
       </form>
     </div>

@@ -1,9 +1,8 @@
 import * as CRMimg from "../images/CRM.png";
 import * as siteImg from "../images/site.png";
-import * as icn from "./IconsList";
-// import * as heroku from "../images/heroku.svg";
+import * as icn from "./iconsList";
 
-  // JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
+// JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
 
 const objCRM = {
   name: "CRM",
