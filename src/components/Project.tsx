@@ -20,12 +20,15 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
     <>
       <div id={id} className="projects__content">
         <h3>{name}</h3>
-        {icons.map(function(icon, i) {
-          return <img className="__logo" src={icon} />
-        })}
         <a href={linkHub}>
           <img id={idImg} alt={idImg} src={src} />
         </a>
+        <div className="icons">
+          {icons.map(function(icon, i) {
+          return <img className="__logo" src={icon} />
+        })}
+        </div>
+        <h3>Stack:</h3>
         <ul>
           {text.map(function(line, i) {
             return <li key={i}>{line}</li>;

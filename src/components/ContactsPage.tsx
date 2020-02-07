@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { githubImg, twitterImg } from "./iconsList";
-// import * as facebookLogo from "../images/f_logo_RGB-Blue_58.png";
+import { facebookImg, githubImg, twitterImg } from "./iconsList";
 import ContactFields from "./ContactFields";
 
 
@@ -14,7 +13,7 @@ const ContactsPage: React.FC = () => {
       Twitter
         </a>
         <a href="https://facebook.com/">
-          {/* <img style={{ height: "1em" }} alt="facebookLogo" src={facebookLogo} /> */}
+          <img style={{ height: "1em" }} alt="facebookLogo" src={facebookImg} />
       Facebook
         </a>
       

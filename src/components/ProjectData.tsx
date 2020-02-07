@@ -39,24 +39,3 @@ const objThis = {
   heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
 };
 export { objCRM, objThis };
-
-
-// const objCRM = {
-//   name: "CRM",
-//   linkHub: "https://github.com",
-//   linkLive: "https://react-crm-maxe.herokuapp.com/",
-//   src: CRMimg,
-//   id:"CRM",
-//   idImg: "img-CRM",
-//   text: [
-//     "Desktop version: Electron with React and Redux",
-//     "Bundle and compilation: Webpack with custom config and Babel",
-//     "Routing: react-router-dom",
-//     "CSS: postCSS(variables, autoprefixer)",
-//     "Linting: ESLint with Airbnb config",
-//     "Testing: Jest, Puppeteer",
-//     "Backend: Express.js",
-//     "Browserlist: >1% and IE11"
-//   ],
-//   heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
-// };

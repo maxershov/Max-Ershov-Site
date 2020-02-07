@@ -1,6 +1,7 @@
 import * as babelImg from "../images/babel.svg";
 import * as electronImg from "../images/electron.svg";
 import * as eslintImg from "../images/eslint.svg";
+import * as facebookImg from "../images/facebook.svg";
 import * as herokuImg from "../images/heroku.svg";
 import * as githubImg from "../images/github.svg";
 import * as ieImg from "../images/ie.svg";
@@ -16,4 +17,4 @@ import * as typescriptImg from "../images/typescript.svg";
 import * as webpackImg from "../images/webpack.svg";
 
 
-export { babelImg, electronImg, eslintImg, herokuImg, githubImg, ieImg, jestImg, postcssImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, twitterImg, typescriptImg, webpackImg };
+export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, jestImg, postcssImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, twitterImg, typescriptImg, webpackImg };

@@ -5,7 +5,7 @@ import ContactsPage from "./ContactsPage";
 
 const MainPage: React.FC = () => {
   return (
-    <div className="mainPage-container">
+    <div className="mainPage">
       <h2>Hi</h2>
       <p>
         You`re on my personal site. If you found something weird, please contact

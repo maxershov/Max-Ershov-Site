@@ -46,10 +46,32 @@ html {
     }
 }
 
+.mainPage {
+    h3 {
+        position: relative;
+        background: #00aabb;
+        border-radius: .4em;
+        padding: 1rem;
+    }
+    h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 0.5rem solid transparent;
+        border-right-color: #00aabb;
+        border-left: 0;
+        margin-top: -0.5rem;
+        margin-left: -0.5rem;
+    }
+}
+
 .projects {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     .projects__content {
         border-style: solid;
         background-color: rgba(255, 255, 255, 0.2);
@@ -59,6 +81,11 @@ html {
         }
         ul {
             list-style-type: circle;
+            margin-right: 1rem;
+        }
+        p {
+            margin: 0 1rem;
+            text-align: center;
         }
     }
     .projects__content:hover {
@@ -67,15 +94,19 @@ html {
     .__logo {
         margin: 0 0.125rem;
     }
+    .icons {
+        text-align: center;
+    }
 }
 
 #img-CRM,
 #img-Site {
     // width: 45vw;
     // height: auto;
-    height: 200px;
+    height: 20rem;
     width: 100%;
-    object-fit: cover;
+    // object-fit: cover;
+    object-fit: contain;
 }
 
 .anchors {
