@@ -1,141 +1,116 @@
 * {
-    box-sizing: border-box;
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-        color: black;
-        text-decoration: none;
-    }
+  box-sizing: border-box;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 html {
-    background-color: rgb(255, 255, 255);
-    // background: linear-gradient(95deg, #fca0a0, #ffdaa2, #82dbfc, #aeb3f7);
-    // background: linear-gradient(45deg, #fafafa, #ffffff, #d60404, #a703a7);
-    // animation: gradient 15s ease infinite;
-    // background-size: 200% 200%;
-    font-size: 1.5rem;
+  background-color: #efeeee;
+  font-size: 1.5rem;
+  margin: 20px;
 }
 
 @media (max-width: 750px) {
-    html {
-        font-size: 0.8rem;
-    }
+  html {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 3840px) {
-    html {
-        font-size: 3.5rem;
-    }
+  html {
+    font-size: 3.5rem;
+  }
+}
+
+._shadow {
+  border-radius: 12px;
+  box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 1), 12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
 }
 
 .app {
-    .app__links {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 1.3rem;
-        border-radius: 4px;
-        a {
-            border-style: solid;
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-        a:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
+  .app__links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    a {
+      padding: 10px;
     }
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
 .mainPage {
-    h3 {
-        position: relative;
-        background: #00aabb;
-        border-radius: .4em;
-        padding: 1rem;
-    }
-    h3::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 0;
-        height: 0;
-        border: 0.5rem solid transparent;
-        border-right-color: #00aabb;
-        border-left: 0;
-        margin-top: -0.5rem;
-        margin-left: -0.5rem;
-    }
 }
 
-.projects {
+.projectsPage {
+  .projects {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     .projects__content {
-        border-style: solid;
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-        h3 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: circle;
-            margin-right: 1rem;
-        }
-        p {
-            margin: 0 1rem;
-            text-align: center;
-        }
+    //   background-color: rgba(255, 255, 255, 0.2);
+    //   border-radius: 10px;
+      h3 {
+        text-align: center;
+      }
+      ul {
+        list-style-type: circle;
+        margin-right: 1rem;
+      }
+      p {
+        margin: 0 1rem;
+        text-align: center;
+      }
     }
     .projects__content:hover {
-        background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.5);
     }
     .__logo {
-        margin: 0 0.125rem;
+      margin: 0 0.125rem;
     }
     .icons {
-        text-align: center;
+      text-align: center;
+
+      img {
+        width: 1.5rem;
+      }
     }
+  }
 }
 
 #img-CRM,
 #img-Site {
-    // width: 45vw;
-    // height: auto;
-    height: 20rem;
-    width: 100%;
-    // object-fit: cover;
-    object-fit: contain;
+  // width: 45vw;
+  // height: auto;
+  height: 20rem;
+  width: 100%;
+  // object-fit: cover;
+  object-fit: contain;
 }
 
 .anchors {
-    display: flex;
-    justify-content: center;
-    a {
-        margin: 0 0.125rem;
-        text-decoration: none;
-        background-color: rgb(238, 235, 235);
-        padding: 0.125rem;
-        border-radius: 4px;
-    }
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 0.125rem;
+    text-decoration: none;
+    background-color: rgb(238, 235, 235);
+    padding: 0.125rem;
+    border-radius: 4px;
+  }
 }
 
 .contacts {
-    input {
-        display: block;
-        width: 25rem;
-    }
+  input {
+    display: block;
+    width: 25rem;
+  }
 }
-
-// @keyframes gradient {
-//     0% {
-//         background-position: 0% 50%;
-//     }
-//     50% {
-//         background-position: 100% 50%;
-//     }
-//     100% {
-//         background-position: 0% 50%;
-//     }
-// }

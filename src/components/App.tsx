@@ -17,8 +17,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-
-        <nav className="app__links">
+        <nav className="app__links _shadow">
           <Redirect exact from="/" to="/main" />
           <Link to="/main">Main Page</Link>
           <Link to="/dev">ProjectsPage</Link>
