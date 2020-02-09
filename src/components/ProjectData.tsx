@@ -24,7 +24,7 @@ const objCRM = {
     "Backend: Express.js",
     "Browserlist: >1% and IE11"
   ],
-  heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
+  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
 const objThis = {
@@ -35,7 +35,7 @@ const objThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["React, TypeScript", "Routing: react-router-dom", "CSS: .SCSS"],
-  heroku: "Hosted on Heroku free App deploy - page may load 5-10 sec"
+  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS"],
+  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 export { objCRM, objThis };

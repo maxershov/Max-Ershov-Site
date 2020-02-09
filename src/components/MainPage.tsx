@@ -6,18 +6,13 @@ import ContactsPage from "./ContactsPage";
 const MainPage: React.FC = () => {
   return (
     <div className="mainPage">
-      <div className="mainPage__TextOne _shadow">
+      <div className="mainPage__text _shadow">
         <h3>Hi</h3>
-        <p>
-          You`re on my personal site. If you found something weird, please contact
-          me on
-        </p>
-        <Link to="/contacts">contacts page</Link>
-      </div>
-      <div className="mainPage__TextTwo _shadow">
-        <h3>Who are you?</h3>
-        <p>My name is Max. I`m Jr. Frontend developer</p>
+        <p>Thanks for your visit!</p>
+        <p>My name is Max. I`m frontend developer</p>
         <p>Live in Russia. Moscow</p>
+        <p>You can read about my projects or contact me here</p>
+        <Link to="/contacts">Contacts me</Link>
       </div>
       <ProjectsPage />
       <ContactsPage />

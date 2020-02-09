@@ -10,8 +10,7 @@ const ContactFields: React.FC = () => {
         <textarea placeholder="Message" />
         <button type="submit">Send message</button>
       </form>
-      <p>or just say HI</p>
-      <button type="button">HI</button>
+      <button type="button">or just say HI</button>
     </>
   )
 }

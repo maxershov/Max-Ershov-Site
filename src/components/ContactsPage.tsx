@@ -5,7 +5,7 @@ import ContactFields from "./ContactFields";
 
 const ContactsPage: React.FC = () => {
   return (
-    <div className="contacts _shadow">
+    <div className="contacts">
       <h3>Contacts:</h3>
       <ContactFields />
       <div className="anchors">

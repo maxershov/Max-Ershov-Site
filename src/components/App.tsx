@@ -17,11 +17,11 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <nav className="app__links _shadow">
+        <nav className="app__links">
           <Redirect exact from="/" to="/main" />
           <Link to="/main">Main Page</Link>
-          <Link to="/dev">ProjectsPage</Link>
-          <Link to="/contacts">Contacts Page</Link>
+          <Link to="/dev">Projects</Link>
+          <Link to="/contacts">Contacts</Link>
         </nav>
         <Switch>
           <Route exact path="/main" component={MainPage} />
