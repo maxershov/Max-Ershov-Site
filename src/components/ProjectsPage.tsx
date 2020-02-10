@@ -4,7 +4,7 @@ import { objCRM, objThis } from "./projectData";
 
 const ProjectsPage: React.FC = () => (
   <div className="projectsPage _shadow">
-    <h3>My Projects:</h3>
+    <h3>MY PROJECTS:</h3>
     <div className="projects">
       <ProjectContent {...objCRM} />
       <ProjectContent {...objThis} />

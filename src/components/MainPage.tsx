@@ -6,9 +6,9 @@ import ContactsPage from "./ContactsPage";
 const MainPage: React.FC = () => (
   <div className="mainPage">
     <div className="mainPage__text _shadow">
-      <p>Hi</p>
-      <p>Thanks for your visit!</p>
-      <p>My name is Max. I`m frontend developer</p>
+      <h3>HI</h3>
+      {/* <p>Thanks for your visit!</p> */}
+      <h3>I'M MAX. I'M A FRONTEND DEVELOPER</h3>
       <p>Live in Russia. Moscow</p>
       <p>
         You can read about my projects or contact me

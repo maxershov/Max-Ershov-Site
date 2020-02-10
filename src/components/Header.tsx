@@ -5,9 +5,9 @@ const Header = () => (
   <header>
     <nav className="app__links">
       <Redirect exact from="/" to="/home" />
-      <Link to="/home">Home</Link>
-      <Link to="/dev">Projects</Link>
-      <Link to="/contacts">Contacts</Link>
+      <Link to="/home">HOME</Link>
+      <Link to="/dev">PROJECTS</Link>
+      <Link to="/contacts">CONTACTS</Link>
     </nav>
   </header>
   );

@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   return (
     <>
       <div id={id} className="projects__content">
-        <h3>{name}</h3>
+        <p>{name}</p>
         <a href={linkHub}>
           <img id={idImg} alt={idImg} src={src} />
         </a>
@@ -28,7 +28,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
             return <img className="__logo" src={icon} />
           })}
         </div>
-        <h3>Stack:</h3>
+        <p>Stack:</p>
         <ul>
           {text.map(function (line, i) {
             return <li key={i}>{line}</li>;
