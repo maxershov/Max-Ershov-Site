@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const myLocalHost = require("./host");
 
 module.exports = {
     mode: 'development',
@@ -15,6 +16,7 @@ module.exports = {
         publicPath: '/'
     },
     devServer: {
+        host: myLocalHost.host,
         port: 8080,
         open: true,
         hot: true,
