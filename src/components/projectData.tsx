@@ -38,4 +38,16 @@ const objThis = {
   text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
-export { objCRM, objThis };
+
+const objNew = {
+  name: "NEW PROJECT",
+  icons: [icn.webpackImg, icn.herokuImg ],
+  linkHub: "https://github.com",
+  linkLive: "",
+  idImg: "img-Site",
+  src: siteImg,
+  id: "This-Site",
+  text: ["Etc"],
+  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
+};
+export { objCRM, objThis, objNew };

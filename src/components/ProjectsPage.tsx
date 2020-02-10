@@ -1,6 +1,6 @@
 import * as React from "react";
 import ProjectContent from "./ProjectContent";
-import { objCRM, objThis } from "./projectData";
+import { objCRM, objThis, objNew } from "./projectData";
 
 const ProjectsPage: React.FC = () => (
   <div className="projectsPage _shadow">
@@ -8,6 +8,7 @@ const ProjectsPage: React.FC = () => (
     <div className="projects">
       <ProjectContent {...objCRM} />
       <ProjectContent {...objThis} />
+      <ProjectContent {...objNew} />
     </div>
   </div>
 );

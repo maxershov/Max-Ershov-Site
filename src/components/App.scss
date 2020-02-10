@@ -19,13 +19,35 @@ html {
     background-color: white;
     font-size: 1.5rem;
     font-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
+    #burgerBtn {
+        display: none;
+    }
     // font-family: "Georgia";
 }
 
 @media (max-width: 750px) {
     html {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1rem;
+    }
+    .app__links {
+        display: none;
+    }
+    #burgerBtn {
+        display: block !important;
+    }
+    .app__links_open {
+        overflow: hidden;
+        a {
+            color: black;
+            border: solid 1px;
+            background-color: white;
+            position: relative;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
     }
 }
 
@@ -35,17 +57,14 @@ html {
     }
 }
 
-// ._shadow {
-//     border-radius: 15px;
-//     margin-bottom: 2rem;
-//     border: 1px solid rgba(255, 255, 255, 0.2);
-//     // box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 1), 12px 12px 12px 0 rgba(0, 0, 0, 0.03);
-//     box-shadow: -6px -6px 26px 0 rgba(255, 255, 255, 0.83), 6px 6px 16px 0 rgba(217, 210, 200, 0.51);
-//     // background-color: #ffffff;
-// }
-// ._shadow:hover {
-//     box-shadow: -12px -12px 30px 0 rgba(255, 255, 255, 0.83), 10px 10px 20px 0 rgba(217, 210, 200, 0.7);
-// }
+@media (min-width: 1070px) and (max-width: 1600px) {
+    // set third item in grid to use all columns
+    .projects__content:nth-child(3n + 0) {
+        // color: red;
+        grid-column: 1 / -1;
+    }
+}
+
 .app__links {
     text-align: right;
     a {
@@ -62,7 +81,7 @@ html {
     .mainPage__text {
         // background-color: $thirdColor;
         border-bottom: solid 1px;
-        padding: 0.5rem;
+        padding: 5rem 0 5rem 0.5rem;
         a {
             color: rgb(219, 2, 2);
         }
@@ -78,11 +97,10 @@ html {
         margin: 1rem;
         display: grid;
         grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         border-bottom: solid 1px;
         .projects__content {
             // background-color: #efeeee;
-            // border-radius: 15px;
             margin: 1rem;
             h3 {
                 text-align: center;
@@ -91,10 +109,10 @@ html {
                 list-style-type: circle;
                 margin-right: 1rem;
                 line-height: 1.4rem;
+                text-align: left;
             }
             p {
                 margin: 0 1rem;
-                text-align: center;
             }
         }
         .projects__content:hover {
@@ -127,7 +145,7 @@ html {
     a {
         margin: 0 0.125rem;
         text-decoration: none;
-        border: solid 1px;
+        border: solid 1.5px;
         padding: 0.125rem;
         font-weight: 600;
     }
@@ -139,8 +157,6 @@ html {
 .contacts {
     border-radius: 15px 15px 0 0;
     padding: 0.5rem;
-    // background-color: #ffffff;
-    // background-color: $thirdColor;
     input {
         display: block;
         width: 25rem;
