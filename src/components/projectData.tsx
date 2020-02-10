@@ -28,8 +28,8 @@ const objCRM = {
 };
 
 const objThis = {
-  name: "This Site",
-  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg ],
+  name: "Projects Site",
+  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg ],
   linkHub: "https://github.com",
   linkLive: "",
   idImg: "img-Site",

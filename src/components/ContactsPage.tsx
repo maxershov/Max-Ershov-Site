@@ -3,8 +3,7 @@ import { facebookImg, githubImg, twitterImg } from "./iconsList";
 import ContactFields from "./ContactFields";
 
 
-const ContactsPage: React.FC = () => {
-  return (
+const ContactsPage: React.FC = () => (
     <div className="contacts">
       <h3>Contacts:</h3>
       <ContactFields />
@@ -24,7 +23,6 @@ const ContactsPage: React.FC = () => {
         </a>
       </div>
     </div>
-  )
-};
+)
 
 export default ContactsPage;

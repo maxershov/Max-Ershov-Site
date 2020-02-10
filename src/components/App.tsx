@@ -9,29 +9,23 @@ import {
 import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import ProjectsPage from "./ProjectsPage";
+import Header from "./Header";
 
 require("./App.scss");
 
 
-const App = () => {
-  return (
-    <Router>
-      <div className="app">
-        <nav className="app__links">
-          <Redirect exact from="/" to="/main" />
-          <Link to="/main">Main Page</Link>
-          <Link to="/dev">Projects</Link>
-          <Link to="/contacts">Contacts</Link>
-        </nav>
-        <Switch>
-          <Route exact path="/main" component={MainPage} />
-          <Route exact path="/dev" component={ProjectsPage} />
-          <Route exact path="/contacts" component={ContactsPage} />
-        </Switch>
-      </div>
-    </Router>
-  );
-};
+const App = () => (
+  <Router>
+    <div className="app">
+      <Header />
+      <Switch>
+        <Route exact path="/home" component={MainPage} />
+        <Route exact path="/dev" component={ProjectsPage} />
+        <Route exact path="/contacts" component={ContactsPage} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 
 export default App;
