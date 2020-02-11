@@ -7,7 +7,7 @@ const MainPage: React.FC = () => (
   <div className="mainPage">
     <div className="mainPage__text _shadow">
       <h3>HI</h3>
-      <h3>I'M MAX. I'M A FRONTEND DEVELOPER</h3>
+      <h3>I&apos;M MAX. I&apos;M A FRONTEND DEVELOPER</h3>
       <p>Live in Russia. Moscow</p>
       <p>
         You can read about my projects or contact me

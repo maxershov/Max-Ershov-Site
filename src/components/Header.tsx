@@ -4,15 +4,11 @@ import * as burgerImg from '../images/burger.svg';
 
 
 
-const Header = () => {
+const Header: React.FC = () => {
   const [openMenu, chgMenu] = React.useState<boolean>(false);
-  
-  function open() {
-    chgMenu(!openMenu);
-  }
   return (
     <header>
-      <button id="burgerBtn" type="button" onClick={() => open()}><img src={burgerImg} /></button>
+      <button id="burgerBtn" type="button" onClick={() => chgMenu(!openMenu)}><img alt="burgerImg" src={burgerImg} /></button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <Redirect exact from="/" to="/home" />
         <Link to="/home">HOME</Link>

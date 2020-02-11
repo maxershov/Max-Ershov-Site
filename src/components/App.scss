@@ -1,160 +1,160 @@
 * {
-    box-sizing: border-box;
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-        color: black;
-        text-decoration: none;
-    }
+  box-sizing: border-box;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 html {
-    background-color: white;
-    font-size: 1.5rem;
-    font-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
-    #burgerBtn {
-        display: none;
-    }
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
+  #burgerBtn {
+    display: none;
+  }
 }
 
 @media (max-width: 750px) {
-    html {
-        font-size: 0.9rem;
-        line-height: 1rem;
+  html {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .app__links {
+    display: none;
+  }
+  #burgerBtn {
+    display: block !important;
+    border: none;
+  }
+  #burgerBtn img {
+    border-radius: 0 !important;
+    width: 3rem;
+    height: 3rem;
+  }
+  .app__links_open {
+    overflow: hidden;
+    a {
+      // text-align: center;
+      text-align: left;
+      color: black;
+      border-bottom: solid 1px;
+      position: relative;
+      padding: 0.9em;
+      display: block;
+      font-size: 0.9em;
     }
-    .app__links {
-        display: none;
-    }
-    #burgerBtn {
-        display: block !important;
-        border: none;
-    }
-    #burgerBtn img {
-        border-radius: 0 !important;
-        width: 3rem;
-        height: 3rem;
-    }
-    .app__links_open {
-        overflow: hidden;
-        a {
-            // text-align: center;
-            text-align: left;
-            color: black;
-            border-bottom: solid 1px;
-            position: relative;
-            padding: 0.9em;
-            display: block;
-            font-size: 0.9em;
-        }
-    }
+  }
 }
 
 @media (min-width: 3840px) {
-    html {
-        font-size: 4.5rem;
-    }
+  html {
+    font-size: 4.5rem;
+  }
 }
 
 @media (min-width: 1070px) and (max-width: 1600px) {
-    // set third item in grid to use all columns
-    .projects__content:nth-child(3n + 0) {
-        // color: red;
-        grid-column: 1 / -1;
-    }
+  // set third item in grid to use all columns
+  .projects__content:nth-child(3n + 0) {
+    // color: red;
+    grid-column: 1 / -1;
+  }
 }
 
 .app__links {
-    text-align: right;
-    a {
-        padding-right: 1rem;
-    }
-    a:hover {
-        border-bottom: solid 2px black;
-    }
+  text-align: right;
+  a {
+    padding-right: 1rem;
+  }
+  a:hover {
+    border-bottom: solid 2px black;
+  }
 }
 
 .mainPage {
-    text-align: center;
-    .mainPage__text {
-        border-bottom: solid 1px;
-        padding: 14rem 0 14rem 0;
-        a {
-            color: rgb(219, 2, 2);
-        }
-        p {
-            font-size: 1em;
-        }
+  text-align: center;
+  .mainPage__text {
+    border-bottom: solid 1px;
+    padding: 14rem 0 14rem 0;
+    a {
+      color: rgb(219, 2, 2);
     }
+    p {
+      font-size: 1em;
+    }
+  }
 }
 
 .projectsPage {
-    .projects {
-        margin: 1rem;
-        display: grid;
-        grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        border-bottom: solid 1px;
-        .projects__content {
-            margin: 1rem;
-            h3 {
-                text-align: center;
-            }
-            ul {
-                list-style-type: circle;
-                margin-right: 1rem;
-                line-height: 1.4rem;
-                text-align: left;
-            }
-            p {
-                margin: 0 1rem;
-            }
-        }
-        .projects__content:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        .__logo {
-            margin: 0 0.125rem;
-        }
-        .icons {
-            text-align: center;
-            margin-bottom: 1rem;
-            img {
-                width: 1.5rem;
-            }
-        }
+  .projects {
+    margin: 1rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    border-bottom: solid 1px;
+    .projects__content {
+      margin: 1rem;
+      h3 {
+        text-align: center;
+      }
+      ul {
+        list-style-type: circle;
+        margin-right: 1rem;
+        line-height: 1.4rem;
+        text-align: left;
+      }
+      p {
+        margin: 0 1rem;
+      }
     }
+    .projects__content:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .__logo {
+      margin: 0 0.125rem;
+    }
+    .icons {
+      text-align: center;
+      margin-bottom: 1rem;
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
 }
 
 #img-CRM,
 #img-Site {
-    width: 90%;
-    margin: 5%;
-    object-fit: contain;
+  width: 90%;
+  margin: 5%;
+  object-fit: contain;
 }
 
 .anchors {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    a {
-        // margin: 0 0.125rem;
-        margin: 0 0.5rem;
-        text-decoration: none;
-        border: solid 1.5px;
-        padding: 0.2rem;
-        font-weight: 600;
-    }
-    a:hover {
-        box-shadow: 0px 3px 2px rgb(41, 41, 41);
-    }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  a {
+    // margin: 0 0.125rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    border: solid 1.5px;
+    padding: 0.2rem;
+    font-weight: 600;
+  }
+  a:hover {
+    box-shadow: 0px 3px 2px rgb(41, 41, 41);
+  }
 }
 
 .contacts {
-    border-radius: 15px 15px 0 0;
-    padding: 0.5rem;
-    input {
-        display: block;
-        width: 15rem;
-    }
+  border-radius: 15px 15px 0 0;
+  padding: 0.5rem;
+  input {
+    display: block;
+    width: 15rem;
+  }
 }

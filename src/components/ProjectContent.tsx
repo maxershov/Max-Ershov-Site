@@ -17,39 +17,33 @@ export interface ProjectProps {
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
-    <>
-      <div id={id} className="projects__content">
-        <p>{name}</p>
-        <a href={linkHub}>
-          <img id={idImg} alt={idImg} src={src} />
-        </a>
-        <div className="icons">
-          {icons.map(function (icon, i) {
-            return <img className="__logo" src={icon} />
-          })}
-        </div>
-        <p>Stack:</p>
-        <ul>
-          {text.map(function (line, i) {
-            return <li key={i}>{line}</li>;
-          })}
-        </ul>
-        <div className="anchors">
-          <a href={linkLive}>
-            <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
-            Live Web version
-          </a>
-          <a href={linkHub}>
-            <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
-            GitHub repo
-          </a>
-        </div>
-        <p>
-          <img alt="herokuImg" src={herokuImg} />
-          {heroku}
-        </p>
+    <div id={id} className="projects__content">
+      <p>{name}</p>
+      <a href={linkHub}>
+        <img id={idImg} alt={idImg} src={src} />
+      </a>
+      <div className="icons">
+        {icons.map(icon => <img className="__logo" alt="icon" src={icon} />)}
       </div>
-    </>
+      <p>Stack:</p>
+      <ul>
+        {text.map(line => <li key={line}>{line}</li>)}
+      </ul>
+      <div className="anchors">
+        <a href={linkLive}>
+          <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
+          Live Web version
+        </a>
+        <a href={linkHub}>
+          <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
+          GitHub repo
+        </a>
+      </div>
+      <p>
+        <img alt="herokuImg" src={herokuImg} />
+        {heroku}
+      </p>
+    </div>
   );
 };
 

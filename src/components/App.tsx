@@ -7,7 +7,7 @@ import Header from "./Header";
 
 require("./App.scss");
 
-const App = () => (
+const App: React.FC = () => (
   <Router>
     <div className="app">
       <Header />

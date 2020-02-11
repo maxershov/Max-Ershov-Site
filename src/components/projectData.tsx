@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import * as CRMimg from "../images/CRM.png";
 import * as siteImg from "../images/site.png";
 import * as icn from "./iconsList";
@@ -10,7 +11,7 @@ const objCRM = {
   linkHub: "https://github.com",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
-  id:"CRM",
+  id: "CRM",
   idImg: "img-CRM",
   text: [
     "Desktop version: Electron",
@@ -29,7 +30,7 @@ const objCRM = {
 
 const objThis = {
   name: "PROJECTS SITE",
-  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg ],
+  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg],
   linkHub: "https://github.com",
   linkLive: "",
   idImg: "img-Site",
@@ -41,7 +42,7 @@ const objThis = {
 
 const objNew = {
   name: "NEW PROJECT",
-  icons: [icn.webpackImg, icn.herokuImg ],
+  icons: [icn.webpackImg, icn.herokuImg],
   linkHub: "https://github.com",
   linkLive: "",
   idImg: "img-Site",
