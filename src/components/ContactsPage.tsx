@@ -7,6 +7,7 @@ const ContactsPage: React.FC = () => (
   <div className="contacts">
     <h3>CONTACTS:</h3>
     <ContactFields />
+    <p>You can find me here:</p>
     <div className="anchors">
       <a href="https://twitter.com/">
         <img style={{ height: "1em" }} alt="twitterLogo" src={twitterImg} />

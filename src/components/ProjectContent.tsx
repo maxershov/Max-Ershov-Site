@@ -32,17 +32,14 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div className="anchors">
         <a href={linkLive}>
           <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
-          Live Web version
+          Live Web
         </a>
         <a href={linkHub}>
           <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
           GitHub repo
         </a>
       </div>
-      <p>
-        <img alt="herokuImg" src={herokuImg} />
-        {heroku}
-      </p>
+      <p>{heroku}</p>
     </div>
   );
 };

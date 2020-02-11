@@ -1,3 +1,5 @@
+$anchor-color: rgb(36, 5, 173);
+
 * {
   box-sizing: border-box;
   a,
@@ -38,7 +40,6 @@ html {
   .app__links_open {
     overflow: hidden;
     a {
-      // text-align: center;
       text-align: left;
       color: black;
       border-bottom: solid 1px;
@@ -59,7 +60,6 @@ html {
 @media (min-width: 1070px) and (max-width: 1600px) {
   // set third item in grid to use all columns
   .projects__content:nth-child(3n + 0) {
-    // color: red;
     grid-column: 1 / -1;
   }
 }
@@ -78,9 +78,9 @@ html {
   text-align: center;
   .mainPage__text {
     border-bottom: solid 1px;
-    padding: 14rem 0 14rem 0;
+    padding: 10rem 0 14rem 0;
     a {
-      color: rgb(219, 2, 2);
+      color: $anchor-color;
     }
     p {
       font-size: 1em;
@@ -127,10 +127,12 @@ html {
 }
 
 #img-CRM,
-#img-Site {
+#img-Site,
+#img-Java {
   width: 90%;
   margin: 5%;
   object-fit: contain;
+  border: solid 1px;
 }
 
 .anchors {
@@ -138,12 +140,15 @@ html {
   justify-content: center;
   margin-bottom: 1rem;
   a {
-    // margin: 0 0.125rem;
     margin: 0 0.5rem;
     text-decoration: none;
-    border: solid 1.5px;
-    padding: 0.2rem;
-    font-weight: 600;
+    border-bottom: solid 2px;
+    padding: 0 0.2rem;
+    color: $anchor-color;
+  }
+  img {
+    padding-right: 4px;
+    margin-bottom: -3px;
   }
   a:hover {
     box-shadow: 0px 3px 2px rgb(41, 41, 41);

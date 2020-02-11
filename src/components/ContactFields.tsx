@@ -3,8 +3,8 @@ import * as React from 'react';
 
 const ContactFields: React.FC = () => (
   <>
+    <p>Contact me:</p>
     <form>
-      <input placeholder="Name" type="text" />
       <input placeholder="Contact adress" type="text" />
       <textarea placeholder="Message" />
       <button type="submit">Send message</button>

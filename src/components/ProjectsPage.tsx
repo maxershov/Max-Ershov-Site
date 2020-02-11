@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import ProjectContent from "./ProjectContent";
-import { objCRM, objThis, objNew } from "./projectData";
+import { objCRM, objThis, objJava } from "./projectData";
 
 const ProjectsPage: React.FC = () => (
   <div className="projectsPage _shadow">
     <h3>MY PROJECTS:</h3>
     <div className="projects">
-      <ProjectContent {...objCRM} />
       <ProjectContent {...objThis} />
-      <ProjectContent {...objNew} />
+      <ProjectContent {...objJava} />
+      <ProjectContent {...objCRM} />
     </div>
   </div>
 );

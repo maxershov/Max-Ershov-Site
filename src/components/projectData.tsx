@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import * as CRMimg from "../images/CRM.png";
 import * as siteImg from "../images/site.png";
+import * as javaImg from "../images/javaPrg.png";
 import * as icn from "./iconsList";
 
 // JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
@@ -21,8 +22,8 @@ const objCRM = {
     "Routing: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
     "Linting: ESLint with Airbnb config",
-    "Testing: Jest, Puppeteer",
-    "Backend: Express.js",
+    "Testing: Jest, Puppeteer, Enzyme",
+    "Backend: Express.js + helmet",
     "Browserlist: >1% and IE11"
   ],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
@@ -30,25 +31,25 @@ const objCRM = {
 
 const objThis = {
   name: "PROJECTS SITE",
-  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg],
+  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg, icn.eslintImg],
   linkHub: "https://github.com",
   linkLive: "",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS"],
+  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
-const objNew = {
-  name: "NEW PROJECT",
-  icons: [icn.webpackImg, icn.herokuImg],
+const objJava = {
+  name: "PDF WRITER",
+  icons: [icn.javaImg],
   linkHub: "https://github.com",
   linkLive: "",
-  idImg: "img-Site",
-  src: siteImg,
-  id: "This-Site",
-  text: ["Etc"],
-  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
+  idImg: "img-Java",
+  src: javaImg,
+  id: "Java",
+  text: ["Language: Java", "GUI: Java Swing", "Apache PDFBox"],
+  heroku: "My first work project. Desktop program that takes input data, write it to PDF and print. Bundled with JRE"
 };
-export { objCRM, objThis, objNew };
+export { objCRM, objThis, objJava };
