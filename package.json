@@ -13,7 +13,7 @@
         "url": "git+https://github.com/maxershov/Max-Ershov-Site.git"
     },
     "author": "MaxErshov",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/maxershov/Max-Ershov-Site/issues"
     },
