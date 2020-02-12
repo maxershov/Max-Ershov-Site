@@ -2,14 +2,25 @@ import * as React from "react";
 import { Link, Redirect } from "react-router-dom";
 import * as burgerImg from '../images/burger.svg';
 
-function chgNight():void {
-  const doc = document.getElementsByClassName('app')[0] as HTMLElement;
-  console.log(doc);
-  doc.className="app_night";
-}
 
-const Header: React.FC = () => {  
+
+const Header: React.FC = () => {
   const [openMenu, chgMenu] = React.useState<boolean>(false);
+  const [isDark, chgDark] = React.useState<boolean>(false);
+  function chgTheme(): void {
+    chgDark(!isDark);
+    if (isDark) {
+      const doc = document.getElementsByClassName("app")[0] as HTMLElement;
+      doc.className = "app_night";
+      const body = document.body as HTMLElement;
+      body.setAttribute("style", "background-color:rgb(29, 26, 26)");
+    } else {
+      const doc = document.getElementsByClassName("app_night")[0] as HTMLElement;
+      doc.className = "app";
+      const body = document.body as HTMLElement;
+      body.setAttribute("style", "background-color:white");
+    }
+  }
   return (
     <header>
       <button id="burgerBtn" type="button" onClick={() => chgMenu(!openMenu)}><img alt="burgerImg" src={burgerImg} /></button>
@@ -18,8 +29,8 @@ const Header: React.FC = () => {
         <Link to="/home">HOME</Link>
         <Link to="/dev">PROJECTS</Link>
         <Link to="/contacts">CONTACTS</Link>
+        <a onClick={() => chgTheme()}>DARK THEME</a>
       </nav>
-      <button type="button" onClick={() => chgNight()}>Night</button>
     </header>
   );
 }

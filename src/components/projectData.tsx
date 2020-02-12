@@ -33,11 +33,11 @@ const objThis = {
   name: "PROJECTS SITE",
   icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg, icn.eslintImg],
   linkHub: "https://github.com",
-  linkLive: "",
+  linkLive: "https://heroku.com",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -45,7 +45,6 @@ const objJava = {
   name: "PDF WRITER",
   icons: [icn.javaImg],
   linkHub: "https://github.com",
-  linkLive: "",
   idImg: "img-Java",
   src: javaImg,
   id: "Java",

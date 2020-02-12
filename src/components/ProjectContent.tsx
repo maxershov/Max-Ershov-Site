@@ -2,14 +2,14 @@ import * as React from "react";
 import { herokuImg, githubImg } from "./iconsList";
 
 export interface ProjectProps {
-  name?: string;
-  icons?: string[];
-  linkHub?: string;
+  name: string;
+  icons: string[];
+  linkHub: string;
   linkLive?: string;
   idImg?: string;
   src?: string;
   id?: string;
-  text?: string[];
+  text: string[];
   heroku?: string;
 }
 
@@ -30,13 +30,15 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         {text.map(line => <li key={line}>{line}</li>)}
       </ul>
       <div className="anchors">
-        <a href={linkLive}>
-          <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
-          Live Web
-        </a>
+        {linkLive ? (
+          <a href={linkLive}>
+            <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
+          Live
+          </a>
+) : undefined}
         <a href={linkHub}>
           <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
-          GitHub repo
+          GitHub
         </a>
       </div>
       <p>{heroku}</p>
