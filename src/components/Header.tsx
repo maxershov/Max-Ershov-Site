@@ -2,9 +2,13 @@ import * as React from "react";
 import { Link, Redirect } from "react-router-dom";
 import * as burgerImg from '../images/burger.svg';
 
+function chgNight():void {
+  const doc = document.getElementsByClassName('app')[0] as HTMLElement;
+  console.log(doc);
+  doc.className="app_night";
+}
 
-
-const Header: React.FC = () => {
+const Header: React.FC = () => {  
   const [openMenu, chgMenu] = React.useState<boolean>(false);
   return (
     <header>
@@ -15,6 +19,7 @@ const Header: React.FC = () => {
         <Link to="/dev">PROJECTS</Link>
         <Link to="/contacts">CONTACTS</Link>
       </nav>
+      <button type="button" onClick={() => chgNight()}>Night</button>
     </header>
   );
 }
