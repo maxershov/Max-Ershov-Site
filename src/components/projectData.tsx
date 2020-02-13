@@ -48,7 +48,7 @@ const objJava = {
   idImg: "img-Java",
   src: javaImg,
   id: "Java",
-  text: ["Language: Java", "GUI: Java Swing", "Apache PDFBox"],
+  text: ["Language: Java", "GUI: Java Swing", "Library: Apache PDFBox"],
   heroku: "My first work project. Desktop program that takes input data, write it to PDF and print. Bundled with JRE"
 };
 export { objCRM, objThis, objJava };

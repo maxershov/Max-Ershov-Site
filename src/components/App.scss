@@ -24,8 +24,11 @@ $anchor-color: rgb(3, 118, 250);
   .app__links a,
   .app__links button,
   .app__links_open a,
-  .app__links_open button {
+  .app__links_open button,
+  .app__links button:hover,
+  .app__links a:hover  {
     color: white;
+    border-color: white;
   }
   .contacts {
     input,
@@ -177,10 +180,9 @@ html {
   margin-bottom: 1rem;
   a {
     margin: 0 0.5rem;
-    text-decoration: none;
-    border-bottom: solid 2px;
     padding: 0 0.2rem;
     color: $anchor-color;
+    font-weight: 600;
   }
   img {
     padding-right: 4px;
@@ -195,6 +197,7 @@ html {
   border-radius: 15px 15px 0 0;
   padding: 0.5rem;
   margin-top: 3rem;
+  text-align: center;
   .contacts__container {
     display: flex;
   }
