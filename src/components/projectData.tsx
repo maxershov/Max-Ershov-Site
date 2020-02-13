@@ -9,7 +9,7 @@ import * as icn from "./iconsList";
 const objCRM = {
   name: "CRM",
   icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.herokuImg, icn.reactRouterImg, icn.postcssImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.ieImg],
-  linkHub: "https://github.com",
+  linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
   id: "CRM",
@@ -32,8 +32,8 @@ const objCRM = {
 const objThis = {
   name: "PROJECTS SITE",
   icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg, icn.eslintImg],
-  linkHub: "https://github.com",
-  linkLive: "https://heroku.com",
+  linkHub: "https://github.com/maxershov/Max-Ershov-Site",
+  linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
@@ -44,7 +44,7 @@ const objThis = {
 const objJava = {
   name: "PDF WRITER",
   icons: [icn.javaImg],
-  linkHub: "https://github.com",
+  linkHub: "https://github.com/maxershov/java-pdf-writer",
   idImg: "img-Java",
   src: javaImg,
   id: "Java",
