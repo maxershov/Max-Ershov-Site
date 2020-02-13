@@ -13,7 +13,7 @@ const App: React.FC = () => (
       <Header />
       <Switch>
         <Route exact path="/home" component={MainPage} />
-        <Route exact path="/dev" component={ProjectsPage} />
+        <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/contacts" component={ContactsPage} />
       </Switch>
     </div>

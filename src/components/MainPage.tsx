@@ -10,8 +10,10 @@ const MainPage: React.FC = () => (
       <h3>I&apos;M MAX. I&apos;M A FRONTEND DEVELOPER</h3>
       <p>Live in Russia. Moscow</p>
       <p>
-        You can read about my projects or contact me
-        <Link to="/contacts"> here</Link>
+        You can read about my 
+        <Link to="/projects"> projects </Link> 
+        or contact me
+        <Link to="/contacts"> here </Link>
       </p>
       <p>Thanks for your visit!</p>
     </div>

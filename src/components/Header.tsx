@@ -28,12 +28,14 @@ const Header: React.FC = () => {
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <Redirect exact from="/" to="/home" />
         <Link to="/home">HOME</Link>
-        <Link to="/dev">PROJECTS</Link>
+        <Link to="/projects">PROJECTS</Link>
         <Link to="/contacts">CONTACTS</Link>
-        <a onClick={() => chgTheme()}>DARK THEME</a>
+        <button type="button" onClick={() => chgTheme()}>DARK THEME</button>
       </nav>
     </header>
   );
 }
+
+// <a onClick={() => chgTheme()}>DARK THEME</a>
 
 export default Header;

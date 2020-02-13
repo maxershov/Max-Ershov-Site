@@ -8,7 +8,7 @@ import * as icn from "./iconsList";
 
 const objCRM = {
   name: "CRM",
-  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.herokuImg, icn.reactRouterImg, icn.postcssImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.ieImg],
+  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.herokuImg, icn.webpackImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.ieImg, icn.reactRouterImg, icn.babelImg ],
   linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -37,7 +37,7 @@ const objThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: .SCSS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 

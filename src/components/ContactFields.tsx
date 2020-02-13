@@ -9,7 +9,6 @@ const ContactFields: React.FC = () => (
       <textarea name="message" minLength={5} placeholder="Message" />
       <button type="submit">SEND MESSAGE</button>
     </form>
-    <button type="button">JUST SAY HI</button>
   </div>
 )
 
