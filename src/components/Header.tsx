@@ -8,17 +8,18 @@ const Header: React.FC = () => {
   const [openMenu, chgMenu] = React.useState<boolean>(false);
   const [isDark, chgDark] = React.useState<boolean>(false);
   function chgTheme(): void {
-    chgDark(!isDark);
-    if (isDark) {
+    if (!isDark) {
       const doc = document.getElementsByClassName("app")[0] as HTMLElement;
       doc.className = "app_night";
       const body = document.body as HTMLElement;
       body.setAttribute("style", "background-color:rgb(29, 26, 26)");
+      chgDark(!isDark);
     } else {
       const doc = document.getElementsByClassName("app_night")[0] as HTMLElement;
       doc.className = "app";
       const body = document.body as HTMLElement;
       body.setAttribute("style", "background-color:white");
+      chgDark(!isDark);
     }
   }
   return (

@@ -23,7 +23,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         <img id={idImg} alt={idImg} src={src} />
       </a>
       <div className="icons">
-        {icons.map(icon => <img className="__logo" alt="icon" src={icon} />)}
+        {icons.map((icon, i) => <img className="__logo" key={i} alt="icon" src={icon} />)}
       </div>
       <p>Stack:</p>
       <ul>
