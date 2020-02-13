@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require('compression-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 // const WebpackMonitor = require('webpack-monitor');
 
 module.exports = {
@@ -21,11 +22,30 @@ module.exports = {
         modules: ['node_modules'],
     },
     optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+          parallel: true,
+            terserOptions: {
+              compress: {
+                unsafe: true,
+                inline: true,
+                passes: 3,
+                keep_fargs: false,
+                booleans_as_integers: true,
+                warnings:false
+              },
+              output: {
+                comments: false,
+                beautify: false
+              },   
+            },
+            extractComments: false,
+        })],
         runtimeChunk: "single",
         splitChunks: {
-            chunks: "all"
+          chunks: "all"
         }
-    },
+      },
     module: {
         rules: [
             {
@@ -64,8 +84,18 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
-        title: "Max-Ershov-Site"
-    }),
+        title: "Max-Ershov-Site",
+        favicon: path.join(__dirname, "src", "assets", "favicon.ico"),
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeRedundantAttributes: true,
+            useShortDoctype: true,
+            removeEmptyAttributes: true,
+            keepClosingSlash: true,
+            minifyURLs: true
+          }
+        }),
     new CompressionPlugin({
         algorithm:"gzip"
       }),
