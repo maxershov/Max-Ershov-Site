@@ -1,7 +1,6 @@
 $anchor-color: rgb(3, 118, 250);
 
 * {
-    --backColor:white;
     box-sizing: border-box;
     a,
     a:visited,
@@ -24,7 +23,6 @@ $anchor-color: rgb(3, 118, 250);
     }
     .anchors>* {
         background-color: white;
-        // color:red;
     }
 }
 

@@ -122,3 +122,4 @@ dist
 
 # host adress
 host.js
+monitor/stats.json

@@ -3,29 +3,35 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CompressionPlugin = require('compression-webpack-plugin');
-// const WebpackMonitor = require('webpack-monitor');
+const myLocalHost = require("./host");
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     context: path.resolve(__dirname),
     entry: './src/index.tsx',
+    devtool: 'inline-source-map',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'main.js',
         chunkFilename: "[name].bundle.js",
         publicPath: '/'
     },
+    devServer: {
+        host: myLocalHost.host,
+        port: 8080,
+        open: true,
+        hot: true,
+        compress: true,
+        watchContentBase: true,
+        progress: true,
+        contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: true, // on 404 load publicPath => for BrowserRouter on refresh
+    },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: ['node_modules'],
     },
-    optimization: {
-        runtimeChunk: "single",
-        splitChunks: {
-            chunks: "all"
-        }
-    },
+
     module: {
         rules: [
             {
@@ -42,10 +48,10 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
+                  'css-loader',
+                  'sass-loader',
                 ],
-            },
+              },
             {
                 loader: require.resolve('file-loader'),
                 exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.s[ac]ss$/],
@@ -65,14 +71,5 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
         title: "Max-Ershov-Site"
-    }),
-    new CompressionPlugin({
-        algorithm:"gzip"
-      }),
-    new MiniCssExtractPlugin(),
-        // new WebpackMonitor({
-        //     capture: true,
-        //     launch: true,
-        // })
-    ]
+    }),  new MiniCssExtractPlugin()]
 };
