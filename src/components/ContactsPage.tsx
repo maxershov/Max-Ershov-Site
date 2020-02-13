@@ -11,15 +11,15 @@ const ContactsPage: React.FC = () => (
       <div className="contacts__right">
         <p>You can find me here:</p>
         <div className="anchors">
-          <a href="https://twitter.com/">
+          <a href="https://twitter.com/MaksksE">
             <img style={{ height: "1em" }} alt="twitterLogo" src={twitterImg} />
             Twitter
           </a>
-          <a href="https://facebook.com/">
+          <a href="https://www.facebook.com/maksksErshov">
             <img style={{ height: "1em" }} alt="facebookLogo" src={facebookImg} />
             Facebook
           </a>
-          <a href="https://github.com/">
+          <a href="https://github.com/maxershov">
             <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
             Github
           </a>
