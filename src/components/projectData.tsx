@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import * as CRMimg from "../images/CRM.jpg";
+import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
-import * as javaImg from "../images/javaPrg.jpg";
+import * as javaImg from "../images/javaprg.jpg";
 import * as icn from "./iconsList";
 
 // JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
