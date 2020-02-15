@@ -37,7 +37,7 @@ const objThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 

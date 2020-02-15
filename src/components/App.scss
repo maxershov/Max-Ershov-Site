@@ -1,5 +1,18 @@
 $anchor-color: rgb(3, 118, 250);
 
+html {
+  @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  #burgerBtn {
+    display: none;
+  }
+}
+
 * {
   box-sizing: border-box;
   a,
@@ -26,7 +39,7 @@ $anchor-color: rgb(3, 118, 250);
   .app__links_open a,
   .app__links_open button,
   .app__links button:hover,
-  .app__links a:hover  {
+  .app__links a:hover {
     color: white;
     border-color: white;
   }
@@ -41,18 +54,9 @@ $anchor-color: rgb(3, 118, 250);
   }
 }
 
-html {
-  font-size: 1.5rem;
-  font-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
-  #burgerBtn {
-    display: none;
-  }
-}
-
 @media (max-width: 750px) {
   html {
     font-size: 0.9rem;
-    line-height: 1rem;
   }
   .app__links {
     display: none;
@@ -145,7 +149,7 @@ html {
       ul {
         list-style-type: circle;
         margin-right: 1rem;
-        line-height: 1.4rem;
+        line-height: 1.3rem;
         text-align: left;
       }
       p {
