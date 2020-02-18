@@ -15,7 +15,7 @@ const Header: React.FC = () => {
       const body = document.body as HTMLElement;
       body.setAttribute("style", "background-color:rgb(29, 26, 26)");
       chgDark(!isDark);
-      chgModeTitle('WHITE THEME');
+      chgModeTitle('LIGHT THEME');
     } else {
       const doc = document.getElementsByClassName("app_night")[0] as HTMLElement;
       doc.className = "app";
