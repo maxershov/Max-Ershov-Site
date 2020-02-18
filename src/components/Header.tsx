@@ -7,6 +7,7 @@ import * as burgerImg from '../images/burger.svg';
 const Header: React.FC = () => {
   const [openMenu, chgMenu] = React.useState<boolean>(false);
   const [isDark, chgDark] = React.useState<boolean>(false);
+  const [modeTitle, chgModeTitle] = React.useState<string>("DARK THEME");
   function chgTheme(): void {
     if (!isDark) {
       const doc = document.getElementsByClassName("app")[0] as HTMLElement;
@@ -14,12 +15,14 @@ const Header: React.FC = () => {
       const body = document.body as HTMLElement;
       body.setAttribute("style", "background-color:rgb(29, 26, 26)");
       chgDark(!isDark);
+      chgModeTitle('WHITE THEME');
     } else {
       const doc = document.getElementsByClassName("app_night")[0] as HTMLElement;
       doc.className = "app";
       const body = document.body as HTMLElement;
       body.setAttribute("style", "background-color:white");
       chgDark(!isDark);
+      chgModeTitle('DARK THEME');
     }
   }
   return (
@@ -30,7 +33,7 @@ const Header: React.FC = () => {
         <Link to="/home">HOME</Link>
         <Link to="/projects">PROJECTS</Link>
         <Link to="/contacts">CONTACTS</Link>
-        <button type="button" onClick={() => chgTheme()}>DARK THEME</button>
+        <button type="button" onClick={() => chgTheme()}>{modeTitle}</button>
       </nav>
     </header>
   );
