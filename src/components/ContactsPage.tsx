@@ -5,7 +5,7 @@ import ContactFields from "./ContactFields";
 
 const ContactsPage: React.FC = () => (
   <div className="contacts">
-    <h3>CONTACTS:</h3>
+    <h3>CONTACTS</h3>
     <div className="contacts__container">
       <ContactFields />
       <div className="contacts__right">

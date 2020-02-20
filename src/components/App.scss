@@ -87,6 +87,9 @@ html {
   .contacts__container {
     display: block !important;
   }
+  .anchors a {
+    border-bottom: solid 1px $anchor-color;
+  }
 }
 
 @media (min-width: 3840px) {
@@ -155,6 +158,9 @@ html {
       p {
         margin: 0 1rem;
       }
+      p:first-of-type {
+        font-weight: bold;
+      }
     }
     .__logo {
       margin: 0 0.125rem;
@@ -176,12 +182,20 @@ html {
   margin: 5%;
   object-fit: contain;
   border: solid 1px;
+  transition: transform 1s;
+}
+
+#img-CRM:hover,
+#img-Site:hover,
+#img-Java:hover {
+  transform: scale(0.95);
 }
 
 .anchors {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
   a {
     margin: 0 0.5rem;
     padding: 0 0.2rem;
@@ -232,7 +246,7 @@ html {
   button[type="submit"] {
     font-weight: 600;
     display: block;
-    width: 8rem;
+    width: 15rem;
   }
   a {
     padding: 0.5rem;
