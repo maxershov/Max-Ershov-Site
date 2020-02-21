@@ -33,12 +33,11 @@ const Header: React.FC = () => {
         <Link to="/home">HOME</Link>
         <Link to="/projects">PROJECTS</Link>
         <Link to="/contacts">CONTACTS</Link>
-        <button type="button" onClick={() => chgTheme()}>{modeTitle}</button>
+        <button title="Change theme" type="button" onClick={() => chgTheme()}>{modeTitle}</button>
       </nav>
     </header>
   );
 }
 
-// <a onClick={() => chgTheme()}>DARK THEME</a>
 
 export default Header;

@@ -8,7 +8,7 @@ import * as icn from "./iconsList";
 
 const objCRM = {
   name: "CRM",
-  icons: [icn.reactImg, icn.electronImg, icn.reduxImg, icn.herokuImg, icn.webpackImg, icn.eslintImg, icn.jestImg, icn.puppeteerImg, icn.ieImg, icn.reactRouterImg, icn.babelImg ],
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg,"Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
   linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -31,7 +31,7 @@ const objCRM = {
 
 const objThis = {
   name: "PROJECTS SITE",
-  icons: [icn.reactImg, icn.typescriptImg, icn.reactRouterImg, icn.sassImg, icn.webpackImg, icn.herokuImg, icn.eslintImg],
+  icons: [[icn.reactImg, "React"], [icn.typescriptImg,"TypeScript"], [icn.reactRouterImg,"React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
@@ -43,7 +43,7 @@ const objThis = {
 
 const objJava = {
   name: "PDF WRITER",
-  icons: [icn.javaImg],
+  icons: [[icn.javaImg, "Java"]],
   linkHub: "https://github.com/maxershov/java-pdf-writer",
   idImg: "img-Java",
   src: javaImg,

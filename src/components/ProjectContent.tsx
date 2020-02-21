@@ -3,7 +3,7 @@ import { herokuImg, githubImg } from "./iconsList";
 
 export interface ProjectProps {
   name: string;
-  icons: string[];
+  icons: string[][];
   linkHub: string;
   linkLive?: string;
   idImg?: string;
@@ -23,7 +23,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         <img id={idImg} alt={idImg} src={src} />
       </a>
       <div className="icons">
-        {icons.map((icon, i) => <img className="__logo" key={i} alt="icon" src={icon} />)}
+        {icons.map((icon, i) => <img className="__logo" title={icon[1]} key={icon[1]} alt="icon" src={icon[0]} />)}
       </div>
       <p>Stack:</p>
       <ul>

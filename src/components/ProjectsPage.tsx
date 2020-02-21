@@ -12,7 +12,7 @@ const ProjectsPage: React.FC = () => (
       <ProjectContent {...objJava} />
       <ProjectContent {...objCRM} />
     </div>
-    <button type="button" onClick={() => window.scrollTo(0, 0)}>&uarr;</button>
+    <button title="Scroll up" type="button" onClick={() => window.scrollTo(0, 0)}>&uarr;</button>
   </div>
 );
 
