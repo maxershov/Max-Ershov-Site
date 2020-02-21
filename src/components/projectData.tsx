@@ -18,13 +18,13 @@ const objCRM = {
     "Desktop version: Electron",
     "Framework: React",
     "Store: Redux",
-    "Bundle and compilation: Webpack with custom config and Babel",
+    "Bundle: Webpack with custom config and Babel",
     "Routing: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
     "Backend: Express.js + helmet",
-    "Browserlist: >1% and IE11"
+    "Browserlist: >1% and Internet Explorer 11"
   ],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
