@@ -8,7 +8,7 @@ import * as icn from "./iconsList";
 
 const objCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg,"Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
   linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -31,13 +31,13 @@ const objCRM = {
 
 const objThis = {
   name: "PROJECTS SITE",
-  icons: [[icn.reactImg, "React"], [icn.typescriptImg,"TypeScript"], [icn.reactRouterImg,"React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.reactRouterImg, "React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 

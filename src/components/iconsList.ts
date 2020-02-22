@@ -8,6 +8,7 @@ import * as ieImg from "../images/ie.svg";
 import * as javaImg from "../images/java.svg";
 import * as jestImg from "../images/jest.svg";
 import * as postcssImg from "../images/postcss.svg";
+import * as preactImg from "../images/preact.svg";
 import * as puppeteerImg from "../images/puppeteer.svg";
 import * as reactImg from "../images/react.svg";
 import * as reactRouterImg from "../images/react-router.svg";
@@ -18,4 +19,4 @@ import * as typescriptImg from "../images/typescript.svg";
 import * as webpackImg from "../images/webpack.svg";
 
 
-export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, javaImg, jestImg, postcssImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, twitterImg, typescriptImg, webpackImg };
+export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, javaImg, jestImg, postcssImg, preactImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, twitterImg, typescriptImg, webpackImg };

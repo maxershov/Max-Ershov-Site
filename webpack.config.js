@@ -21,35 +21,35 @@ module.exports = {
         "alias": {
             "react": "preact/compat",
             "react-dom": "preact/compat"
-          },
+        },
         extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: ['node_modules'],
     },
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin({
-          parallel: true,
+            parallel: true,
             terserOptions: {
-              compress: {
-                unsafe: true,
-                inline: true,
-                passes: 3,
-                keep_fargs: false,
-                booleans_as_integers: true,
-                warnings:false
-              },
-              output: {
-                comments: false,
-                beautify: false
-              },   
+                compress: {
+                    unsafe: true,
+                    inline: true,
+                    passes: 3,
+                    keep_fargs: false,
+                    booleans_as_integers: true,
+                    warnings: false
+                },
+                output: {
+                    comments: false,
+                    beautify: false
+                },
             },
             extractComments: false,
         })],
         runtimeChunk: "single",
         splitChunks: {
-          chunks: "all"
+            chunks: "all"
         }
-      },
+    },
     module: {
         rules: [
             {
@@ -98,11 +98,11 @@ module.exports = {
             removeEmptyAttributes: true,
             keepClosingSlash: true,
             minifyURLs: true
-          }
-        }),
+        }
+    }),
     new CompressionPlugin({
-        algorithm:"gzip"
-      }),
+        algorithm: "gzip"
+    }),
     new MiniCssExtractPlugin(),
         // new WebpackMonitor({
         //     capture: true,

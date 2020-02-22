@@ -32,7 +32,7 @@ module.exports = {
         "alias": {
             "react": "preact/compat",
             "react-dom": "preact/compat"
-          },
+        },
         extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: ['node_modules'],
     },
@@ -53,10 +53,10 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                  'css-loader',
-                  'sass-loader',
+                    'css-loader',
+                    'sass-loader',
                 ],
-              },
+            },
             {
                 loader: require.resolve('file-loader'),
                 exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.s[ac]ss$/],
@@ -76,5 +76,5 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
         title: "Max-Ershov-Site"
-    }),  new MiniCssExtractPlugin()]
+    }), new MiniCssExtractPlugin()]
 };
