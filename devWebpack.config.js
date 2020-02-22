@@ -29,6 +29,10 @@ module.exports = {
         historyApiFallback: true, // on 404 load publicPath => for BrowserRouter on refresh
     },
     resolve: {
+        "alias": {
+            "react": "preact/compat",
+            "react-dom": "preact/compat"
+          },
         extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: ['node_modules'],
     },

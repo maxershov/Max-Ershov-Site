@@ -18,6 +18,10 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
+        "alias": {
+            "react": "preact/compat",
+            "react-dom": "preact/compat"
+          },
         extensions: ['.ts', '.tsx', '.js', '.json'],
         modules: ['node_modules'],
     },
