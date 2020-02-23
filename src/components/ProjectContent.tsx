@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from 'react-i18next';
 import { herokuImg, githubImg } from "./iconsList";
 
 export interface ProjectProps {
@@ -15,6 +16,7 @@ export interface ProjectProps {
 
 
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
+  const { t } = useTranslation();
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
     <div id={id} className="projects__content">
@@ -25,7 +27,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div className="icons">
         {icons.map((icon, i) => <img className="__logo" title={icon[1]} key={icon[1]} alt="icon" src={icon[0]} />)}
       </div>
-      <p>Stack:</p>
+      <p>{t("projects.stack")}</p>
       <ul>
         {text.map(line => <li key={line}>{line}</li>)}
       </ul>
@@ -33,9 +35,9 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         {linkLive ? (
           <a href={linkLive}>
             <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
-          Live
+            Live
           </a>
-) : undefined}
+        ) : undefined}
         <a href={linkHub}>
           <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
           GitHub

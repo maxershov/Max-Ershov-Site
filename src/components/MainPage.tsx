@@ -1,25 +1,26 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from 'react-i18next';
 import ProjectsPage from "./ProjectsPage";
 import ContactsPage from "./ContactsPage";
 
-const MainPage: React.FC = () => (
-  <div className="mainPage">
-    <div className="mainPage__text _shadow">
-      <h3>HI</h3>
-      <h3>I&apos;M MAX. I&apos;M A FRONTEND DEVELOPER</h3>
-      <p>Live in Russia. Moscow</p>
-      <p>
-        You can read about my 
-        <Link to="/projects"> projects </Link> 
-        or contact me
-        <Link to="/contacts"> here </Link>
-      </p>
-      <p>Thanks for your visit!</p>
+// <h3>I&apos;M MAX. I&apos;M A FRONTEND DEVELOPER</h3>
+
+const MainPage: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="mainPage">
+      <div className="mainPage__text _shadow">
+        <h3>{t("title.a")}</h3>
+        <h3>{t("title.b")}</h3>
+        <p>{t("title.c")}</p>
+        <Trans i18nKey="textLinks"><Link to="/projects">projects</Link><Link to="/contacts"></Link></Trans>
+        <p>{t("title.d")}</p>
+      </div>
+      <ProjectsPage />
+      <ContactsPage />
     </div>
-    <ProjectsPage />
-    <ContactsPage />
-  </div>
-);
+  );
+}
 
 export default MainPage;
