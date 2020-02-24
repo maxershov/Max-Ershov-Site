@@ -37,7 +37,7 @@ const objThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -74,30 +74,30 @@ const ruCRM = {
     "Сервер: Express.js + helmet",
     "Поддержка браузеров: >1% и Internet Explorer 11"
   ],
-  heroku: "Сайт использует бесплатный тариф Heroku - страница может долго загружаться"
+  heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
 const ruThis = {
-  name: "Портфолио",
+  name: "ПОРТФОЛИО",
   icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.reactRouterImg, "React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "CSS: SASS + Поддержка темной темы", "Линтер: ESLint с Airbnb-TS конфигурацией"],
-  heroku: "Сайт использует бесплатный тариф Heroku - страница может долго загружаться"
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "CSS: SASS + Поддержка темной темы", "Линтер: ESLint с Airbnb-TS конфигурацией"],
+  heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
 const ruJava = {
-  name: "Печать PDF документов",
+  name: "PDF WRITER",
   icons: [[icn.javaImg, "Java"]],
   linkHub: "https://github.com/maxershov/java-pdf-writer",
   idImg: "img-Java",
   src: javaImg,
   id: "Java",
   text: ["Язык: Java", "GUI: Java Swing", "Библиотека: Apache PDFBox"],
-  heroku: "Первый проект для работы. Программа собирает введенные данные, подставляет в PDF заготовку и печатает. Запаковал программу и JRE в .exe файл"
+  heroku: "Первый проект для работы. Программа подставляет введенные данные в PDF заготовку и печатает документ на принтере. JRE и .jar файлы запакованы в .exe файл"
 };
 
-export { objCRM, objThis, objJava, ruCRM,ruThis, ruJava };
+export { objCRM, objThis, objJava, ruCRM, ruThis, ruJava };
