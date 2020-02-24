@@ -72,7 +72,7 @@ i18n
   .init({
     resources,
     lng: "en",
-    whitelist:["en", "ru"],
+    whitelist: ["en", "ru"],
     interpolation: {
       escapeValue: false // react already safes from xss
     }

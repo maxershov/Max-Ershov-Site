@@ -4,7 +4,6 @@ import * as siteImg from "../images/site.jpg";
 import * as javaImg from "../images/javaprg.jpg";
 import * as icn from "./iconsList";
 
-// JSXprops: (<li>CSS: <img src={postcssImg} />postCSS(variables, autoprefixer)</li>)
 
 const objCRM = {
   name: "CRM",
@@ -66,7 +65,7 @@ const ruCRM = {
     "Нативная версия: Electron",
     "Фреймворк: React",
     "Управление состоянием: Redux",
-    "Бандл: Webpack с  custom config and Babel",
+    "Сборка: Webpack(custom config) и Babel",
     "Роутинг: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
     "Линтер: ESLint с Airbnb конфигурацией",
@@ -85,7 +84,7 @@ const ruThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "CSS: SASS + Поддержка темной темы", "Линтер: ESLint с Airbnb-TS конфигурацией"],
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Поддержка темной темы", "Линтер: ESLint с Airbnb-TS конфигурацией"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
