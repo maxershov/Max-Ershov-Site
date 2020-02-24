@@ -37,8 +37,8 @@ const Header: React.FC = () => {
         <Link to="/projects">{t("links.projects")}</Link>
         <Link to="/contacts">{t("links.contacts")}</Link>
         <button title="Change theme" type="button" onClick={() => chgTheme()}>{t(modeTitle)}</button>
-        <button onClick={() => i18n.changeLanguage('en')} type="button">ENG</button>
-        <button onClick={() => i18n.changeLanguage('ru')} type="button">РУС</button>
+        <button onClick={() => i18n.changeLanguage('en')} type="button">EN</button>
+        <button onClick={() => i18n.changeLanguage('ru')} type="button">РУ</button>
       </nav>
     </header>
   );

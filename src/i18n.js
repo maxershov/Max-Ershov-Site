@@ -1,8 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-// the translations
-// (tip move them in a JSON file and import them)
+
 const resources = {
   en: {
     translation: {
@@ -73,7 +72,7 @@ i18n
   .init({
     resources,
     lng: "en",
-    // keySeparator: false, // we do not use keys in form messages.welcome
+    whitelist:["en", "ru"],
     interpolation: {
       escapeValue: false // react already safes from xss
     }
