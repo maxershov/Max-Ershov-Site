@@ -8,23 +8,28 @@ import * as burgerImg from '../images/burger.svg';
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [openMenu, chgMenu] = React.useState<boolean>(false);
-  const [isDark, chgDark] = React.useState<boolean>(false);
-  // const [modeTitle, chgModeTitle] = React.useState<string>("DARK THEME");
+  const [currLanguage, setCurrLanguage] = React.useState<string>("РУССКИЙ")
   const [modeTitle, chgModeTitle] = React.useState<string>("links.dark");
+
+  function chgLanguage(): void {
+    if (currLanguage === 'РУССКИЙ') {
+      i18n.changeLanguage('ru');
+      setCurrLanguage("ENGLISH");
+    } else {
+      i18n.changeLanguage('en');
+      setCurrLanguage("РУССКИЙ");
+    }
+  }
   function chgTheme(): void {
-    if (!isDark) {
+    if (modeTitle === "links.dark") {
       const doc = document.getElementsByClassName("app")[0] as HTMLElement;
       doc.className = "app_night";
-      const body = document.body as HTMLElement;
-      body.setAttribute("style", "background-color:rgb(29, 26, 26)");
-      chgDark(!isDark);
+      document.body.setAttribute("style", "background-color:rgb(29, 26, 26)");
       chgModeTitle("links.light");
     } else {
       const doc = document.getElementsByClassName("app_night")[0] as HTMLElement;
       doc.className = "app";
-      const body = document.body as HTMLElement;
-      body.setAttribute("style", "background-color:white");
-      chgDark(!isDark);
+      document.body.setAttribute("style", "background-color:white");
       chgModeTitle("links.dark");
     }
   }
@@ -37,8 +42,7 @@ const Header: React.FC = () => {
         <Link to="/projects">{t("links.projects")}</Link>
         <Link to="/contacts">{t("links.contacts")}</Link>
         <button title="Change theme" type="button" onClick={() => chgTheme()}>{t(modeTitle)}</button>
-        <button onClick={() => i18n.changeLanguage('en')} type="button">EN</button>
-        <button onClick={() => i18n.changeLanguage('ru')} type="button">РУ</button>
+        <button onClick={() => chgLanguage()} type="button">{currLanguage}</button>
       </nav>
     </header>
   );

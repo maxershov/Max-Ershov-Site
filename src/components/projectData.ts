@@ -2,6 +2,7 @@
 import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as javaImg from "../images/javaprg.jpg";
+import * as counterImg from "../images/counter.jpg";
 import * as icn from "./iconsList";
 
 
@@ -23,7 +24,7 @@ const objCRM = {
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
     "Backend: Express.js + helmet",
-    "Browserlist: >1% and Internet Explorer 11"
+    "Browserlist: >1% (Internet Explorer 11)"
   ],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
@@ -49,6 +50,17 @@ const objJava = {
   id: "Java",
   text: ["Language: Java", "GUI: Java Swing", "Library: Apache PDFBox"],
   heroku: "My first work project. Desktop program that takes input data, write it to PDF and print. Bundled with JRE"
+};
+
+const objCounter = {
+  name: "TIME COUNTER",
+  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"]],
+  linkHub: "https://github.com/maxershov/",
+  idImg: "img-Counter",
+  src: counterImg,
+  id: "Counter",
+  text: ["Framework: Svelte", "Bundle: Webpack"],
+  heroku: "WORK IN PROGRESS"
 };
 
 
@@ -99,4 +111,15 @@ const ruJava = {
   heroku: "Первый проект для работы. Программа подставляет введенные данные в PDF заготовку и печатает документ на принтере. JRE и .jar файлы запакованы в .exe файл"
 };
 
-export { objCRM, objThis, objJava, ruCRM, ruThis, ruJava };
+const ruCounter = {
+  name: "TIME COUNTER",
+  icons: [[icn.svelteImg, "Svelte", icn.webpackImg, "Webpack"]],
+  linkHub: "https://github.com/maxershov/",
+  idImg: "img-Counter",
+  src: counterImg,
+  id: "Counter",
+  text: ["Фреймворк: Svelte", "Сборка: Webpack"],
+  heroku: "В ПРОЦЕССЕ РАЗРАБОТКИ"
+};
+
+export { objCRM, objThis, objJava, objCounter, ruCRM, ruThis, ruJava, ruCounter };

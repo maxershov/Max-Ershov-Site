@@ -103,9 +103,9 @@ html {
 
 @media (min-width: 1070px) and (max-width: 1600px) {
     // set third item in grid to use all columns
-    .projects__content:nth-child(3n+0) {
-        grid-column: 1 / -1;
-    }
+    // .projects__content:nth-child(3n+0) {
+    //     grid-column: 1 / -1;
+    // }
 }
 
 .app__links {
@@ -185,7 +185,8 @@ html {
 
 #img-CRM,
 #img-Site,
-#img-Java {
+#img-Java,
+#img-Counter {
     width: 90%;
     margin: 5%;
     object-fit: contain;
@@ -195,7 +196,8 @@ html {
 
 #img-CRM:hover,
 #img-Site:hover,
-#img-Java:hover {
+#img-Java:hover,
+#img-Counter:hover {
     transform: scale(0.95);
 }
 

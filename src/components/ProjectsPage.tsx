@@ -2,14 +2,14 @@
 import * as React from "react";
 import ProjectContent from "./ProjectContent";
 import { useTranslation } from "react-i18next";
-import { objCRM, objThis, objJava, ruCRM, ruThis, ruJava } from "./projectData";
+import { objCRM, objThis, objJava, ruCRM, ruThis, ruJava, objCounter, ruCounter } from "./projectData";
 import i18next from "i18next";
 
 const ProjectsPage: React.FC = () => {
   const { t } = useTranslation();
   const currLanguage = i18next.language;
-  const enObj = [objThis, objJava, objCRM];
-  const ruObj = [ruThis, ruJava, ruCRM];
+  const enObj = [objThis, objCounter, objCRM, objJava];
+  const ruObj = [ruThis, ruCounter, ruCRM, ruJava];
   return (
     <div className="projectsPage _shadow">
       <h3>{t("projects.title")}</h3>
