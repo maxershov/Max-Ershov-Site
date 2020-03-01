@@ -114,9 +114,9 @@ const ruJava = {
 
 const ruCounter = {
   name: "TIME COUNTER",
-  icons: [[icn.svelteImg, "Svelte", icn.webpackImg, "Webpack"]],
-  linkHub: "https://github.com/maxershov/",
-  linkLive: "https://react-crm-maxe.herokuapp.com/",
+  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  linkHub: "https://github.com/maxershov/svelte-time-counter",
+  linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
   src: counterImg,
   id: "Counter",
