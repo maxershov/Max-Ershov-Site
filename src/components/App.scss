@@ -52,7 +52,6 @@ html {
   }
   .anchors > * {
     background-color: #212529;
-    border: solid 1px $anchor-color;
   }
   #darkImg {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
@@ -105,9 +104,6 @@ html {
   }
   .contacts__container {
     display: block !important;
-  }
-  .anchors a {
-    border-bottom: solid 1px $anchor-color;
   }
 }
 

@@ -21,7 +21,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   return (
     <div id={id} className="projects__content">
       <p>{name}</p>
-      <a href={linkHub}>
+      <a href={linkLive || linkHub}>
         <img id={idImg} alt={idImg} src={src} />
       </a>
       <div className="icons">
