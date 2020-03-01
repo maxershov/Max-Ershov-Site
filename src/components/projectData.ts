@@ -116,6 +116,7 @@ const ruCounter = {
   name: "TIME COUNTER",
   icons: [[icn.svelteImg, "Svelte", icn.webpackImg, "Webpack"]],
   linkHub: "https://github.com/maxershov/",
+  linkLive: "https://react-crm-maxe.herokuapp.com/",
   idImg: "img-Counter",
   src: counterImg,
   id: "Counter",

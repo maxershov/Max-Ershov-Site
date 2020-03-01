@@ -188,6 +188,7 @@ html {
     }
     h3,
     p {
+      animation: fadein 1s;
       margin: 0.5rem;
       color: rgb(255, 255, 255);
       text-shadow: 1px 1px 0px rgb(12, 11, 11);
@@ -328,5 +329,15 @@ html {
   }
   a {
     padding: 0.5rem;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(-2rem);
+  }
+  to {
+    opacity: 1;
   }
 }
