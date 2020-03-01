@@ -23,7 +23,7 @@ const ContactsPage: React.FC = () => {
               Facebook
           </a>
             <a href="https://github.com/maxershov">
-              <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
+              <img id="darkImg" style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
               Github
           </a>
           </div>

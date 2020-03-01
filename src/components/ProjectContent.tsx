@@ -34,12 +34,12 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div className="anchors">
         {linkLive ? (
           <a href={linkLive}>
-            <img style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
+            <img id="darkImg" style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
             Live
           </a>
         ) : undefined}
         <a href={linkHub}>
-          <img style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
+          <img id="darkImg" style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
           GitHub
         </a>
       </div>
