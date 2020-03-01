@@ -54,12 +54,13 @@ const objJava = {
 
 const objCounter = {
   name: "TIME COUNTER",
-  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"]],
-  linkHub: "https://github.com/maxershov/",
+  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  linkHub: "https://github.com/maxershov/svelte-time-counter",
+  linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
   src: counterImg,
   id: "Counter",
-  text: ["Framework: Svelte", "Bundle: Webpack"],
+  text: ["Framework: Svelte", "Bundle: Webpack", "Backend: Express.js + helmet"],
   heroku: "WORK IN PROGRESS"
 };
 
@@ -118,7 +119,7 @@ const ruCounter = {
   idImg: "img-Counter",
   src: counterImg,
   id: "Counter",
-  text: ["Фреймворк: Svelte", "Сборка: Webpack"],
+  text: ["Фреймворк: Svelte", "Сборка: Webpack", "Сервер: Express.js + helmet"],
   heroku: "В ПРОЦЕССЕ РАЗРАБОТКИ"
 };
 

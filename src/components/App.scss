@@ -53,7 +53,8 @@ html {
   .anchors > * {
     background-color: #212529;
   }
-  #darkImg {
+  #darkImg,
+  #burgerBtn {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
   }
   .projectsPage .projects .projects__content {
