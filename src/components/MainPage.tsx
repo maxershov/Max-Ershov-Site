@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
         <h3>{t("title.a")}</h3>
         <h3>{t("title.b")}</h3>
         <p>{t("title.c")}</p>
-        <Trans i18nKey="textLinks"><Link to="/projects">projects</Link><Link to="/contacts"></Link></Trans>
+        <p><Trans i18nKey="textLinks"><Link to="/projects">projects</Link><Link to="/contacts"></Link></Trans></p>
         <p>{t("title.d")}</p>
       </div>
       <ProjectsPage />

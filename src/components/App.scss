@@ -1,264 +1,315 @@
 $anchor-color: rgb(3, 118, 250);
 html {
-    @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-    }
-    #burgerBtn {
-        display: none;
-    }
+  @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  button {
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #burgerBtn {
+    display: none;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-        text-decoration: none;
-    }
-    button {
-        border: none;
-        background: none;
-    }
+  box-sizing: border-box;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+  button {
+    border: none;
+    background: none;
+  }
 }
 
 .app_night {
+  color: white;
+  a,
+  a:hover,
+  button,
+  input,
+  textarea,
+  .app__links a,
+  .app__links button,
+  .app__links_open a,
+  .app__links_open button,
+  .app__links button:hover,
+  .app__links a:hover,
+  .app__links a:focus {
     color: white;
-    a,
-    a:hover,
-    button,
+    border-color: white;
+  }
+  .contacts {
     input,
-    textarea,
-    .app__links a,
-    .app__links button,
-    .app__links_open a,
-    .app__links_open button,
-    .app__links button:hover,
-    .app__links a:hover,
-    .app__links a:focus {
-        color: white;
-        border-color: white;
+    textarea {
+      background-color: rgba(105, 102, 102, 0.795);
     }
-    .contacts {
-        input,
-        textarea {
-            background-color: rgba(105, 102, 102, 0.795);
-        }
-    }
-    .anchors>* {
-        background-color: white;
-    }
-    .projectsPage .projects .projects__content {
-        background-color: rgb(26, 26, 26);
-    }
+  }
+  .anchors > * {
+    background-color: white;
+  }
+  .projectsPage .projects .projects__content {
+    background-color: rgb(26, 26, 26);
+  }
 }
 
-@media (max-width: 750px) {
-    html {
-        font-size: 0.9rem;
-    }
-    .app__links {
-        display: none;
-    }
-    #burgerBtn {
-        display: block !important;
-        border: none;
-    }
-    #burgerBtn img {
-        border-radius: 0 !important;
-        width: 3rem;
-        height: 3rem;
-    }
-    .app__links_open {
-        overflow: hidden;
-        a,
-        button {
-            text-align: left;
-            color: black;
-            border-bottom: solid 1px;
-            position: relative;
-            padding: 0.9em;
-            display: block;
-            font-size: 0.9em;
-            width: 100%;
-        }
-    }
-    .contacts__container {
-        display: block !important;
-    }
-    .anchors a {
-        border-bottom: solid 1px $anchor-color;
-    }
-}
-
-@media (min-width: 3840px) {
-    html {
-        font-size: 3.5rem;
-    }
-}
-
-@media (min-width: 1070px) and (max-width: 1600px) {
-    // set third item in grid to use all columns
-    // .projects__content:nth-child(3n+0) {
-    //     grid-column: 1 / -1;
-    // }
-}
-
-.app__links {
-    text-align: right;
+@media (max-width: 768px) {
+  html {
+    font-size: 0.9rem;
+  }
+  .app__links {
+    display: none;
+  }
+  #burgerBtn {
+    display: block !important;
+    border: none;
+  }
+  #burgerBtn img {
+    border-radius: 0 !important;
+    width: 3rem;
+    height: 3rem;
+  }
+  .app__links_open {
+    overflow: hidden;
     a,
     button {
-        padding-right: 1rem;
-        color: black;
-        font-size: 1rem;
+      text-align: left;
+      color: black;
+      border-bottom: solid 1px;
+      position: relative;
+      padding: 0.9em;
+      display: block;
+      font-size: 0.9em;
+      width: 100%;
     }
-    a:hover,
-    button:hover,
-    a:focus {
-        border-bottom: solid 2px black;
+  }
+  .contacts__container {
+    display: block !important;
+  }
+  .anchors a {
+    border-bottom: solid 1px $anchor-color;
+  }
+}
+
+@media only screen {
+  @media (min-width: 3840px) {
+    html {
+      font-size: 3.5rem;
     }
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg3840.jpg");
+    }
+  }
+  @media (min-width: 1920px) and (max-width: 3839px) {
+    html {
+      font-size: 1.5rem;
+    }
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg1920.jpg");
+    }
+  }
+  @media (min-width: 1600px) and (max-width: 1919px) {
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg1600.jpg");
+    }
+  }
+  @media (min-width: 1366px) and (max-width: 1599px) {
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg1366.jpg");
+    }
+  }
+
+  @media (min-width: 1280px) and (max-width: 1365px) {
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg1280.jpg");
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg768.jpg");
+      background-attachment: scroll !important;
+    }
+  }
+  @media (min-width: 250px) and (max-width: 767px) {
+    .mainPage__text {
+      background-image: url("../images/jeshoots_bg500.jpg");
+      background-attachment: scroll !important;
+    }
+  }
+}
+
+// @media (min-width: 1070px) and (max-width: 1600px) {
+// set third item in grid to use all columns
+// .projects__content:nth-child(3n+0) {grid-column: 1 / -1;}}
+
+.app__links {
+  text-align: right;
+  a,
+  button {
+    padding-right: 1rem;
+    color: black;
+    font-size: 1rem;
+  }
+  a:hover,
+  button:hover,
+  a:focus {
+    border-bottom: solid 2px black;
+  }
 }
 
 .mainPage {
-    text-align: center;
-    .mainPage__text {
-        border-bottom: solid 1px;
-        padding: 10rem 0 14rem 0;
-        a {
-            color: $anchor-color;
-        }
-        h3 {
-            margin: 0.5rem;
-        }
+  text-align: center;
+  .mainPage__text {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    border-bottom: solid 1px;
+    padding: 10rem 0 14rem 00;
+    a {
+      color: $anchor-color;
+      text-shadow: 1px 1px 0px rgb(3, 17, 143);
     }
+    h3,
+    p {
+      margin: 0.5rem;
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 0px rgb(12, 11, 11);
+    }
+  }
 }
 
 .projectsPage {
-    text-align: center;
-    button {
-        font-size: 1rem;
-        border: solid 1px;
-        width: 3rem;
+  text-align: center;
+  button {
+    font-size: 1rem;
+    border: solid 1px;
+    width: 3rem;
+  }
+  .projects {
+    margin: 1rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    border-bottom: solid 1px;
+    .projects__content {
+      background-color: rgb(253, 253, 253);
+      margin: 1rem;
+      h3 {
+        text-align: center;
+      }
+      ul {
+        list-style-type: circle;
+        margin-right: 1rem;
+        line-height: 1.3rem;
+        text-align: left;
+      }
+      p {
+        margin: 0 1rem;
+      }
+      p:first-of-type {
+        padding-top: 1rem;
+        font-weight: bold;
+      }
     }
-    .projects {
-        margin: 1rem;
-        display: grid;
-        grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        border-bottom: solid 1px;
-        .projects__content {
-            background-color: rgb(253, 253, 253);
-            margin: 1rem;
-            h3 {
-                text-align: center;
-            }
-            ul {
-                list-style-type: circle;
-                margin-right: 1rem;
-                line-height: 1.3rem;
-                text-align: left;
-            }
-            p {
-                margin: 0 1rem;
-            }
-            p:first-of-type {
-                padding-top: 1rem;
-                font-weight: bold;
-            }
-        }
-        .__logo {
-            margin: 0 0.125rem;
-        }
-        .icons {
-            text-align: center;
-            margin-bottom: 1rem;
-            img {
-                width: 1.5rem;
-            }
-        }
+    .__logo {
+      margin: 0 0.125rem;
     }
+    .icons {
+      text-align: center;
+      margin-bottom: 1rem;
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
 }
 
 #img-CRM,
 #img-Site,
 #img-Java,
 #img-Counter {
-    width: 90%;
-    margin: 5%;
-    object-fit: contain;
-    border: solid 1px;
-    transition: transform 1s;
+  width: 90%;
+  margin: 5%;
+  object-fit: contain;
+  border: solid 1px;
+  transition: transform 1s;
 }
 
 #img-CRM:hover,
 #img-Site:hover,
 #img-Java:hover,
 #img-Counter:hover {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .anchors {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    a {
-        margin: 0 0.5rem;
-        padding: 0 0.2rem;
-        color: $anchor-color;
-        font-weight: 600;
-    }
-    img {
-        padding-right: 4px;
-        margin-bottom: -3px;
-    }
-    a:hover {
-        box-shadow: 0px 3px 2px rgb(41, 41, 41);
-    }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  a {
+    margin: 0 0.5rem;
+    padding: 0 0.2rem;
+    color: $anchor-color;
+    font-weight: 600;
+  }
+  img {
+    padding-right: 4px;
+    margin-bottom: -3px;
+  }
+  a:hover {
+    box-shadow: 0px 3px 2px rgb(41, 41, 41);
+  }
 }
 
 .contacts {
-    border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+  padding: 0.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  .contacts__container {
+    display: flex;
+  }
+  .contacts__right {
+    flex: 0.5;
+  }
+  .contacts__left {
+    flex: 1;
+  }
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+  }
+  input::placeholder,
+  textarea::placeholder,
+  button {
+    font-size: 0.8rem;
+  }
+  textarea {
+    height: 4rem;
+  }
+  button {
+    width: 3rem;
+    border: solid 1px;
+  }
+
+  button[type="submit"] {
+    font-weight: 600;
+    display: block;
+    width: 15rem;
+  }
+  button[type="submit"]:hover {
+    color: $anchor-color;
+  } 
+  a {
     padding: 0.5rem;
-    margin-top: 3rem;
-    text-align: center;
-    .contacts__container {
-        display: flex;
-    }
-    .contacts__right {
-        flex: 0.5;
-    }
-    .contacts__left {
-        flex: 1;
-    }
-    input,
-    textarea {
-        display: block;
-        width: 100%;
-        height: 1.5rem;
-    }
-    input::placeholder,
-    textarea::placeholder,
-    button {
-        font-size: 0.8rem;
-    }
-    textarea {
-        height: 4rem;
-    }
-    button {
-        width: 3rem;
-        border: solid 1px;
-    }
-    button[type="submit"] {
-        font-weight: 600;
-        display: block;
-        width: 15rem;
-    }
-    a {
-        padding: 0.5rem;
-    }
+  }
 }
