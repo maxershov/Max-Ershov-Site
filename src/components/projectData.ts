@@ -37,7 +37,7 @@ const objThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Dark theme support", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -97,7 +97,7 @@ const ruThis = {
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Поддержка темной темы", "Линтер: ESLint с Airbnb-TS конфигурацией"],
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 

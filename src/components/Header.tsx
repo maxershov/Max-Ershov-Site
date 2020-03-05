@@ -1,4 +1,5 @@
-import * as React from "react";
+// import * as React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
 import * as burgerImg from '../images/burger.svg';
@@ -7,9 +8,19 @@ import * as burgerImg from '../images/burger.svg';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const [openMenu, chgMenu] = React.useState<boolean>(false);
-  const [currLanguage, setCurrLanguage] = React.useState<string>("РУССКИЙ")
-  const [modeTitle, chgModeTitle] = React.useState<string>("links.dark");
+  const [openMenu, chgMenu] = useState<boolean>(false);
+  const [currLanguage, setCurrLanguage] = useState<string>("РУССКИЙ")
+  const [modeTitle, chgModeTitle] = useState<string>("links.dark");
+
+
+  useEffect(() => {
+    // checks for dark theme and ru language
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
+    if (window.navigator.language === "ru") {
+      i18n.changeLanguage('ru');
+      setCurrLanguage("ENGLISH");
+    }
+  }, []);
 
   function chgLanguage(): void {
     if (currLanguage === 'РУССКИЙ') {
