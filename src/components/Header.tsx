@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     // checks for dark theme and ru language
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
-    if (window.navigator.language === "ru") {
+    if (window.navigator.language === "ru" || window.navigator.language === "ru-RU") {
       i18n.changeLanguage('ru');
       setCurrLanguage("ENGLISH");
     }
