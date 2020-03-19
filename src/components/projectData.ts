@@ -3,6 +3,7 @@ import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as javaImg from "../images/javaprg.jpg";
 import * as counterImg from "../images/counter.jpg";
+import * as covidImg from "../images/covid.jpg";
 import * as icn from "./iconsList";
 
 
@@ -64,6 +65,17 @@ const objCounter = {
   heroku: "WORK IN PROGRESS"
 };
 
+const objCovid = {
+  name: "COVID-19 STATS & ADVICE",
+  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  linkHub: "https://github.com/maxershov/covid-stats-site",
+  linkLive: "https://covidrus.herokuapp.com/",
+  idImg: "img-Covid",
+  src: covidImg,
+  id: "Covid-Site",
+  text: ["Framework: React", "Language: TypeScript", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
+  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
+};
 
 
 const ruCRM = {
@@ -124,4 +136,16 @@ const ruCounter = {
   heroku: "В ПРОЦЕССЕ РАЗРАБОТКИ"
 };
 
-export { objCRM, objThis, objJava, objCounter, ruCRM, ruThis, ruJava, ruCounter };
+const ruCovid = {
+  name: "COVID-19 СТАТИСТИКА & СОВЕТЫ",
+  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  linkHub: "https://github.com/maxershov/covid-stats-site",
+  linkLive: "https://covidrus.herokuapp.com/",
+  idImg: "img-Covid",
+  src: covidImg,
+  id: "Covid-Site",
+  text: ["Фреймворк: React", "Язык: TypeScript", "Сервер: Express.js", "Сборка: Webpack(custom config)", "CSS: SASS", "API: covid-19-api"],
+  heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
+};
+
+export { objCRM, objThis, objJava, objCounter, objCovid, ruCRM, ruThis, ruJava, ruCounter, ruCovid };
