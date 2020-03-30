@@ -32,13 +32,13 @@ const objCRM = {
 
 const objThis = {
   name: "PORTFOLIO",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.reactRouterImg, "React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom to vanilla #", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -67,13 +67,13 @@ const objCounter = {
 
 const objCovid = {
   name: "COVID-19 STATS & ADVICE",
-  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"],[icn.babelImg, "Babel"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.babelImg, "Babel"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",
   src: covidImg,
   id: "Covid-Site",
-  text: ["Framework: React", "Language: TypeScript","Bundle: Webpack & Babel", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
+  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack & Babel", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -103,13 +103,13 @@ const ruCRM = {
 
 const ruThis = {
   name: "ПОРТФОЛИО",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.reactRouterImg, "React-Router"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom => #", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
@@ -138,7 +138,7 @@ const ruCounter = {
 
 const ruCovid = {
   name: "COVID-19 СТАТИСТИКА & СОВЕТЫ",
-  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"],[icn.babelImg, "Babel"],[icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.babelImg, "Babel"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",

@@ -35,8 +35,7 @@
         "helmet": "^3.21.3",
         "i18next": "^19.3.3",
         "preact": "^10.3.4",
-        "react-i18next": "^11.3.3",
-        "react-router-dom": "^5.1.2"
+        "react-i18next": "^11.3.3"
     },
     "devDependencies": {
         "@babel/core": "^7.8.7",

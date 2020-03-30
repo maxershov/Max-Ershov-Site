@@ -11,7 +11,7 @@ const ProjectsPage: React.FC = () => {
   const enObj = [objThis, objCounter, objCRM, objJava, objCovid];
   const ruObj = [ruThis, ruCounter, ruCRM, ruJava, ruCovid];
   return (
-    <div className="projectsPage _shadow">
+    <div id="projects" className="projectsPage _shadow">
       <h3>{t("projects.title")}</h3>
       <div className="projects">
         {currLanguage === "ru"

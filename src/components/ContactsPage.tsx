@@ -7,7 +7,7 @@ import ContactFields from "./ContactFields";
 const ContactsPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="contacts">
+    <div id="contacts" className="contacts">
       <h3>{t("contacts.title")}</h3>
       <div className="contacts__container">
         <ContactFields />

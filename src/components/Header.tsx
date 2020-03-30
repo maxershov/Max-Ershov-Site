@@ -1,6 +1,5 @@
 // import * as React from "react";
 import React, { useEffect, useState } from 'react';
-import { Link, Redirect } from "react-router-dom";
 import { useTranslation, Trans } from 'react-i18next';
 import * as burgerImg from '../images/burger.svg';
 
@@ -48,10 +47,9 @@ const Header: React.FC = () => {
     <header>
       <button id="burgerBtn" type="button" onClick={() => chgMenu(!openMenu)}><img alt="burgerImg" src={burgerImg} /></button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
-        <Redirect exact from="/" to="/home" />
-        <Link to="/home">{t("links.home")}</Link>
-        <Link to="/projects">{t("links.projects")}</Link>
-        <Link to="/contacts">{t("links.contacts")}</Link>
+        <a title="To home" href="#home">{t("links.home")}</a>
+        <a title="To projects" href="#projects">{t("links.projects")}</a>
+        <a title="To contacts" href="#contacts">{t("links.contacts")}</a>
         <button title="Change theme" type="button" onClick={() => chgTheme()}>{t(modeTitle)}</button>
         <button onClick={() => chgLanguage()} type="button">{currLanguage}</button>
       </nav>
