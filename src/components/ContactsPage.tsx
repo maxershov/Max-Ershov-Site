@@ -29,7 +29,6 @@ const ContactsPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <button title={t("scroll")} type="button" onClick={() => window.scrollTo(0, 0)}>&uarr;</button>
     </div>
   )
 }

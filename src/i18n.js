@@ -31,7 +31,6 @@ const resources = {
         "placeholderMsg": "Message",
         "btn": "SEND MESSAGE"
       },
-      "scroll": "Scroll up"
     }
   },
   ru: {
@@ -61,8 +60,7 @@ const resources = {
         "placeholderMail": "Почтовый адрес",
         "placeholderMsg": "Сообщение",
         "btn": "ОТПРАВИТЬ СООБЩЕНИЕ",
-      },
-      "scroll": "Вверх"
+      }
     }
   }
 }

@@ -15,9 +15,10 @@ import * as reactRouterImg from "../images/react-router.svg";
 import * as reduxImg from "../images/redux.svg";
 import * as sassImg from "../images/sass.svg";
 import * as svelteImg from "../images/svelte.svg";
+import * as topArrowImg from "../images/topArrow.svg";
 import * as twitterImg from "../images/twitter.svg";
 import * as typescriptImg from "../images/typescript.svg";
 import * as webpackImg from "../images/webpack.svg";
 
 
-export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, javaImg, jestImg, postcssImg, preactImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, svelteImg, twitterImg, typescriptImg, webpackImg };
+export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, javaImg, jestImg, postcssImg, preactImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, svelteImg, topArrowImg, twitterImg, typescriptImg, webpackImg };

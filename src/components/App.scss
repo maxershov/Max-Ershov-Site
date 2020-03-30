@@ -53,7 +53,8 @@ html {
     background-color: #212529;
   }
   #darkImg,
-  #burgerBtn {
+  #burgerBtn,
+  #topArrowImg {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
   }
   .projectsPage .projects .projects__content {
@@ -86,6 +87,10 @@ html {
     border-radius: 0 !important;
     width: 3rem;
     height: 3rem;
+  }
+  #topArrowImg {
+    // width: 5rem !important;
+    // left: 80% !important;
   }
   .app__links_open {
     overflow: hidden;
@@ -197,11 +202,6 @@ html {
 
 .projectsPage {
   text-align: center;
-  button {
-    font-size: 1rem;
-    border: solid 1px;
-    width: 3rem;
-  }
   .projects {
     margin: 1rem;
     display: grid;
@@ -236,6 +236,7 @@ html {
       margin-bottom: 1rem;
       img {
         width: 1.5rem;
+        height: 100%;
       }
     }
   }
@@ -314,16 +315,12 @@ html {
   textarea {
     height: 4rem;
   }
-  button {
-    width: 3rem;
-    border: solid 1px;
-  }
-
   button[type="submit"] {
     font-weight: 600;
     display: block;
     width: 15rem;
     margin-top: 0.5rem;
+    border: solid 1px;
   }
   button[type="submit"]:hover {
     color: $anchor-color;
@@ -340,5 +337,31 @@ html {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#toTop {
+  // transition: all .25s ease-in-out;
+  -webkit-animation: fadein 7s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 7s; /* Firefox < 16 */
+  animation: fadein 7s;
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  display: inline-flex;
+  cursor: pointer;
+  z-index: 69;
+  img {
+    width: 2.1rem;
+    height: 100%; // for -webkit
   }
 }

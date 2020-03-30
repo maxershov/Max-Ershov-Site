@@ -18,13 +18,6 @@ const ProjectsPage: React.FC = () => {
           ? ruObj.map(obj => <ProjectContent {...obj} />)
           : enObj.map(obj => <ProjectContent {...obj} />)}
       </div>
-      <button
-        title="Scroll up"
-        type="button"
-        onClick={() => window.scrollTo(0, 0)}
-      >
-        &uarr;
-      </button>
     </div>
   );
 };
