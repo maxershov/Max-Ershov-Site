@@ -350,9 +350,6 @@ html {
 }
 
 #toTop {
-  // transition: all .25s ease-in-out;
-  -webkit-animation: fadein 7s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 7s; /* Firefox < 16 */
   animation: fadein 7s;
   position: fixed;
   top: 85%;

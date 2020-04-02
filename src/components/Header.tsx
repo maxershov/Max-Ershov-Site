@@ -1,4 +1,3 @@
-// import * as React from "react";
 import React, { useEffect, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import * as burgerImg from '../images/burger.svg';

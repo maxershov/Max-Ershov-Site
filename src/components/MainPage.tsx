@@ -4,7 +4,6 @@ import { useTranslation, Trans } from 'react-i18next';
 import ProjectsPage from "./ProjectsPage";
 import ContactsPage from "./ContactsPage";
 
-// <h3>I&apos;M MAX. I&apos;M A FRONTEND DEVELOPER</h3>
 
 const MainPage: React.FC = () => {
   const { t } = useTranslation();

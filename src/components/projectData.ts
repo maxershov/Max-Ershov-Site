@@ -9,7 +9,7 @@ import * as icn from "./iconsList";
 
 const objCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
   linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -19,7 +19,7 @@ const objCRM = {
     "Desktop version: Electron",
     "Framework: React",
     "Store: Redux",
-    "Bundle: Webpack with custom config and Babel",
+    "Bundle: Webpack(custom config) and Babel",
     "Routing: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
     "Linting: ESLint with Airbnb config",
@@ -32,13 +32,13 @@ const objCRM = {
 
 const objThis = {
   name: "PORTFOLIO",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.postcssImg, "postCSS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: react-router-dom to vanilla #", "Backend: Express.js", "L10n: i18next", "CSS: SASS + Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
+  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: Vanilla #", "Backend: Express.js", "L10n: i18next", "CSS: postCSS, SASS + Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
@@ -73,14 +73,14 @@ const objCovid = {
   idImg: "img-Covid",
   src: covidImg,
   id: "Covid-Site",
-  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack & Babel", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
+  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack and Babel", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
 
 const ruCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
   linkHub: "https://github.com/maxershov/Web-React-CRM",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -103,13 +103,13 @@ const ruCRM = {
 
 const ruThis = {
   name: "ПОРТФОЛИО",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.postcssImg, "postCSS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
   src: siteImg,
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom => #", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: react-router-dom => #", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: postCSS, SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
