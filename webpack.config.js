@@ -71,8 +71,12 @@ module.exports = {
                 ],
             },
             {
+                test: /\.svg$/,
+                loader: 'url-loader'
+              },
+            {
                 loader: require.resolve('file-loader'),
-                exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.s[ac]ss$/],
+                exclude: [/\.(js|mjs|svg|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.s[ac]ss$/],
                 options: {
                     name: 'static/media/[name].[hash:8].[ext]',
                     esModule: false,
