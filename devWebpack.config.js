@@ -4,6 +4,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const myLocalHost = require("./host");
 
 module.exports = {
@@ -77,5 +78,12 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
         title: "Max-Ershov-Site"
-    }), new MiniCssExtractPlugin()]
+    }), new MiniCssExtractPlugin(),
+    new CopyPlugin([
+
+        { from: path.join(__dirname, "src", "assets", "apple-touch-icon.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "android-chrome-512x512.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "android-chrome-192x192.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "site.webmanifest"), to: path.join(__dirname, "dist") }
+    ])]
 };

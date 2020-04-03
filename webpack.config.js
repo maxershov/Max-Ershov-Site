@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 // const WebpackMonitor = require('webpack-monitor');
 
 module.exports = {
@@ -101,6 +102,12 @@ module.exports = {
             minifyURLs: true
         }
     }),
+    new CopyPlugin([
+        { from: path.join(__dirname, "src", "assets", "apple-touch-icon.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "android-chrome-512x512.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "android-chrome-192x192.png"), to: path.join(__dirname, "dist") },
+        { from: path.join(__dirname, "src", "assets", "site.webmanifest"), to: path.join(__dirname, "dist") }
+    ]),
     new CompressionPlugin({
         algorithm: "gzip"
     }),
