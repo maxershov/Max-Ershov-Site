@@ -10,7 +10,6 @@ const Header: React.FC = () => {
   const [currLanguage, setCurrLanguage] = useState<string>("РУССКИЙ")
   const [modeTitle, chgModeTitle] = useState<string>("links.dark");
 
-
   useEffect(() => {
     // checks for dark theme and ru language
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
@@ -49,8 +48,14 @@ const Header: React.FC = () => {
         <a title="To home" href="#home">{t("links.home")}</a>
         <a title="To projects" href="#projects">{t("links.projects")}</a>
         <a title="To contacts" href="#contacts">{t("links.contacts")}</a>
-        <button title="Change theme" type="button" onClick={() => chgTheme()}>{t(modeTitle)}</button>
-        <button onClick={() => chgLanguage()} type="button">{currLanguage}</button>
+        <label className="toggle-check">
+          <input onClick={() => chgTheme()} checked={modeTitle === 'links.light' ? true : false} type="checkbox" className="toggle-check-input" />
+          <span data-content={t(modeTitle)} className="toggle-check-text"></span>
+        </label>
+        <label className="toggle-check">
+          <input onClick={() => chgLanguage()} checked={currLanguage === 'РУССКИЙ' ? true : false} type="checkbox" className="toggle-check-input" />
+          <span data-content={currLanguage} className="toggle-check-text"></span>
+        </label>
       </nav>
     </header>
   );
