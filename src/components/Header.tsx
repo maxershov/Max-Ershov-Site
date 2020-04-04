@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation} from "react-i18next";
 import * as burgerImg from "../images/burger.svg";
 
 const Header: React.FC = () => {
@@ -11,12 +11,6 @@ const Header: React.FC = () => {
   useEffect(() => {
     // checks for dark theme and ru language
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
-    if (
-      window.navigator.language == "ru" ||
-      window.navigator.language == "ru-RU"
-    ) {
-      chgLanguage();
-    }
   }, []);
 
   function chgLanguage(): void {
@@ -75,7 +69,7 @@ const Header: React.FC = () => {
           <label className="switch">
             <input
               onClick={() => chgLanguage()}
-              checked={currLanguage === "ENGLISH" ? true : false}
+              checked={currLanguage === "РУССКИЙ" ? false : true}
               type="checkbox"
               id="checkbox"
             />
