@@ -6,7 +6,6 @@ html {
     button {
         font-family: inherit;
         cursor: pointer;
-        font-weight: bold;
         padding: 0;
         border: none;
         background: none;
@@ -91,7 +90,8 @@ html {
     }
     .app__links_open {
         overflow: hidden;
-        a {
+        a,
+        button {
             text-align: left;
             color: black;
             border-bottom: solid 1px;
@@ -104,17 +104,6 @@ html {
     }
     .contacts__container {
         display: block !important;
-    }
-    .toggle-check {
-        position: relative;
-        padding: 0.9em 0;
-        display: block;
-        border-bottom: solid 1px;
-        width: 100%;
-        .toggle-check-text {
-            border-radius: 0 !important;
-            font-size: 1.1em !important;
-        }
     }
 }
 
@@ -169,9 +158,11 @@ html {
 // .projects__content:nth-child(3n+0) {grid-column: 1 / -1;}}
 .app__links {
     text-align: right;
-    a {
+    a,
+    button {
         padding-right: 1rem;
         color: black;
+        font-size: 1rem;
     }
     a:hover,
     a:focus {
@@ -365,46 +356,53 @@ html {
     }
 }
 
-.toggle-check {
-    font-size: 0.9em;
-    vertical-align: top;
-    margin-right: 1rem;
-    .toggle-check-input {
-        width: 1px;
-        height: 1px;
-        position: absolute;
-    }
-    .toggle-check-text {
-        display: inline-block;
-        position: relative;
-        text-transform: uppercase;
-        padding: 0em 0.5em 0em 2em;
-        border-radius: 1em;
-        border-bottom: 1px solid;
-        min-width: 2em;
-        cursor: pointer;
-    }
-    .toggle-check-text:after {
-        content: " ";
-        display: block;
-        background: $anchor-color;
-        width: 1.1em;
-        height: 1.1em;
-        border-radius: 1em;
-        position: absolute;
-        left: 0.3em;
-        top: 0.1em;
-        transition: left 0.15s, margin-left 0.15s;
-    }
-    .toggle-check-text:before {
-        content: attr(data-content);
-    }
-    .toggle-check-input:checked~.toggle-check-text {
-        padding-left: 0.5em;
-        padding-right: 2em;
-    }
-    .toggle-check-input:checked~.toggle-check-text:after {
-        left: 100%;
-        margin-left: -1.4em;
-    }
+.switch {
+    display: inline-block;
+    height: 0.9rem;
+    width: 2rem;
+    position: relative;
+    margin-left: 0.3rem;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    // background-color: #ccc;
+    background-color: $anchor-color;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 0px;
+    content: "";
+    height: 1rem;
+    left: 0px;
+    position: absolute;
+    transition: 0.4s;
+    width: 1rem;
+}
+
+input:checked+.slider {
+    background-color: $anchor-color;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1rem);
+}
+
+.slider.round {
+    border-radius: 0.8rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
