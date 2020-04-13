@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import * as burgerImg from "../images/burger.svg";
+
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -8,10 +9,24 @@ const Header: React.FC = () => {
   const [currLanguage, setCurrLanguage] = useState<string>("РУССКИЙ");
   const [modeTitle, chgModeTitle] = useState<string>("links.dark");
 
+
+  function handleClick(event: MouseEvent) {
+    // close burger menu after click on anchor
+    if (event.target instanceof HTMLAnchorElement) {
+      chgMenu(false);
+    }
+  }
   useEffect(() => {
-    // checks for dark theme and ru language
+    window.addEventListener('click', handleClick);
+    return () => window.removeEventListener('click', handleClick);
+  }, []);
+
+
+  useEffect(() => {
+    // checks for dark theme
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
   }, []);
+
 
   function chgLanguage(): void {
     if (currLanguage === "РУССКИЙ") {
@@ -22,26 +37,22 @@ const Header: React.FC = () => {
       i18n.changeLanguage("en");
     }
   }
+
+
   function chgTheme(): void {
     if (modeTitle === "links.dark") {
-      const doc = document.getElementsByClassName("app")[0] as HTMLElement;
-      doc.className = "app_night";
-      document.body.setAttribute("style", "background-color:rgb(29, 26, 26)");
+      document.documentElement.setAttribute('data-theme', 'dark');
       chgModeTitle("links.light");
     } else {
-      const doc = document.getElementsByClassName(
-        "app_night"
-      )[0] as HTMLElement;
-      doc.className = "app";
-      document.body.setAttribute("style", "background-color:white");
+      document.documentElement.setAttribute('data-theme', 'light');
       chgModeTitle("links.dark");
     }
   }
+
+
   return (
     <header>
-      <button id="burgerBtn" type="button" onClick={() => chgMenu(!openMenu)}>
-        <img alt="burgerImg" src={burgerImg} />
-      </button>
+      <input type="image" id="burgerBtn" onClick={() => chgMenu(!openMenu)} alt="burgerImg" src={burgerImg} />
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <a title="To home" href="#home">
           {t("links.home")}

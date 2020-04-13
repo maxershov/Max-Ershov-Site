@@ -1,4 +1,3 @@
-$anchor-color: rgb(3, 118, 250);
 html {
     @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
     font-family: "Montserrat", sans-serif;
@@ -13,9 +12,6 @@ html {
     #burgerBtn {
         display: none;
     }
-}
-
-* {
     box-sizing: border-box;
     a,
     a:visited,
@@ -25,51 +21,43 @@ html {
     }
 }
 
-.app_night {
-    color: white;
-    a,
-    a:hover,
-    button,
-    input,
-    textarea,
-    .app__links a,
-    .app__links button,
-    .app__links_open a,
-    .app__links_open button,
-    .app__links button:hover,
-    .app__links a:hover,
-    .app__links a:focus {
-        color: white;
-        border-color: white;
-    }
-    .contacts {
-        input,
-        textarea,
-        .anchors {
-            background-color: #212529;
-        }
-    }
-    .anchors>* {
-        background-color: #212529;
-    }
-    #darkImg,
-    #burgerBtn,
-    #topArrowImg {
-        filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
-    }
-    .projectsPage .projects .projects__content {
-        background-color: rgb(26, 26, 26);
-    }
-    img {
-        opacity: 0.75;
-        transition: opacity 0.5s ease-in-out;
-    }
-    img:hover {
+.app img {
+    opacity: var(--imgOpacity);
+    transition: opacity 0.7s ease-in-out;
+    &:hover {
         opacity: 1;
     }
-    .mainPage__text {
-        opacity: 0.7;
-    }
+}
+
+:root {
+    --bgcolor: white;
+    --anchorColor: rgb(3, 118, 250);
+    --white: #fff;
+    --lightGray: rgba(128, 128, 128, 1);
+    --textColor: black;
+    --inputBgColor: white;
+    --imgOpacity: 1;
+    --svgFilter: none;
+}
+
+[data-theme="dark"] {
+    --bgcolor: #212121;
+    --white: #fff;
+    --lightGray: #000000;
+    --textColor: white;
+    --inputBgColor: #212529;
+    --imgOpacity: 0.75;
+    --svgFilter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+#darkImg,
+#burgerBtn,
+#topArrowImg {
+    filter: var(--svgFilter);
+}
+
+body {
+    background-color: var(--bgcolor);
 }
 
 @media (max-width: 768px) {
@@ -81,10 +69,6 @@ html {
     }
     #burgerBtn {
         display: block !important;
-        border: none;
-    }
-    #burgerBtn img {
-        border-radius: 0 !important;
         width: 3rem;
         height: 3rem;
     }
@@ -93,7 +77,7 @@ html {
         a,
         button {
             text-align: left;
-            color: black;
+            color: var(--textColor);
             border-bottom: solid 1px;
             position: relative;
             padding: 0.9em;
@@ -161,12 +145,12 @@ html {
     a,
     button {
         padding-right: 1rem;
-        color: black;
+        color: var(--textColor);
         font-size: 1rem;
     }
     a:hover,
     a:focus {
-        border-bottom: solid 2px black;
+        border-bottom: solid 2px var(--textColor);
     }
 }
 
@@ -178,31 +162,34 @@ html {
         background-position: top center;
         background-attachment: fixed;
         border-bottom: solid 1px;
+
+        opacity: var(--imgOpacity);
+        transition: opacity 0.7s ease-in-out;
+
         padding: 10rem 0 14rem 00;
         a {
-            color: $anchor-color;
-            text-shadow: 1px 1px 0px rgb(3, 17, 143);
+            color: var(--anchorColor);
         }
         h3,
         p {
             animation: fadein 1s;
             margin: 0.5rem;
-            color: rgb(255, 255, 255);
-            text-shadow: 1px 1px 0px rgb(12, 11, 11);
+            color: var(--white);
+            letter-spacing: 0.1em;
+            text-shadow: -1px 2px 1px black, 1px 2px 1px black;
         }
     }
 }
 
 .projectsPage {
     text-align: center;
+    color: var(--textColor);
     .projects {
-        margin: 1rem;
         display: grid;
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         border-bottom: solid 1px;
         .projects__content {
-            background-color: rgb(253, 253, 253);
             margin: 1rem;
             h3 {
                 text-align: center;
@@ -215,10 +202,11 @@ html {
             }
             p {
                 margin: 0 1rem;
-            }
-            p:first-of-type {
-                padding-top: 1rem;
-                font-weight: bold;
+
+                &:first-of-type {
+                    padding-top: 1rem;
+                    font-weight: bold;
+                }
             }
         }
         .__logo {
@@ -240,19 +228,13 @@ html {
 #img-Java,
 #img-Counter,
 #img-Covid {
-    width: 90%;
+    width: 95%;
     margin: 5%;
     object-fit: contain;
-    // border: solid 1px;
     transition: transform 1s;
-}
-
-#img-CRM:hover,
-#img-Site:hover,
-#img-Java:hover,
-#img-Counter:hover,
-#img-Covid:hover {
-    transform: scale(0.95);
+    &:hover {
+        transform: scale(0.95);
+    }
 }
 
 .anchors {
@@ -262,24 +244,26 @@ html {
     font-size: 1.1rem;
     a {
         margin: 0 0.5rem;
-        padding: 0 0.2rem;
-        color: $anchor-color;
+        padding: 0.5rem;
+        color: var(--anchorColor);
         font-weight: 600;
+        box-shadow: 0px 3px var(--bgcolor), 0px 6px 5px -1px var(--lightGray);
+        &:hover {
+            box-shadow: inset 0px 4px 4px var(--lightGray);
+            text-shadow: 0px 1px 6px var(--anchorColor);
+        }
     }
     img {
         padding-right: 4px;
         margin-bottom: -3px;
     }
-    a:hover {
-        box-shadow: 0px 3px 2px rgb(41, 41, 41);
-    }
 }
 
 .contacts {
-    border-radius: 15px 15px 0 0;
-    padding: 0.5rem;
-    margin-top: 3rem;
+    color: var(--textColor);
+    padding: 0.5rem 0;
     text-align: center;
+
     .contacts__container {
         display: flex;
     }
@@ -291,19 +275,27 @@ html {
     }
     input,
     textarea {
+        color: var(--textColor);
+        font-size: 1rem;
         display: block;
-        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        width: 90%;
         height: 1.5rem;
         outline: none;
+        background-color: var(--inputBgColor);
+        margin: 0 auto 0.3rem auto;
+        box-shadow: inset 0px 4px 4px var(--lightGray);
+        &::placeholder {
+            font-size: 0.8rem;
+        }
+        &:focus {
+            box-shadow: inset 0px 4px 1px var(--anchorColor);
+        }
     }
-    input::placeholder,
-    textarea::placeholder,
     button {
         font-size: 0.8rem;
-    }
-    input:focus,
-    textarea:focus {
-        background-color: rgba(196, 221, 238, 0.418);
+        color: var(--textColor);
     }
     textarea {
         height: 4rem;
@@ -311,25 +303,14 @@ html {
     button[type="submit"] {
         font-weight: 600;
         display: block;
+        padding: 0.4rem;
         width: 15rem;
         margin-top: 0.5rem;
-        border: solid 1px;
-    }
-    button[type="submit"]:hover {
-        color: $anchor-color;
-    }
-    a {
-        padding: 0.5rem;
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translate(-2rem);
-    }
-    to {
-        opacity: 1;
+        margin: 0 auto;
+        box-shadow: 0px 5px var(--bgcolor), 0px 7px 5px -1px var(--lightGray);
+        &:hover {
+            box-shadow: inset 0px 4px 4px var(--lightGray);
+        }
     }
 }
 
@@ -353,6 +334,9 @@ html {
     img {
         width: 2.1rem;
         height: 100%; // for -webkit
+        &:hover {
+            filter: invert(0.5) sepia(1) saturate(10) hue-rotate(360deg);
+        }
     }
 }
 
@@ -362,15 +346,13 @@ html {
     width: 2rem;
     position: relative;
     margin-left: 0.3rem;
-}
-
-.switch input {
-    display: none;
+    input {
+        display: none;
+    }
 }
 
 .slider {
-    // background-color: #ccc;
-    background-color: $anchor-color;
+    background-color: var(--anchorColor);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -378,31 +360,30 @@ html {
     right: 0;
     top: 0;
     transition: 0.4s;
+
+    &:before {
+        background-color: var(--white);
+        bottom: 0px;
+        content: "";
+        height: 1rem;
+        left: 0px;
+        position: absolute;
+        transition: 0.4s;
+        width: 1rem;
+    }
+    &.round {
+        border-radius: 0.8rem;
+        &:before {
+            border-radius: 50%;
+        }
+    }
 }
 
-.slider:before {
-    background-color: #fff;
-    bottom: 0px;
-    content: "";
-    height: 1rem;
-    left: 0px;
-    position: absolute;
-    transition: 0.4s;
-    width: 1rem;
-}
-
-input:checked+.slider {
-    background-color: $anchor-color;
-}
-
-input:checked+.slider:before {
-    transform: translateX(1rem);
-}
-
-.slider.round {
-    border-radius: 0.8rem;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+input:checked {
+    + .slider {
+        background-color: var(--anchorColor);
+        &:before {
+            transform: translateX(1rem);
+        }
+    }
 }

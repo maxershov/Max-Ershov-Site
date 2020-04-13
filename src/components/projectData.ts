@@ -1,7 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
-import * as javaImg from "../images/javaprg.jpg";
 import * as counterImg from "../images/counter.jpg";
 import * as covidImg from "../images/covid.jpg";
 import * as icn from "./iconsList";
@@ -42,16 +41,6 @@ const objThis = {
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
-const objJava = {
-  name: "PDF WRITER",
-  icons: [[icn.javaImg, "Java"]],
-  linkHub: "https://github.com/maxershov/java-pdf-writer",
-  idImg: "img-Java",
-  src: javaImg,
-  id: "Java",
-  text: ["Language: Java", "GUI: Java Swing", "Library: Apache PDFBox"],
-  heroku: "My first work project. Desktop program that takes input data, write it to PDF and print. Bundled with JRE"
-};
 
 const objCounter = {
   name: "TIME COUNTER",
@@ -113,16 +102,6 @@ const ruThis = {
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
-const ruJava = {
-  name: "PDF WRITER",
-  icons: [[icn.javaImg, "Java"]],
-  linkHub: "https://github.com/maxershov/java-pdf-writer",
-  idImg: "img-Java",
-  src: javaImg,
-  id: "Java",
-  text: ["Язык: Java", "GUI: Java Swing", "Библиотека: Apache PDFBox"],
-  heroku: "Первый проект для работы. Программа подставляет введенные данные в PDF заготовку и печатает документ на принтере. JRE и .jar файлы запакованы в .exe файл"
-};
 
 const ruCounter = {
   name: "TIME COUNTER",
@@ -148,4 +127,4 @@ const ruCovid = {
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
-export { objCRM, objThis, objJava, objCounter, objCovid, ruCRM, ruThis, ruJava, ruCounter, ruCovid };
+export { objCRM, objThis, objCounter, objCovid, ruCRM, ruThis, ruCounter, ruCovid };
