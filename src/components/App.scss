@@ -19,6 +19,9 @@ html {
     a:active {
         text-decoration: none;
     }
+    input, textarea {
+        -webkit-appearance: none;
+    }
 }
 
 .app img {
