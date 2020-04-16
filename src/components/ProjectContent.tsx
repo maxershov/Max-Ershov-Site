@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { t } = useTranslation();
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
-    <div id={id} className="projects__content">
+    <article id={id} className="projects__content">
       <p>{name}</p>
       <a href={linkLive || linkHub}>
         <img id={idImg} alt={idImg} src={src} />
@@ -44,7 +44,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         </a>
       </div>
       <p>{heroku}</p>
-    </div>
+    </article>
   );
 };
 

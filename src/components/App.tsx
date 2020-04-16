@@ -9,13 +9,13 @@ require("./App.scss");
 
 
 const App: React.FC = () => (
-  <div id="home" className="app">
+  <main id="home" className="app">
     <a id="toTop" title="Back to top" href="#home"><img id="topArrowImg" src={topArrowImg}></img></a>
     <Header />
     <MainPage />
     <ProjectsPage />
     <ContactsPage />
-  </div>
+  </main>
 );
 
 export default App;

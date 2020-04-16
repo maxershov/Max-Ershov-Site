@@ -174,7 +174,7 @@ body {
         a {
             color: var(--anchorColor);
         }
-        h3,
+        h1,
         p {
             animation: fadein 1s;
             margin: 0.5rem;
@@ -195,9 +195,6 @@ body {
         border-bottom: solid 1px;
         .projects__content {
             margin: 1rem;
-            h3 {
-                text-align: center;
-            }
             ul {
                 list-style-type: circle;
                 margin-right: 1rem;

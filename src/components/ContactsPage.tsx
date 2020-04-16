@@ -7,7 +7,7 @@ import ContactFields from "./ContactFields";
 const ContactsPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div id="contacts" className="contacts">
+    <footer id="contacts" className="contacts">
       <h3>{t("contacts.title")}</h3>
       <div className="contacts__container">
         <ContactFields />
@@ -28,7 +28,7 @@ const ContactsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

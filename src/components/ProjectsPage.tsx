@@ -12,14 +12,14 @@ const ProjectsPage: React.FC = () => {
   const enObj = [objThis, objCounter, objCRM, objCovid];
   const ruObj = [ruThis, ruCounter, ruCRM, ruCovid];
   return (
-    <div id="projects" className="projectsPage _shadow">
-      <h3>{t("projects.title")}</h3>
+    <section id="projects" className="projectsPage _shadow">
+      <h2>{t("projects.title")}</h2>
       <div className="projects">
         {currLanguage === "ru"
           ? ruObj.map(obj => <ProjectContent {...obj} />)
           : enObj.map(obj => <ProjectContent {...obj} />)}
       </div>
-    </div>
+    </section>
   );
 };
 
