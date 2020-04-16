@@ -19,7 +19,8 @@ html {
     a:active {
         text-decoration: none;
     }
-    input, textarea {
+    input,
+    textarea {
         -webkit-appearance: none;
     }
 }
@@ -179,7 +180,7 @@ body {
             margin: 0.5rem;
             color: var(--white);
             letter-spacing: 0.1em;
-            text-shadow:1px 1px 1px black;
+            text-shadow: 1px 1px 1px black;
         }
     }
 }
@@ -269,9 +270,11 @@ body {
 
     .contacts__container {
         display: flex;
+        margin-top: 2rem;
     }
     .contacts__right {
         flex: 0.5;
+        margin-top:1rem;
     }
     .contacts__left {
         flex: 1;
@@ -299,21 +302,17 @@ body {
     button {
         font-size: 0.8rem;
         color: var(--textColor);
-    }
-    textarea {
-        height: 4rem;
-    }
-    button[type="submit"] {
         font-weight: 600;
-        display: block;
         padding: 0.4rem;
         width: 15rem;
-        margin-top: 0.5rem;
         margin: 0 auto;
         box-shadow: 0px 5px var(--bgcolor), 0px 7px 5px -1px var(--lightGray);
         &:hover {
             box-shadow: inset 0px 4px 4px var(--lightGray);
         }
+    }
+    textarea {
+        height: 4rem;
     }
 }
 

@@ -12,7 +12,6 @@ const ContactsPage: React.FC = () => {
       <div className="contacts__container">
         <ContactFields />
         <div className="contacts__right">
-          <p>{t("contacts.links")}</p>
           <div className="anchors">
             <a href="https://twitter.com/MaksksE">
               <img style={{ height: "1em" }} alt="twitterLogo" src={twitterImg} />

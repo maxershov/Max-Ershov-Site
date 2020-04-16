@@ -24,10 +24,8 @@ const resources = {
         "stack": "Stack:"
       },
       "contacts": {
-        "title": "CONTACTS",
-        "fields": "Contact me:",
-        "links": "You can find me here:",
-        "placeholderMail": "Contact adress",
+        "title": "CONTACT ME",
+        "placeholderMail": "E-mail adress",
         "placeholderMsg": "Message",
         "btn": "SEND MESSAGE"
       },
@@ -55,9 +53,7 @@ const resources = {
       },
       "contacts": {
         "title": "КОНТАКТЫ",
-        "fields": "Свяжитесь со мной:",
-        "links": "Вы можете найти меня тут:",
-        "placeholderMail": "Почтовый адрес",
+        "placeholderMail": "E-mail адрес",
         "placeholderMsg": "Сообщение",
         "btn": "ОТПРАВИТЬ СООБЩЕНИЕ",
       }
