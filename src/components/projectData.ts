@@ -8,8 +8,8 @@ import * as icn from "./iconsList";
 
 const objCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
-  linkHub: "https://github.com/maxershov/Web-React-CRM",
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.reduxSagaImg, "Redux-Saga"], [icn.babelImg, "Babel"]],
+  linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
   id: "CRM",
@@ -17,7 +17,7 @@ const objCRM = {
   text: [
     "Desktop version: Electron",
     "Framework: React",
-    "Store: Redux",
+    "Store: Redux, Redux Saga",
     "Bundle: Webpack(custom config) and Babel",
     "Routing: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",
@@ -69,8 +69,8 @@ const objCovid = {
 
 const ruCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.puppeteerImg, "Puppeteer"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.babelImg, "Babel"]],
-  linkHub: "https://github.com/maxershov/Web-React-CRM",
+  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.reduxSagaImg, "Redux-Saga"], [icn.babelImg, "Babel"]],
+  linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
   id: "CRM",
@@ -78,7 +78,7 @@ const ruCRM = {
   text: [
     "Нативная версия: Electron",
     "Фреймворк: React",
-    "Управление состоянием: Redux",
+    "Управление состоянием: Redux, Redux Saga",
     "Сборка: Webpack(custom config) и Babel",
     "Роутинг: react-router-dom",
     "CSS: postCSS(variables, autoprefixer)",

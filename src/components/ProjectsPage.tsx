@@ -9,8 +9,8 @@ import i18next from "i18next";
 const ProjectsPage: React.FC = () => {
   const { t } = useTranslation();
   const currLanguage = i18next.language;
-  const enObj = [objThis, objCounter, objCRM, objCovid];
-  const ruObj = [ruThis, ruCounter, ruCRM, ruCovid];
+  const enObj = [objThis, objCRM, objCounter, objCovid];
+  const ruObj = [ruThis, ruCRM, ruCounter, ruCovid];
   return (
     <section id="projects" className="projectsPage _shadow">
       <h2>{t("projects.title")}</h2>

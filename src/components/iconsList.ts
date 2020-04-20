@@ -8,10 +8,10 @@ import * as ieImg from "../images/ie.svg";
 import * as jestImg from "../images/jest.svg";
 import * as postcssImg from "../images/postcss.svg";
 import * as preactImg from "../images/preact.svg";
-import * as puppeteerImg from "../images/puppeteer.svg";
 import * as reactImg from "../images/react.svg";
 import * as reactRouterImg from "../images/react-router.svg";
 import * as reduxImg from "../images/redux.svg";
+import * as reduxSagaImg from "../images/redux-saga.svg";
 import * as sassImg from "../images/sass.svg";
 import * as svelteImg from "../images/svelte.svg";
 import * as topArrowImg from "../images/topArrow.svg";
@@ -20,4 +20,4 @@ import * as typescriptImg from "../images/typescript.svg";
 import * as webpackImg from "../images/webpack.svg";
 
 
-export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, jestImg, postcssImg, preactImg, puppeteerImg, reactImg, reactRouterImg, reduxImg, sassImg, svelteImg, topArrowImg, twitterImg, typescriptImg, webpackImg };
+export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, jestImg, postcssImg, preactImg, reactImg, reactRouterImg, reduxImg,reduxSagaImg, sassImg, svelteImg, topArrowImg, twitterImg, typescriptImg, webpackImg };
