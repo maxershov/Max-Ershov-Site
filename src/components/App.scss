@@ -50,7 +50,7 @@ html {
     --lightGray: #000000;
     --textColor: white;
     --inputBgColor: #212529;
-    --imgOpacity: 0.75;
+    --imgOpacity: 0.5;
     --svgFilter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
@@ -78,6 +78,10 @@ body {
     }
     .app__links_open {
         overflow: hidden;
+        position: absolute;
+        z-index: 69;
+        width: 100%;
+        background-color: var(--bgcolor);
         a,
         button {
             text-align: left;
@@ -148,6 +152,7 @@ body {
         padding-right: 1rem;
         color: var(--textColor);
         font-size: 1rem;
+        outline: none;
     }
     a:hover,
     a:focus {
