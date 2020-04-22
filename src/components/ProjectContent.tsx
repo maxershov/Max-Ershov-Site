@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useTranslation } from 'react-i18next';
-import { herokuImg, githubImg } from "./iconsList";
+import { herokuImg } from "./iconsList";
 
 export interface ProjectProps {
   name: string;
@@ -39,7 +39,9 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           </a>
         ) : undefined}
         <a href={linkHub}>
-          <img id="darkImg" style={{ height: "1em" }} alt="githubLogo" src={githubImg} />
+          <svg width="1em" height="1em">
+            <use xlinkHref="#githubImg" />
+          </svg>
           GitHub
         </a>
       </div>

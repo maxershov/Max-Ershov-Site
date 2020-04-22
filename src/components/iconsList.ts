@@ -3,7 +3,6 @@ import * as electronImg from "../images/electron.svg";
 import * as eslintImg from "../images/eslint.svg";
 import * as facebookImg from "../images/facebook.svg";
 import * as herokuImg from "../images/heroku.svg";
-import * as githubImg from "../images/github.svg";
 import * as ieImg from "../images/ie.svg";
 import * as jestImg from "../images/jest.svg";
 import * as postcssImg from "../images/postcss.svg";
@@ -20,4 +19,4 @@ import * as typescriptImg from "../images/typescript.svg";
 import * as webpackImg from "../images/webpack.svg";
 
 
-export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, githubImg, ieImg, jestImg, postcssImg, preactImg, reactImg, reactRouterImg, reduxImg,reduxSagaImg, sassImg, svelteImg, topArrowImg, twitterImg, typescriptImg, webpackImg };
+export { babelImg, electronImg, eslintImg, facebookImg, herokuImg, ieImg, jestImg, postcssImg, preactImg, reactImg, reactRouterImg, reduxImg,reduxSagaImg, sassImg, svelteImg, topArrowImg, twitterImg, typescriptImg, webpackImg };

@@ -50,7 +50,7 @@ html {
     --lightGray: #000000;
     --textColor: white;
     --inputBgColor: #212529;
-    --imgOpacity: 0.5;
+    --imgOpacity: 0.7;
     --svgFilter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
@@ -58,6 +58,9 @@ html {
 #burgerBtn,
 #topArrowImg {
     filter: var(--svgFilter);
+}
+#githubImg {
+    fill: var(--textColor);
 }
 
 body {
@@ -213,7 +216,7 @@ body {
                 }
             }
         }
-        .__logo {
+        .__logo, svg {
             margin: 0 0.125rem;
         }
         .icons {
