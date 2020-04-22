@@ -36,7 +36,7 @@ html {
 :root {
     --bgcolor: white;
     --anchorColor: rgb(3, 118, 250);
-    --white: #fff;
+    --alwaysWhite: #fff;
     --lightGray: rgba(128, 128, 128, 1);
     --textColor: black;
     --inputBgColor: white;
@@ -46,7 +46,7 @@ html {
 
 [data-theme="dark"] {
     --bgcolor: #212121;
-    --white: #fff;
+    --alwaysWhite: #fff;
     --lightGray: #000000;
     --textColor: white;
     --inputBgColor: #212529;
@@ -141,9 +141,6 @@ body {
     }
 }
 
-// @media (min-width: 1070px) and (max-width: 1600px) {
-// set third item in grid to use all columns
-// .projects__content:nth-child(3n+0) {grid-column: 1 / -1;}}
 .app__links {
     text-align: right;
     a,
@@ -178,7 +175,7 @@ body {
         p {
             animation: fadein 1s;
             margin: 0.5rem;
-            color: var(--white);
+            color: var(--alwaysWhite);
             letter-spacing: 0.1em;
             text-shadow: 1px 1px 1px black;
         }
@@ -271,7 +268,7 @@ body {
     }
     .contacts__right {
         flex: 0.5;
-        margin-top:1rem;
+        margin-top: 1rem;
     }
     .contacts__left {
         flex: 1;
@@ -361,14 +358,15 @@ body {
     transition: 0.4s;
 
     &:before {
-        background-color: var(--white);
-        bottom: 0px;
+        background-color: var(--alwaysWhite);
+        bottom: -1px;
         content: "";
         height: 1rem;
         left: 0px;
         position: absolute;
         transition: 0.4s;
         width: 1rem;
+        border: solid 1px var(--textColor);
     }
     &.round {
         border-radius: 0.8rem;
