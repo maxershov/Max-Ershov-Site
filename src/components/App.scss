@@ -168,21 +168,22 @@ body {
         background-position: top center;
         background-attachment: fixed;
         border-bottom: solid 1px;
-
         opacity: var(--imgOpacity);
         transition: opacity 0.7s ease-in-out;
-
+        color: var(--anchorColor);
         padding: 10rem 0 14rem 00;
-        a {
-            color: var(--anchorColor);
-        }
-        h1,
-        p {
+        letter-spacing: 0.1em;
+        color: var(--alwaysWhite);
+        text-shadow: 1px 1px 1px black;
+        h1 {
             animation: fadein 1s;
             margin: 0.5rem;
-            color: var(--alwaysWhite);
-            letter-spacing: 0.1em;
-            text-shadow: 1px 1px 1px black;
+        }
+        p {
+            animation: animated-text 3s steps(50, end) 1s 1 normal both;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 0 auto;
         }
     }
 }
@@ -315,15 +316,6 @@ body {
     }
 }
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 #toTop {
     animation: fadein 7s;
     position: fixed;
@@ -387,5 +379,22 @@ input:checked {
         &:before {
             transform: translateX(1rem);
         }
+    }
+}
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
