@@ -216,7 +216,8 @@ body {
                 }
             }
         }
-        .__logo, svg {
+        .__logo,
+        svg {
             margin: 0 0.125rem;
         }
         .icons {
@@ -316,6 +317,9 @@ body {
     }
     textarea {
         height: 4rem;
+    }
+    .footer__year {
+        font-size: 0.8em;
     }
 }
 
