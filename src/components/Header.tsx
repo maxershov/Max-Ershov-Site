@@ -31,9 +31,11 @@ const Header: React.FC = () => {
     if (currLanguage === "РУССКИЙ") {
       setCurrLanguage("ENGLISH");
       i18n.changeLanguage("ru");
+      document.title = "Макс Ершов"
     } else {
       setCurrLanguage("РУССКИЙ");
       i18n.changeLanguage("en");
+      document.title = "Max Ershov"
     }
   }
 
