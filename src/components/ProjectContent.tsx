@@ -1,10 +1,9 @@
 import * as React from "react";
 import { useTranslation } from 'react-i18next';
-import { herokuImg } from "./iconsList";
 
 export interface ProjectProps {
   name: string;
-  icons: string[][];
+  icons: string[];
   linkHub: string;
   linkLive?: string;
   idImg?: string;
@@ -25,7 +24,10 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         <img id={idImg} alt={idImg} src={src} />
       </a>
       <div className="icons">
-        {icons.map((icon, i) => <img className="__logo" title={icon[1]} key={icon[1]} alt="icon" src={icon[0]} />)}
+        {icons.map((icon) => <svg className="__logo" key={icon} width="1.5em" height="1.5em">
+          <title>{icon}</title>
+          <use xlinkHref={`sprite.svg#${icon}`} />
+        </svg>)}
       </div>
       <p>{t("projects.stack")}</p>
       <ul>
@@ -34,13 +36,15 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div className="anchors">
         {linkLive ? (
           <a href={linkLive}>
-            <img id="darkImg" style={{ height: "1em" }} alt="herokuLogo" src={herokuImg} />
+            <svg id="herokuImg" width="1em" height="1em">
+              <use xlinkHref="sprite.svg#Heroku" />
+            </svg>
             Live
           </a>
         ) : undefined}
         <a href={linkHub}>
-          <svg width="1em" height="1em">
-            <use xlinkHref="#githubImg" />
+          <svg id="githubImg" width="1em" height="1em">
+            <use xlinkHref="sprite.svg#Github" />
           </svg>
           GitHub
         </a>

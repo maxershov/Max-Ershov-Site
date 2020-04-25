@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import * as burgerImg from "../images/burger.svg";
 
 
 const Header: React.FC = () => {
@@ -50,9 +49,12 @@ const Header: React.FC = () => {
   }
 
 
+
   return (
     <header>
-      <input type="image" id="burgerBtn" onClick={() => chgMenu(!openMenu)} alt="burgerImg" src={burgerImg} />
+      <button type="button" id="burgerBtn" onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="3em" height="3em">
+        <use xlinkHref="sprite.svg#Burger" />
+      </svg></button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <a title="To home" href="#home">
           {t("links.home")}

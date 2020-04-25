@@ -41,7 +41,6 @@ html {
     --textColor: black;
     --inputBgColor: white;
     --imgOpacity: 1;
-    --svgFilter: none;
 }
 
 [data-theme="dark"] {
@@ -51,16 +50,6 @@ html {
     --textColor: white;
     --inputBgColor: #212529;
     --imgOpacity: 0.7;
-    --svgFilter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
-}
-
-#darkImg,
-#burgerBtn,
-#topArrowImg {
-    filter: var(--svgFilter);
-}
-#githubImg {
-    fill: var(--textColor);
 }
 
 body {
@@ -76,9 +65,8 @@ body {
     }
     #burgerBtn {
         display: block !important;
-        width: 3rem;
-        height: 3rem;
     }
+
     .app__links_open {
         overflow: hidden;
         position: absolute;
@@ -119,28 +107,28 @@ body {
             background-image: url("../images/jeshoots_bg1920.jpg");
         }
     }
-    @media (min-width: 1600px) and (max-width: 1919px) {
+    @media  (max-width: 1919px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg1600.jpg");
         }
     }
-    @media (min-width: 1366px) and (max-width: 1599px) {
+    @media (max-width: 1599px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg1366.jpg");
         }
     }
-    @media (min-width: 1280px) and (max-width: 1365px) {
+    @media (max-width: 1365px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg1280.jpg");
         }
     }
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media  (max-width: 1279px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg768.jpg");
             background-attachment: scroll !important;
         }
     }
-    @media (min-width: 250px) and (max-width: 767px) {
+    @media  (max-width: 767px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg500.jpg");
             background-attachment: scroll !important;
@@ -223,12 +211,13 @@ body {
         .icons {
             text-align: center;
             margin-bottom: 1rem;
-            img {
-                width: 1.5rem;
-                height: 100%;
-            }
         }
     }
+}
+
+#githubImg,
+#herokuImg {
+    fill: var(--textColor);
 }
 
 #img-CRM,
@@ -331,11 +320,12 @@ body {
     display: inline-flex;
     cursor: pointer;
     z-index: 69;
-    img {
+    #topArrowImg {
         width: 2.1rem;
         height: 100%; // for -webkit
+        fill: var(--textColor);
         &:hover {
-            filter: invert(0.5) sepia(1) saturate(10) hue-rotate(360deg);
+            fill: red;
         }
     }
 }

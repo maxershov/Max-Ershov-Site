@@ -3,14 +3,13 @@ import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import ProjectsPage from "./ProjectsPage";
 import Header from "./Header";
-import { topArrowImg } from "./iconsList";
 
 require("./App.scss");
 
 
 const App: React.FC = () => (
   <main id="home" className="app">
-    <a id="toTop" title="Back to top" href="#home"><img id="topArrowImg" src={topArrowImg}></img></a>
+    <a id="toTop" title="Back to top" href="#home"><svg id="topArrowImg" width="1em" height="1em"><use xlinkHref="sprite.svg#TopArrow" /></svg></a>
     <Header />
     <MainPage />
     <ProjectsPage />

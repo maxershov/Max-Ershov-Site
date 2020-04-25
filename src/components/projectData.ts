@@ -3,12 +3,11 @@ import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as counterImg from "../images/counter.jpg";
 import * as covidImg from "../images/covid.jpg";
-import * as icn from "./iconsList";
 
 
 const objCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.reduxSagaImg, "Redux-Saga"], [icn.babelImg, "Babel"]],
+  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -31,7 +30,7 @@ const objCRM = {
 
 const objThis = {
   name: "PORTFOLIO",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.postcssImg, "postCSS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: ["Preact", "React", "TypeScript", "SCSS", "PostCSS", "Webpack", "Heroku", "ESLint"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
@@ -44,7 +43,7 @@ const objThis = {
 
 const objCounter = {
   name: "TIME COUNTER",
-  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: ["Svelte", "Webpack", "Heroku"],
   linkHub: "https://github.com/maxershov/svelte-time-counter",
   linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
@@ -56,20 +55,20 @@ const objCounter = {
 
 const objCovid = {
   name: "COVID-19 STATS & ADVICE",
-  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.babelImg, "Babel"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: ["React", "TypeScript", "Babel", "SCSS", "Webpack", "Heroku"],
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",
   src: covidImg,
   id: "Covid-Site",
-  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack and Babel", "Backend: Express.js", "CSS: SASS", "API: covid-19-api"],
+  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack and Babel", "Backend: Express.js", "CSS: SCSS", "API: covid-19-api"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
 
 const ruCRM = {
   name: "CRM",
-  icons: [[icn.reactImg, "React"], [icn.electronImg, "Electron"], [icn.reduxImg, "Redux"], [icn.herokuImg, "Heroku"], [icn.webpackImg, "Webpack"], [icn.eslintImg, "ESLint"], [icn.jestImg, "Jest"], [icn.postcssImg, "postCSS"], [icn.ieImg, "IE 11 Support"], [icn.reactRouterImg, "React-Router"], [icn.reduxSagaImg, "Redux-Saga"], [icn.babelImg, "Babel"]],
+  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -92,7 +91,7 @@ const ruCRM = {
 
 const ruThis = {
   name: "ПОРТФОЛИО",
-  icons: [[icn.preactImg, "Preact"], [icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.sassImg, "SAAS"], [icn.postcssImg, "postCSS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"], [icn.eslintImg, "ESLint"]],
+  icons: ["Preact", "React", "TypeScript", "SCSS", "PostCSS", "Webpack", "Heroku", "ESLint"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
@@ -105,7 +104,7 @@ const ruThis = {
 
 const ruCounter = {
   name: "TIME COUNTER",
-  icons: [[icn.svelteImg, "Svelte"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: ["Svelte", "Webpack", "Heroku"],
   linkHub: "https://github.com/maxershov/svelte-time-counter",
   linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
@@ -117,7 +116,7 @@ const ruCounter = {
 
 const ruCovid = {
   name: "COVID-19 СТАТИСТИКА & СОВЕТЫ",
-  icons: [[icn.reactImg, "React"], [icn.typescriptImg, "TypeScript"], [icn.babelImg, "Babel"], [icn.sassImg, "SAAS"], [icn.webpackImg, "Webpack"], [icn.herokuImg, "Heroku"]],
+  icons: ["React", "TypeScript", "Babel", "SCSS", "Webpack", "Heroku"],
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",
