@@ -25,7 +25,7 @@ html {
     }
 }
 
-.app img {
+.app img, svg {
     opacity: var(--imgOpacity);
     transition: opacity 0.7s ease-in-out;
     &:hover {

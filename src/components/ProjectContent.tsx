@@ -21,7 +21,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
     <article id={id} className="projects__content">
       <p>{name}</p>
       <a href={linkLive || linkHub}>
-        <img id={idImg} alt={idImg} src={src} />
+        <img loading="lazy" id={idImg} alt={idImg} src={src} />
       </a>
       <div className="icons">
         {icons.map((icon) => <svg className="__logo" key={icon} width="1.5em" height="1.5em">
