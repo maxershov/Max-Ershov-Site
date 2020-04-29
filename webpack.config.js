@@ -90,7 +90,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
-        title: "Max-Ershov-Site",
+        title: "Max-Ershov",
         favicon: path.join(__dirname, "src", "assets", "favicon.ico"),
         minify: {
             removeComments: true,

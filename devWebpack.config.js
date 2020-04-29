@@ -77,7 +77,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
-        title: "Max-Ershov-Site"
+        title: "Max-Ershov"
     }), new MiniCssExtractPlugin(),
     new CopyPlugin([
 
