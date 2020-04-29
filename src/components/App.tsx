@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import ProjectsPage from "./ProjectsPage";
@@ -7,14 +8,25 @@ import Header from "./Header";
 require("./App.scss");
 
 
-const App: React.FC = () => (
-  <main id="home" className="app">
-    <a id="toTop" title="Back to top" href="#home"><svg id="topArrowImg" width="1em" height="1em"><use xlinkHref="sprite.svg#TopArrow" /></svg></a>
-    <Header />
-    <MainPage />
-    <ProjectsPage />
-    <ContactsPage />
-  </main>
-);
+const App: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    // Check for language
+    if (window.navigator.language == "ru" || window.navigator.language == "ru-RU") {
+      i18n.changeLanguage("ru");
+    }
+  }, [])
+
+  return (
+    <main id="home" className="app">
+      <a id="toTop" title="Back to top" href="#home"><svg id="topArrowImg" width="1em" height="1em"><use xlinkHref="sprite.svg#TopArrow" /></svg></a>
+      <Header />
+      <MainPage />
+      <ProjectsPage />
+      <ContactsPage />
+    </main>
+  )
+};
 
 export default App;

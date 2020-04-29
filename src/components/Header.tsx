@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 
 
 const Header: React.FC = () => {
+
   const { t, i18n } = useTranslation();
   const [openMenu, chgMenu] = useState<boolean>(false);
-  const [currLanguage, setCurrLanguage] = useState<string>("РУССКИЙ");
+  const [toLanguage, setToLanguage] = useState<string>("РУССКИЙ");
   const [modeTitle, chgModeTitle] = useState<string>("links.dark");
 
 
@@ -28,12 +29,12 @@ const Header: React.FC = () => {
 
 
   function chgLanguage(): void {
-    if (currLanguage === "РУССКИЙ") {
-      setCurrLanguage("ENGLISH");
+    if (toLanguage === "РУССКИЙ") {
+      setToLanguage("ENGLISH");
       i18n.changeLanguage("ru");
       document.title = "Макс Ершов"
     } else {
-      setCurrLanguage("РУССКИЙ");
+      setToLanguage("РУССКИЙ");
       i18n.changeLanguage("en");
       document.title = "Max Ershov"
     }
@@ -49,7 +50,6 @@ const Header: React.FC = () => {
       chgModeTitle("links.dark");
     }
   }
-
 
 
   return (
@@ -80,11 +80,11 @@ const Header: React.FC = () => {
           </label>
         </button>
         <button onClick={() => chgLanguage()} type="button">
-          {currLanguage}
+          {toLanguage}
           <label className="switch">
             <input
               onClick={() => chgLanguage()}
-              checked={currLanguage === "РУССКИЙ" ? false : true}
+              checked={toLanguage === "РУССКИЙ" ? false : true}
               type="checkbox"
               id="checkbox"
             />
