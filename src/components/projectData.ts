@@ -7,7 +7,7 @@ import * as covidImg from "../images/covid.jpg";
 
 const objCRM = {
   name: "CRM",
-  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
+  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -22,7 +22,7 @@ const objCRM = {
     "CSS: postCSS(variables, autoprefixer)",
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
-    "Backend: Express.js + helmet",
+    "Backend: Express.js + helmet, Knex.js",
     "Browserlist: >1% (Internet Explorer 11)"
   ],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
@@ -68,7 +68,7 @@ const objCovid = {
 
 const ruCRM = {
   name: "CRM",
-  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
+  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: CRMimg,
@@ -83,7 +83,7 @@ const ruCRM = {
     "CSS: postCSS(variables, autoprefixer)",
     "Линтер: ESLint с Airbnb конфигурацией",
     "Тестирование: Jest, Puppeteer, Enzyme",
-    "Сервер: Express.js + helmet",
+    "Сервер: Express.js + helmet, Knex.js",
     "Поддержка браузеров: >1% и Internet Explorer 11"
   ],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
