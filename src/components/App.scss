@@ -26,7 +26,8 @@ html {
     }
 }
 
-.app img, svg {
+.app img,
+svg {
     opacity: var(--imgOpacity);
     transition: opacity 0.7s ease-in-out;
     &:hover {
@@ -108,7 +109,7 @@ body {
             background-image: url("../images/jeshoots_bg1920.jpg");
         }
     }
-    @media  (max-width: 1919px) {
+    @media (max-width: 1919px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg1600.jpg");
         }
@@ -123,13 +124,13 @@ body {
             background-image: url("../images/jeshoots_bg1280.jpg");
         }
     }
-    @media  (max-width: 1279px) {
+    @media (max-width: 1279px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg768.jpg");
             background-attachment: scroll !important;
         }
     }
-    @media  (max-width: 767px) {
+    @media (max-width: 767px) {
         .mainPage__text {
             background-image: url("../images/jeshoots_bg500.jpg");
             background-attachment: scroll !important;
@@ -187,8 +188,8 @@ body {
         display: grid;
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        border-bottom: solid 1px;
         .projects__content {
+            box-shadow: 0px 3px var(--bgcolor), 0px 4px 5px -1px var(--lightGray);
             margin: 1rem;
             ul {
                 list-style-type: circle;
@@ -198,11 +199,13 @@ body {
             }
             p {
                 margin: 0 1rem;
-
                 &:first-of-type {
                     padding-top: 1rem;
                     font-weight: bold;
                 }
+            }
+            .last-line {
+                margin-bottom: 10px;
             }
         }
         .__logo,
@@ -227,7 +230,6 @@ body {
 #img-Counter,
 #img-Covid {
     width: 95%;
-    margin: 5%;
     object-fit: contain;
     transition: transform 1s;
     &:hover {
@@ -310,6 +312,7 @@ body {
     }
     .footer__year {
         font-size: 0.8em;
+        color: grey;
     }
 }
 

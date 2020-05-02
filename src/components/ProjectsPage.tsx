@@ -12,7 +12,7 @@ const ProjectsPage: React.FC = () => {
   const enObj = [objThis, objCRM, objCounter, objCovid];
   const ruObj = [ruThis, ruCRM, ruCounter, ruCovid];
   return (
-    <section id="projects" className="projectsPage _shadow">
+    <section id="projects" className="projectsPage">
       <h2>{t("projects.title")}</h2>
       <div className="projects">
         {currLanguage === "ru"

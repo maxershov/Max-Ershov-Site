@@ -49,7 +49,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           GitHub
         </a>
       </div>
-      <p>{heroku}</p>
+      <p className="last-line">{heroku}</p>
     </article>
   );
 };
