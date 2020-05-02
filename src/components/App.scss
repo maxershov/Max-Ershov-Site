@@ -190,7 +190,7 @@ body {
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         .projects__content {
-            box-shadow: 0px 3px var(--bgcolor), 0px 4px 5px -1px var(--lightGray);
+            box-shadow: 0px 5px 8px var(--lightGray);
             margin: 1rem;
             ul {
                 list-style-type: circle;
@@ -209,13 +209,12 @@ body {
                 margin-bottom: 10px;
             }
         }
-        .__logo,
         svg {
-            margin: 0 0.125rem;
+             margin: 0 0.125rem;
         }
         .icons {
             text-align: center;
-            margin-bottom: 1rem;
+            margin: 10px;
         }
     }
 }
@@ -223,6 +222,8 @@ body {
 #githubImg,
 #herokuImg {
     fill: var(--textColor);
+    position: relative;
+    top:0.2em;
 }
 
 #img-CRM,
@@ -248,7 +249,7 @@ body {
         padding: 0.5rem;
         color: var(--anchorColor);
         font-weight: 600;
-        box-shadow: 0px 3px var(--bgcolor), 0px 6px 5px -1px var(--lightGray);
+        box-shadow: 0px 6px 5px -1px var(--lightGray);
         &:hover {
             box-shadow: inset 0px 4px 4px var(--lightGray);
             text-shadow: 0px 1px 6px var(--anchorColor);
@@ -303,7 +304,7 @@ body {
         padding: 0.4rem;
         width: 15rem;
         margin: 0 auto;
-        box-shadow: 0px 5px var(--bgcolor), 0px 7px 5px -1px var(--lightGray);
+        box-shadow: 0px 7px 5px -1px var(--lightGray);
         &:hover {
             box-shadow: inset 0px 4px 4px var(--lightGray);
         }
