@@ -167,10 +167,11 @@ body {
         padding: 10rem 0 14rem 00;
         letter-spacing: 0.1em;
         color: var(--alwaysWhite);
-        text-shadow: 1px 1px 1px black;
+        text-shadow: 1px 1px 1px rgb(59, 59, 59);
         h1 {
             animation: fadein 1s;
             margin: 0.5rem;
+            font-size: 1.8em;
         }
         p {
             animation: animated-text 3s steps(50, end) 1s 1 normal both;
