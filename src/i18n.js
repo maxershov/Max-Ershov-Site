@@ -19,10 +19,7 @@ const resources = {
         "d": "Thanks for your visit!"
       },
       "textLinks": "You can read about my <0>projects</0> or contact me <1>here</1>",
-      "projects": {
-        "title": "MY PROJECTS",
-        "stack": "Stack:"
-      },
+      "projects": "MY PROJECTS",
       "contacts": {
         "title": "CONTACT ME",
         "placeholderMail": "E-mail adress",
@@ -47,10 +44,7 @@ const resources = {
         "d": "Спасибо за ваш визит!"
       },
       "textLinks": "Вы можете просмотреть мои <0>проекты</0> или связаться со мной <1>тут</1>",
-      "projects": {
-        "title": "МОИ ПРОЕКТЫ",
-        "stack": "Список технологий:"
-      },
+      "projects": "МОИ ПРОЕКТЫ",
       "contacts": {
         "title": "КОНТАКТЫ",
         "placeholderMail": "E-mail адрес",

@@ -19,37 +19,40 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
     <article id={id} className="projects__content">
-      <p>{name}</p>
-      <a href={linkLive || linkHub}>
-        <img loading="lazy" id={idImg} alt={idImg} src={src} />
-      </a>
-      <div className="icons">
-        {icons.map((icon) => <svg className="__logo" key={icon} width="1.5em" height="1.5em">
-          <title>{icon}</title>
-          <use xlinkHref={`sprite.svg#${icon}`} />
-        </svg>)}
+      <p className="project-name">{name}</p>
+      <div className="project-images">
+        <a href={linkLive || linkHub}>
+          <img width="250px" loading="lazy" id={idImg} alt={idImg} src={src} />
+        </a>
+        <div className="icons">
+          {icons.map((icon) => <svg className="__logo" key={icon} width="1.5em" height="1.5em">
+            <title>{icon}</title>
+            <use xlinkHref={`sprite.svg#${icon}`} />
+          </svg>)}
+        </div>
       </div>
-      <p>{t("projects.stack")}</p>
-      <ul>
-        {text.map(line => <li key={line}>{line}</li>)}
-      </ul>
-      <div className="anchors">
-        {linkLive ? (
-          <a href={linkLive}>
-            <svg id="herokuImg" width="1em" height="1em">
-              <use xlinkHref="sprite.svg#Heroku" />
-            </svg>
+      <div className="project-info">
+        <ul>
+          {text.map(line => <li key={line}>{line}</li>)}
+        </ul>
+        <div className="anchors">
+          {linkLive ? (
+            <a href={linkLive}>
+              <svg id="herokuImg" width="1em" height="1em">
+                <use xlinkHref="sprite.svg#Heroku" />
+              </svg>
             Live
-          </a>
-        ) : undefined}
-        <a href={linkHub}>
-          <svg id="githubImg" width="1em" height="1em">
-            <use xlinkHref="sprite.svg#Github" />
-          </svg>
+            </a>
+          ) : undefined}
+          <a href={linkHub}>
+            <svg id="githubImg" width="1em" height="1em">
+              <use xlinkHref="sprite.svg#Github" />
+            </svg>
           GitHub
         </a>
+        </div>
+        <p className="last-line">{heroku}</p>
       </div>
-      <p className="last-line">{heroku}</p>
     </article>
   );
 };

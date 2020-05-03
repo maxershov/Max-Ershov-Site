@@ -13,7 +13,7 @@ const ProjectsPage: React.FC = () => {
   const ruObj = [ruThis, ruCRM, ruCounter, ruCovid];
   return (
     <section id="projects" className="projectsPage">
-      <h2>{t("projects.title")}</h2>
+      <h2>{t("projects")}</h2>
       <div className="projects">
         {currLanguage === "ru"
           ? ruObj.map(obj => <ProjectContent {...obj} />)
