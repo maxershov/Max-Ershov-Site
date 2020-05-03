@@ -6,6 +6,7 @@ const MainPage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="mainPage">
+      <div className="fixedImg"></div>
       <div className="mainPage__text">
         <h1>{t("title.a")}</h1>
         <h1>{t("title.b")}</h1>

@@ -54,7 +54,7 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <button type="button" id="burgerBtn" onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="3em" height="3em">
+      <button type="button" id="burgerBtn" onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="2em" height="2em">
         <use xlinkHref="sprite.svg#Burger" />
       </svg></button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>

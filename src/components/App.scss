@@ -26,6 +26,11 @@ html {
     }
 }
 
+body {
+    background-color: var(--bgcolor);
+    margin: 0;
+}
+
 .app img,
 svg {
     opacity: var(--imgOpacity);
@@ -37,6 +42,7 @@ svg {
 
 :root {
     --bgcolor: white;
+    --bgcolorTransparent: rgba(255, 255, 255, 0.767);
     --anchorColor: rgb(3, 118, 250);
     --alwaysWhite: #fff;
     --lightGray: rgba(128, 128, 128, 1);
@@ -47,15 +53,12 @@ svg {
 
 [data-theme="dark"] {
     --bgcolor: #212121;
+    --bgcolorTransparent: #000000b0;
     --alwaysWhite: #fff;
     --lightGray: #000000;
     --textColor: white;
     --inputBgColor: #212529;
     --imgOpacity: 0.7;
-}
-
-body {
-    background-color: var(--bgcolor);
 }
 
 @media (max-width: 768px) {
@@ -97,7 +100,7 @@ body {
         html {
             font-size: 3.5rem;
         }
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg3840.jpg");
         }
     }
@@ -105,39 +108,40 @@ body {
         html {
             font-size: 1.5rem;
         }
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg1920.jpg");
         }
     }
     @media (max-width: 1919px) {
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg1600.jpg");
         }
     }
     @media (max-width: 1599px) {
-        .mainPage__text {
+        .mainPage__text:before {
             background-image: url("../images/jeshoots_bg1366.jpg");
         }
     }
     @media (max-width: 1365px) {
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg1280.jpg");
         }
     }
     @media (max-width: 1279px) {
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg768.jpg");
-            background-attachment: scroll !important;
         }
     }
     @media (max-width: 767px) {
-        .mainPage__text {
+        .fixedImg {
             background-image: url("../images/jeshoots_bg500.jpg");
-            background-attachment: scroll !important;
         }
     }
 }
 
+header {
+    background-color: var(--bgcolor);
+}
 .app__links {
     text-align: right;
     a,
@@ -155,15 +159,24 @@ body {
 
 .mainPage {
     text-align: center;
-    .mainPage__text {
-        background-size: cover;
+
+    .fixedImg {
+        position: fixed;
+        z-index: -10;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
         background-repeat: no-repeat;
-        background-position: top center;
-        background-attachment: fixed;
-        border-bottom: solid 1px;
+        background-position: center;
+        background-size: cover;
         opacity: var(--imgOpacity);
         transition: opacity 0.7s ease-in-out;
-        color: var(--anchorColor);
+    }
+
+    .mainPage__text {
+        width: 100%;
         padding: 10rem 0 14rem 00;
         letter-spacing: 0.1em;
         color: var(--alwaysWhite);
@@ -185,11 +198,17 @@ body {
 .projectsPage {
     text-align: center;
     color: var(--textColor);
+    background-color: var(--bgcolorTransparent);
+    h2 {
+        margin: 0;
+        padding-top: 10px;
+    }
     .projects {
         display: grid;
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         .projects__content {
+            background-color: var(--bgcolor);
             box-shadow: 0px 5px 8px var(--lightGray);
             margin: 1rem;
             ul {
@@ -210,7 +229,7 @@ body {
             }
         }
         svg {
-             margin: 0 0.125rem;
+            margin: 0 0.125rem;
         }
         .icons {
             text-align: center;
@@ -223,7 +242,7 @@ body {
 #herokuImg {
     fill: var(--textColor);
     position: relative;
-    top:0.2em;
+    top: 0.2em;
 }
 
 #img-CRM,
@@ -265,7 +284,11 @@ body {
     color: var(--textColor);
     padding: 0.5rem 0;
     text-align: center;
+    background-color: var(--bgcolorTransparent);
 
+    a {
+        background-color: var(--bgcolor);
+    }
     .contacts__container {
         display: flex;
         margin-top: 2rem;
@@ -304,6 +327,7 @@ body {
         padding: 0.4rem;
         width: 15rem;
         margin: 0 auto;
+        background-color: var(--bgcolor);
         box-shadow: 0px 7px 5px -1px var(--lightGray);
         &:hover {
             box-shadow: inset 0px 4px 4px var(--lightGray);
