@@ -1,11 +1,12 @@
 html {
     @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
+    font-size: 16px;
     font-display: swap;
     box-sizing: border-box;
     button {
         font-family: inherit;
+        font-size: inherit;
         cursor: pointer;
         padding: 0;
         border: none;
@@ -63,7 +64,7 @@ svg {
 
 @media (max-width: 768px) {
     html {
-        font-size: 0.9rem;
+        font-size: 14px;
     }
     .app__links {
         display: none;
@@ -86,7 +87,6 @@ svg {
             position: relative;
             padding: 0.9em;
             display: block;
-            font-size: 0.9em;
             width: 100%;
         }
     }
@@ -98,7 +98,7 @@ svg {
 @media only screen {
     @media (min-width: 3840px) {
         html {
-            font-size: 3.5rem;
+            font-size: 48px;
         }
         .fixedImg {
             background-image: url("../images/jeshoots_bg3840.jpg");
@@ -106,7 +106,7 @@ svg {
     }
     @media (min-width: 1920px) and (max-width: 3839px) {
         html {
-            font-size: 1.5rem;
+            font-size: 36px;
         }
         .fixedImg {
             background-image: url("../images/jeshoots_bg1920.jpg");
@@ -146,10 +146,8 @@ header {
     text-align: right;
     a,
     button {
-        padding-right: 1rem;
+        padding-right: 20px;
         color: var(--textColor);
-        font-size: 1rem;
-        outline: none;
     }
     a:hover,
     a:focus {
@@ -177,14 +175,14 @@ header {
 
     .mainPage__text {
         width: 100%;
-        padding: 10rem 0 14rem 0;
+        padding: 40vh 0 40vh 0;
         letter-spacing: 0.1em;
         color: var(--alwaysWhite);
         text-shadow: 1px 1px 1px rgb(59, 59, 59);
         h1 {
             animation: fadein 1s;
-            margin: 0.5rem;
-            font-size: 1.8em;
+            margin: 5px;
+            font-size: 2em;
         }
         p {
             animation: animated-text 3s steps(50, end) 1s 1 normal both;
@@ -257,12 +255,12 @@ header {
                 margin-bottom: 10px;
             }
         }
-        svg {
-            margin: 0 5px;
-        }
         .icons {
             text-align: center;
             margin: 10px;
+            & > * {
+                margin: 0.25em;
+            }
         }
     }
 }
@@ -271,7 +269,7 @@ header {
 #herokuImg {
     fill: var(--textColor);
     position: relative;
-    top: 0.2em;
+    top: 0.1em;
 }
 
 #img-CRM,
@@ -290,22 +288,20 @@ header {
 .anchors {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    svg {
+        margin: 0 5px;
+    }
     a {
-        margin: 0 0.5rem;
-        padding: 0.5rem;
+        margin: 0 10px;
+        padding: 1.3vw 1.5vh;
         color: var(--anchorColor);
-        font-weight: 600;
+        font-weight: bold;
         box-shadow: 0px 6px 5px -1px var(--lightGray);
         &:hover {
             box-shadow: inset 0px 4px 4px var(--lightGray);
             text-shadow: 0px 1px 6px var(--anchorColor);
         }
-    }
-    img {
-        padding-right: 4px;
-        margin-bottom: -3px;
     }
 }
 
@@ -320,11 +316,10 @@ header {
     }
     .contacts__container {
         display: flex;
-        margin-top: 2rem;
     }
     .contacts__right {
         flex: 0.5;
-        margin-top: 1rem;
+        margin-top: 30px;
     }
     .contacts__left {
         flex: 1;
@@ -334,27 +329,26 @@ header {
         color: var(--textColor);
         font-size: 1.1em;
         display: block;
-        padding: 0.5rem;
+        padding: 0.5em;
         border: none;
         width: 90%;
-        height: 1.5rem;
+        height: 1.5em;
         outline: none;
         background-color: var(--inputBgColor);
-        margin: 0 auto 0.3rem auto;
+        margin: 0 auto 0.5em auto;
         box-shadow: inset 0px 4px 4px var(--lightGray);
         &::placeholder {
-            font-size: 0.8rem;
+            font-size: 0.8em;
         }
         &:focus {
             box-shadow: inset 0px 4px 1px var(--anchorColor);
         }
     }
     button {
-        font-size: 0.8rem;
         color: var(--textColor);
-        font-weight: 600;
-        padding: 0.4rem;
-        width: 15rem;
+        font-weight: bold;
+        padding: 0.7em 0;
+        width: 60%;
         margin: 0 auto;
         background-color: var(--bgcolor);
         box-shadow: 0px 7px 5px -1px var(--lightGray);
@@ -363,7 +357,7 @@ header {
         }
     }
     textarea {
-        height: 4rem;
+        height: 4em;
     }
     .footer__year {
         font-size: 0.8em;
@@ -380,7 +374,7 @@ header {
     cursor: pointer;
     z-index: 69;
     #topArrowImg {
-        width: 2.1rem;
+        width: 2.2em;
         height: 100%; // for -webkit
         fill: var(--textColor);
     }
@@ -388,10 +382,10 @@ header {
 
 .switch {
     display: inline-block;
-    height: 0.9rem;
-    width: 2rem;
+    height: 0.9em;
+    width: 2em;
     position: relative;
-    margin-left: 0.3rem;
+    margin-left: 0.3em;
     input {
         display: none;
     }
@@ -411,15 +405,15 @@ header {
         background-color: var(--alwaysWhite);
         bottom: -1px;
         content: "";
-        height: 1rem;
+        height: 1em;
         left: 0px;
         position: absolute;
         transition: 0.4s;
-        width: 1rem;
+        width: 1em;
         border: solid 1px var(--textColor);
     }
     &.round {
-        border-radius: 0.8rem;
+        border-radius: 0.8em;
         &:before {
             border-radius: 50%;
         }
@@ -430,7 +424,7 @@ input:checked {
     + .slider {
         background-color: var(--anchorColor);
         &:before {
-            transform: translateX(1rem);
+            transform: translateX(1em);
         }
     }
 }

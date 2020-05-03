@@ -25,7 +25,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           <img width="250px" loading="lazy" id={idImg} alt={idImg} src={src} />
         </a>
         <div className="icons">
-          {icons.map((icon) => <svg className="__logo" key={icon} width="1.5em" height="1.5em">
+          {icons.map((icon) => <svg key={icon} width="2em" height="2em">
             <title>{icon}</title>
             <use xlinkHref={`sprite.svg#${icon}`} />
           </svg>)}

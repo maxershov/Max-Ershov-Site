@@ -50,7 +50,7 @@ const objCounter = {
   src: counterImg,
   id: "Counter",
   text: ["Framework: Svelte", "Bundle: Webpack", "Backend: Express.js + helmet"],
-  heroku: "WORK IN PROGRESS"
+  heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
 };
 
 const objCovid = {
@@ -111,7 +111,7 @@ const ruCounter = {
   src: counterImg,
   id: "Counter",
   text: ["Фреймворк: Svelte", "Сборка: Webpack", "Сервер: Express.js + helmet"],
-  heroku: "В ПРОЦЕССЕ РАЗРАБОТКИ"
+  heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
 };
 
 const ruCovid = {
