@@ -311,7 +311,7 @@ header {
 
 .contacts {
     color: var(--textColor);
-    padding: 0.5rem 0;
+    padding: 100px 0 40px 0;
     text-align: center;
     background-color: var(--bgcolorTransparent);
 
@@ -332,7 +332,7 @@ header {
     input,
     textarea {
         color: var(--textColor);
-        font-size: 1rem;
+        font-size: 1.1em;
         display: block;
         padding: 0.5rem;
         border: none;
