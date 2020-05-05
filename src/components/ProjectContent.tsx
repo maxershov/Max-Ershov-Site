@@ -35,21 +35,21 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         </div>
       </div>
       <div className="project-info">
-      <p className="project-name">{name}</p>
+        <p className="project-name">{name}</p>
         <ul>
           {text.map(line => <li key={line}>{line}</li>)}
         </ul>
-        <div className="anchors">
+        <div className="project__links">
           {linkLive ? (
             <a href={linkLive}>
-              <svg id="herokuImg" width="1em" height="1em">
+              <svg id="herokuImg" width="1.6em" height="1.6em">
                 <use xlinkHref="sprite.svg#Heroku" />
               </svg>
             Live
             </a>
           ) : undefined}
           <a href={linkHub}>
-            <svg id="githubImg" width="1em" height="1em">
+            <svg id="githubImg" width="1.8em" height="1.8em">
               <use xlinkHref="sprite.svg#Github" />
             </svg>
           GitHub

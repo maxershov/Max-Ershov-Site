@@ -135,26 +135,6 @@ body {
     }
 }
 
-.anchors {
-    display: flex;
-    justify-content: center;
-    font-size: 1.1em;
-    svg {
-        margin: 0 5px;
-    }
-    a {
-        margin: 0 10px;
-        padding: 1.3vw 1.5vh;
-        color: var(--anchorColor);
-        font-weight: bold;
-        box-shadow: 0px 6px 5px -1px var(--lightGray);
-        &:hover {
-            box-shadow: inset 0px 4px 4px var(--lightGray);
-            text-shadow: 0px 1px 6px var(--anchorColor);
-        }
-    }
-}
-
 /* Header */
 
 header {
@@ -238,6 +218,15 @@ header {
             .project-images {
                 min-width: 250px;
                 flex: 1;
+                img {
+                    width: 90%;
+                    object-fit: contain;
+                    margin: 20px 10px;
+                    transition: transform 1s;
+                    &:hover {
+                        transform: scale(0.95);
+                    }
+                }
             }
             .project-info {
                 min-width: 250px;
@@ -267,6 +256,11 @@ header {
                     margin-left: 10px;
                 }
             }
+            svg {
+                display: inline-block;
+                // vertical-align: center;
+                vertical-align: baseline;
+            }
             ul {
                 list-style-type: circle;
                 line-height: 1.5em;
@@ -281,6 +275,23 @@ header {
             margin: 0 10px 5px 10px;
             & > * {
                 margin: 0 0.5%;
+            }
+        }
+        .project__links > * {
+            display: inline-flex;
+            align-items: center;
+            color: var(--anchorColor);
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0px 6px 5px -1px var(--lightGray);
+            padding: 1% 7%;
+            margin: 3%;
+            &:hover {
+                box-shadow: inset 0px 4px 4px var(--lightGray);
+                text-shadow: 0px 1px 6px var(--anchorColor);
+            }
+            svg {
+                margin-right: 7%;
             }
         }
     }
@@ -303,19 +314,6 @@ svg {
     top: 0.1em;
 }
 
-#img-CRM,
-#img-Site,
-#img-Counter,
-#img-Covid {
-    width: 90%;
-    object-fit: contain;
-    margin: 20px 10px;
-    transition: transform 1s;
-    &:hover {
-        transform: scale(0.95);
-    }
-}
-
 /* Contacts */
 
 .contacts {
@@ -323,9 +321,8 @@ svg {
     padding: 100px 0 40px 0;
     text-align: center;
     background-color: var(--bgcolorTransparent);
-
     a {
-        background-color: var(--bgcolor);
+        border-radius: 10px;
     }
     .contacts__container {
         display: flex;
@@ -372,10 +369,21 @@ svg {
     textarea {
         height: 4em;
     }
+    .contacts__links a:not(:first-child) {
+        margin-left: 3%;
+    }
+    .contacts__links > * {
+        box-shadow: 0px 6px 5px -1px var(--lightGray);
+        padding: 7%;
+        &:hover {
+            box-shadow: inset 0px 4px 4px var(--lightGray);
+            text-shadow: 0px 1px 6px var(--anchorColor);
+        }
+    }
     .footer__year {
         font-size: 0.8em;
         color: grey;
-        margin-top: 2em;
+        margin-top: 4em;
     }
 }
 
