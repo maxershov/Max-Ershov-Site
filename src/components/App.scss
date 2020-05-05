@@ -32,15 +32,6 @@ body {
     margin: 0;
 }
 
-.app img,
-svg {
-    opacity: var(--imgOpacity);
-    transition: opacity 0.7s ease-in-out;
-    &:hover {
-        opacity: 1;
-    }
-}
-
 :root {
     --bgcolor: white;
     --bgcolorTransparent: rgba(255, 255, 255, 0.767);
@@ -139,6 +130,28 @@ svg {
     }
 }
 
+.anchors {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    svg {
+        margin: 0 5px;
+    }
+    a {
+        margin: 0 10px;
+        padding: 1.3vw 1.5vh;
+        color: var(--anchorColor);
+        font-weight: bold;
+        box-shadow: 0px 6px 5px -1px var(--lightGray);
+        &:hover {
+            box-shadow: inset 0px 4px 4px var(--lightGray);
+            text-shadow: 0px 1px 6px var(--anchorColor);
+        }
+    }
+}
+
+/* Header */
+
 header {
     background-color: var(--bgcolor);
 }
@@ -154,6 +167,8 @@ header {
         border-bottom: solid 2px var(--textColor);
     }
 }
+
+/* Main page */
 
 .mainPage {
     text-align: center;
@@ -192,6 +207,8 @@ header {
         }
     }
 }
+
+/* Projects */
 
 .projectsPage {
     text-align: center;
@@ -258,6 +275,16 @@ header {
     }
 }
 
+/*  Static */
+.app img,
+svg {
+    opacity: var(--imgOpacity);
+    transition: opacity 0.7s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+}
+
 #githubImg,
 #herokuImg {
     fill: var(--textColor);
@@ -278,25 +305,7 @@ header {
     }
 }
 
-.anchors {
-    display: flex;
-    justify-content: center;
-    font-size: 1.1em;
-    svg {
-        margin: 0 5px;
-    }
-    a {
-        margin: 0 10px;
-        padding: 1.3vw 1.5vh;
-        color: var(--anchorColor);
-        font-weight: bold;
-        box-shadow: 0px 6px 5px -1px var(--lightGray);
-        &:hover {
-            box-shadow: inset 0px 4px 4px var(--lightGray);
-            text-shadow: 0px 1px 6px var(--anchorColor);
-        }
-    }
-}
+/* Contacts */
 
 .contacts {
     color: var(--textColor);
@@ -374,6 +383,8 @@ header {
     }
 }
 
+/* slider */
+
 .switch {
     display: inline-block;
     height: 0.9em;
@@ -423,6 +434,8 @@ input:checked {
     }
 }
 
+/* animations */
+
 @keyframes animated-text {
     from {
         width: 0;
@@ -438,4 +451,32 @@ input:checked {
     to {
         opacity: 1;
     }
+}
+
+@keyframes slideL {
+    from {
+        opacity: 0;
+        transform: translate(-40%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideLeft {
+    animation: slideL 1s ease-in-out;
+}
+
+@keyframes slideR {
+    from {
+        opacity: 0;
+        transform: translate(+40%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideRight {
+    animation: slideR 1s ease-in-out;
 }

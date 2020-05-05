@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import * as React from "react";
+import React, { useEffect } from "react";
 import ProjectContent from "./ProjectContent";
 import { useTranslation } from "react-i18next";
 import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objCovid, ruCovid } from "./projectData";
@@ -11,6 +11,36 @@ const ProjectsPage: React.FC = () => {
   const currLanguage = i18next.language;
   const enObj = [objThis, objCRM, objCounter, objCovid];
   const ruObj = [ruThis, ruCRM, ruCounter, ruCovid];
+  let cardElements: HTMLElement[] = [];
+
+
+  function getElements() {
+    cardElements = enObj.map(obj => document.getElementById(obj.id));
+  }
+
+  function onScroll(event: MouseEvent) {
+    /* add animation to cards */
+    let odd = true;
+    cardElements.forEach(element => {
+      if (window.pageYOffset + window.innerHeight >= element.offsetTop) {
+        if (odd) {
+          element.classList.add("slideLeft");
+          odd = false;
+        } else {
+          element.classList.add("slideRight");
+          odd = true;
+        }
+      }
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    getElements();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+
   return (
     <section id="projects" className="projectsPage">
       <h2>{t("projects")}</h2>
