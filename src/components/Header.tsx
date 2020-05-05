@@ -32,10 +32,12 @@ const Header: React.FC = () => {
     if (toLanguage === "РУССКИЙ") {
       setToLanguage("ENGLISH");
       i18n.changeLanguage("ru");
-      document.title = "Макс Ершов"
+      document.title = "Макс Ершов";
+      document.getElementsByTagName('html')[0].setAttribute('lang', "ru");
     } else {
       setToLanguage("РУССКИЙ");
       i18n.changeLanguage("en");
+      document.getElementsByTagName('html')[0].setAttribute('lang', "en");
       document.title = "Max Ershov"
     }
   }

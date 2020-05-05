@@ -15,6 +15,7 @@ const App: React.FC = () => {
     // Check for language
     if (window.navigator.language == "ru" || window.navigator.language == "ru-RU") {
       i18n.changeLanguage("ru");
+      document.getElementsByTagName('html')[0].setAttribute('lang', "ru");
     }
   }, [])
 
