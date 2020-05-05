@@ -248,6 +248,7 @@ header {
                     box-shadow: 0px 0.4em var(--textColor);
                     position: relative;
                     top: -0.1em;
+                    opacity: 0.8;
                 }
                 &:before {
                     margin-right: 10px;
@@ -258,8 +259,7 @@ header {
             }
             svg {
                 display: inline-block;
-                // vertical-align: center;
-                vertical-align: baseline;
+                vertical-align: center;
             }
             ul {
                 list-style-type: circle;
@@ -399,6 +399,7 @@ svg {
         width: 2.2em;
         height: 100%; // for -webkit
         fill: var(--textColor);
+        opacity: 0.5;
     }
 }
 
