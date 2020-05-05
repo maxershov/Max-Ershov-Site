@@ -7,7 +7,7 @@ export interface ProjectProps {
   linkHub: string;
   linkLive?: string;
   idImg?: string;
-  src?: string;
+  src?: string[];
   id?: string;
   text: string[];
   heroku?: string;
@@ -22,7 +22,11 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <p className="project-name">{name}</p>
       <div className="project-images">
         <a href={linkLive || linkHub}>
-          <img width="250px" loading="lazy" id={idImg} alt={idImg} src={src} />
+          <picture>
+            <source srcSet={src[1]} type="image/webp" />
+            <source srcSet={src[0]} type="image/jpeg" />
+            <img width="250px" loading="lazy" id={idImg} alt={idImg} src={src[0]} />
+          </picture>
         </a>
         <div className="icons">
           {icons.map((icon) => <svg key={icon} width="2em" height="2em">

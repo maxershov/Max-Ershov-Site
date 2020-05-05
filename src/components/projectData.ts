@@ -3,14 +3,17 @@ import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as counterImg from "../images/counter.jpg";
 import * as covidImg from "../images/covid.jpg";
-
+import * as CRMwebp from "../images/crm.webp";
+import * as siteWebp from "../images/site.webp";
+import * as counterWebp from "../images/counter.webp";
+import * as covidWebp from "../images/covid.webp";
 
 const objCRM = {
   name: "CRM",
   icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
-  src: CRMimg,
+  src: [CRMimg, CRMwebp],
   id: "CRM",
   idImg: "img-CRM",
   text: [
@@ -34,7 +37,7 @@ const objThis = {
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
-  src: siteImg,
+  src: [siteImg, siteWebp],
   id: "This-Site",
   text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: #", "Backend: Express.js", "L10n: i18next", "CSS: SASS, postCSS, Auto dark theme", "Linting: ESLint with Airbnb-TS config"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
@@ -47,7 +50,7 @@ const objCounter = {
   linkHub: "https://github.com/maxershov/svelte-time-counter",
   linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
-  src: counterImg,
+  src: [counterImg, counterWebp],
   id: "Counter",
   text: ["Framework: Svelte", "Bundle: Webpack", "Backend: Express.js + helmet"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
@@ -59,7 +62,7 @@ const objCovid = {
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",
-  src: covidImg,
+  src: [covidImg, covidWebp],
   id: "Covid-Site",
   text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack and Babel", "Backend: Express.js", "CSS: SCSS", "API: covid-19-api"],
   heroku: "Hosted on Heroku free plan - page may load 5-10 sec"
@@ -71,7 +74,7 @@ const ruCRM = {
   icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
-  src: CRMimg,
+  src: [CRMimg, CRMwebp],
   id: "CRM",
   idImg: "img-CRM",
   text: [
@@ -95,7 +98,7 @@ const ruThis = {
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
   linkLive: "https://maxershov.herokuapp.com/",
   idImg: "img-Site",
-  src: siteImg,
+  src: [siteImg, siteWebp],
   id: "This-Site",
   text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: #", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: postCSS, SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
@@ -108,7 +111,7 @@ const ruCounter = {
   linkHub: "https://github.com/maxershov/svelte-time-counter",
   linkLive: "https://development-counter.herokuapp.com/",
   idImg: "img-Counter",
-  src: counterImg,
+  src: [counterImg, counterWebp],
   id: "Counter",
   text: ["Фреймворк: Svelte", "Сборка: Webpack", "Сервер: Express.js + helmet"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"
@@ -120,7 +123,7 @@ const ruCovid = {
   linkHub: "https://github.com/maxershov/covid-stats-site",
   linkLive: "https://covidrus.herokuapp.com/",
   idImg: "img-Covid",
-  src: covidImg,
+  src: [covidImg, covidWebp],
   id: "Covid-Site",
   text: ["Фреймворк: React", "Язык: TypeScript", "Сервер: Express.js", "Сборка: Webpack(custom config) и Babel", "CSS: SASS", "API: covid-19-api"],
   heroku: "Сайт на бесплатном тарифе Heroku - сервер в спящем режиме и страница может долго загружаться"

@@ -46,10 +46,6 @@ module.exports = {
             },
             extractComments: false,
         })],
-        runtimeChunk: "single",
-        splitChunks: {
-            chunks: "all"
-        }
     },
     module: {
         rules: [
