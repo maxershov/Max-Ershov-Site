@@ -21,6 +21,11 @@ const ProjectsPage: React.FC = () => {
   function onScroll(event: MouseEvent) {
     /* add animation to cards */
     let odd = true;
+
+    if (window.pageYOffset > cardElements[cardElements.length - 1].offsetTop) {
+      window.removeEventListener('scroll', onScroll);
+    }
+    
     cardElements.forEach(element => {
       if (window.pageYOffset + window.innerHeight >= element.offsetTop) {
         if (odd) {

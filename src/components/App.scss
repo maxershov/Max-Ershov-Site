@@ -455,8 +455,8 @@ input:checked {
 
 @keyframes slideL {
     from {
-        opacity: 0;
-        transform: translate(-40%);
+        opacity: 0.25;
+        transform: translate(-5%);
     }
     to {
         opacity: 1;
@@ -469,8 +469,8 @@ input:checked {
 
 @keyframes slideR {
     from {
-        opacity: 0;
-        transform: translate(+40%);
+        opacity: 0.25;
+        transform: translate(+5%);
     }
     to {
         opacity: 1;
@@ -478,5 +478,5 @@ input:checked {
 }
 
 .slideRight {
-    animation: slideR 1s ease-in-out;
+    animation: slideR 0.6s ease-in-out;
 }
