@@ -19,7 +19,6 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
   return (
     <article id={id} className="projects__content">
-      <p className="project-name">{name}</p>
       <div className="project-images">
         <a href={linkLive || linkHub}>
           <picture>
@@ -36,6 +35,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         </div>
       </div>
       <div className="project-info">
+      <p className="project-name">{name}</p>
         <ul>
           {text.map(line => <li key={line}>{line}</li>)}
         </ul>

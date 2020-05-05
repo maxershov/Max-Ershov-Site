@@ -219,47 +219,40 @@ header {
                 flex: 1;
             }
             .project-name {
-                width: 100%;
                 display: flex;
                 align-items: center;
                 text-align: center;
+                font-size: 1.2em;
+                font-weight: bold;
                 &:before,
                 &:after {
                     content: "";
                     flex-grow: 1;
                     flex-shrink: 0;
-                    height: 1px;
+                    height: 0.2em;
                     background-color: var(--textColor);
                 }
                 &:before {
-                    margin-right: 15px;
+                    margin-right: 10px;
                 }
                 &:after {
-                    margin-left: 15px;
+                    margin-left: 10px;
                 }
             }
             ul {
                 list-style-type: circle;
-                margin-left: 20px;
                 line-height: 1.5em;
                 text-align: left;
             }
-            p {
-                margin: 0 10px;
-                &:first-of-type {
-                    padding-top: 20px;
-                    font-weight: bold;
-                }
-            }
             .last-line {
-                margin-bottom: 10px;
+                margin: 20px 5px 5px 5px;
             }
         }
         .icons {
             text-align: center;
-            margin: 10px;
+            margin: 5px 10px;
             & > * {
-                margin: 0.25em;
+                margin: 0 0.5%;
             }
         }
     }
@@ -347,7 +340,7 @@ header {
     button {
         color: var(--textColor);
         font-weight: bold;
-        padding: 0.7em 0;
+        padding: 0.5em 0;
         width: 60%;
         margin: 0 auto;
         background-color: var(--bgcolor);
@@ -362,6 +355,7 @@ header {
     .footer__year {
         font-size: 0.8em;
         color: grey;
+        margin-top: 2em;
     }
 }
 
