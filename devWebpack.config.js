@@ -79,12 +79,13 @@ module.exports = {
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
         title: "Max-Ershov"
     }), new MiniCssExtractPlugin(),
-    new CopyPlugin([
-
-        { from: path.join(__dirname, "src", "assets", "apple-touch-icon.png"), to: path.join(__dirname, "dist") },
-        { from: path.join(__dirname, "src", "assets", "android-chrome-512x512.png"), to: path.join(__dirname, "dist") },
-        { from: path.join(__dirname, "src", "assets", "android-chrome-192x192.png"), to: path.join(__dirname, "dist") },
-        { from: path.join(__dirname, "src", "assets", "site.webmanifest"), to: path.join(__dirname, "dist") },
-        { from: path.join(__dirname, "src", "assets", "sprite.svg"), to: path.join(__dirname, "dist") }
-    ])]
+    new CopyPlugin({
+        patterns:[
+            { from: path.join(__dirname, "src", "assets", "apple-touch-icon.png"), to: path.join(__dirname, "dist") },
+            { from: path.join(__dirname, "src", "assets", "android-chrome-512x512.png"), to: path.join(__dirname, "dist") },
+            { from: path.join(__dirname, "src", "assets", "android-chrome-192x192.png"), to: path.join(__dirname, "dist") },
+            { from: path.join(__dirname, "src", "assets", "site.webmanifest"), to: path.join(__dirname, "dist") },
+            { from: path.join(__dirname, "src", "assets", "sprite.svg"), to: path.join(__dirname, "dist") }
+        ]
+    })]
 };
