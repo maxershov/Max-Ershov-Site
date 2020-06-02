@@ -223,6 +223,7 @@ header {
                     width: 90%;
                     object-fit: contain;
                     margin: 20px 10px;
+                    border-radius: 6px;
                     transition: transform 1s;
                     &:hover {
                         transform: scale(0.95);
@@ -394,7 +395,7 @@ svg {
     animation: fadein 7s;
     position: fixed;
     top: 85%;
-    left: 90%;
+    left: 5%;
     display: inline-flex;
     cursor: pointer;
     z-index: 69;
