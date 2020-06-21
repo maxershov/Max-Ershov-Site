@@ -9,6 +9,7 @@ const resources = {
         "home": "HOME",
         "projects": "PROJECTS",
         "contacts": "CONTACTS",
+        "login": "LOG IN",
         "dark": "DARK THEME",
         "light": "LIGHT THEME"
       },
@@ -22,7 +23,7 @@ const resources = {
       "projects": "MY PROJECTS",
       "contacts": {
         "title": "CONTACT ME",
-        "placeholderMail": "E-mail adress",
+        "placeholderMail": "E-mail address",
         "placeholderMsg": "Message",
         "btn": "SEND MESSAGE"
       },
@@ -34,6 +35,7 @@ const resources = {
         "home": "ГЛАВНАЯ",
         "projects": "ПРОЕКТЫ",
         "contacts": "КОНТАКТЫ",
+        "login": " ВХОД",
         "dark": "ТЕМНАЯ ТЕМА",
         "light": "СВЕТЛАЯ ТЕМА"
       },

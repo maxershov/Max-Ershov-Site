@@ -69,6 +69,8 @@ const Header: React.FC = () => {
         <a title="To contacts" href="#contacts">
           {t("links.contacts")}
         </a>
+        <a title="To login" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          {t("links.login")}</a>
         <button title="Change theme" type="button" onClick={() => chgTheme()}>
           {t(modeTitle)}
           <label className="switch">
