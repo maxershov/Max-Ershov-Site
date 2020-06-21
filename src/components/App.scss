@@ -480,7 +480,7 @@ input:checked {
 @keyframes slideL {
     from {
         opacity: 0.25;
-        transform: translate(-5%);
+        transform: translate(-10%);
     }
     to {
         opacity: 1;
@@ -494,7 +494,7 @@ input:checked {
 @keyframes slideR {
     from {
         opacity: 0.25;
-        transform: translate(+5%);
+        transform: translate(+10%);
     }
     to {
         opacity: 1;
