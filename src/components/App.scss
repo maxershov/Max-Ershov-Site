@@ -53,87 +53,6 @@ body {
     --imgOpacity: 0.7;
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 14px;
-    }
-    .app__links {
-        display: none;
-    }
-    #burgerBtn {
-        display: block !important;
-    }
-
-    .app__links_open {
-        overflow: hidden;
-        position: absolute;
-        z-index: 69;
-        width: 100%;
-        background-color: var(--bgcolorTransparent);
-        a,
-        button {
-            text-align: left;
-            color: var(--textColor);
-            border-bottom: solid 1px;
-            position: relative;
-            padding: 0.9em;
-            display: block;
-            width: 100%;
-        }
-    }
-    .contacts__container {
-        display: block !important;
-    }
-}
-@media (max-width: 500px) {
-    div.projects article:nth-child(even) .project-images {
-        order: 0 !important;
-    }
-}
-
-@media only screen {
-    @media (min-width: 3840px) {
-        html {
-            font-size: 48px;
-        }
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg3840.jpg");
-        }
-    }
-    @media (min-width: 1920px) and (max-width: 3839px) {
-        html {
-            font-size: 24px;
-        }
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg1920.jpg");
-        }
-    }
-    @media (max-width: 1919px) {
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg1600.jpg");
-        }
-    }
-    @media (max-width: 1599px) {
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg1366.jpg");
-        }
-    }
-    @media (max-width: 1365px) {
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg1280.jpg");
-        }
-    }
-    @media (max-width: 1279px) {
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg768.jpg");
-        }
-    }
-    @media (max-width: 767px) {
-        .fixedImg {
-            background-image: url("../images/jeshoots_bg500.jpg");
-        }
-    }
-}
 
 /* Header */
 
@@ -512,4 +431,89 @@ input:checked {
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+
+
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .app__links {
+        display: none;
+    }
+    #burgerBtn {
+        display: block !important;
+    }
+
+    .app__links_open {
+        overflow: hidden;
+        position: absolute;
+        z-index: 69;
+        width: 100%;
+        background-color: var(--bgcolorTransparent);
+        a,
+        button {
+            text-align: left;
+            color: var(--textColor);
+            border-bottom: solid 1px;
+            position: relative;
+            padding: 0.9em;
+            display: block;
+            width: 100%;
+        }
+    }
+    .contacts__container {
+        display: block !important;
+    }
+}
+@media (max-width: 500px) {
+    div.projects article:nth-child(even) .project-images {
+        order: 0 !important;
+    }
+}
+
+@media only screen {
+    @media (min-width: 3840px) {
+        html {
+            font-size: 48px;
+        }
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg3840.jpg");
+        }
+    }
+    @media (min-width: 1920px) and (max-width: 3839px) {
+        html {
+            font-size: 24px;
+        }
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg1920.jpg");
+        }
+    }
+    @media (max-width: 1919px) {
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg1600.jpg");
+        }
+    }
+    @media (max-width: 1599px) {
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg1366.jpg");
+        }
+    }
+    @media (max-width: 1365px) {
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg1280.jpg");
+        }
+    }
+    @media (max-width: 1279px) {
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg768.jpg");
+        }
+    }
+    @media (max-width: 767px) {
+        .fixedImg {
+            background-image: url("../images/jeshoots_bg500.jpg");
+        }
+    }
 }
