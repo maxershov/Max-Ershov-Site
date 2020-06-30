@@ -12,21 +12,21 @@ const ContactsPage: React.FC = () => {
         <ContactFields />
         <div className="contacts__right">
           <div className="contacts__links">
-            <a href="https://twitter.com/MaksksE">
-            <svg width="2.5em" height="2.5em">
-            <use xlinkHref="sprite.svg#Twitter" />
-          </svg>
-          </a>
-            <a href="https://www.facebook.com/maksksErshov">
+            <a aria-label="twitter" href="https://twitter.com/MaksksE">
+              <svg width="2.5em" height="2.5em">
+                <use xlinkHref="sprite.svg#Twitter" />
+              </svg>
+            </a>
+            <a aria-label="facebook" href="https://www.facebook.com/maksksErshov">
               <svg className="project__link" width="2.5em" height="2.5em">
-              <use xlinkHref="sprite.svg#Facebook" />
-            </svg>
-          </a>
-            <a href="https://github.com/maxershov">
-            <svg className="project__link" id="githubImg" width="2.5em" height="2.5em">
-            <use xlinkHref="sprite.svg#Github" />
-          </svg>
-          </a>
+                <use xlinkHref="sprite.svg#Facebook" />
+              </svg>
+            </a>
+            <a aria-label="github" href="https://github.com/maxershov">
+              <svg className="project__link" id="githubImg" width="2.5em" height="2.5em">
+                <use xlinkHref="sprite.svg#Github" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

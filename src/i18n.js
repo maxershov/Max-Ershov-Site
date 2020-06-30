@@ -11,7 +11,8 @@ const resources = {
         "contacts": "CONTACTS",
         "login": "LOG IN",
         "dark": "DARK THEME",
-        "light": "LIGHT THEME"
+        "light": "LIGHT THEME",
+        "menu" : "Open menu"
       },
       "title": {
         "a": "HI",
@@ -37,7 +38,8 @@ const resources = {
         "contacts": "КОНТАКТЫ",
         "login": " ВХОД",
         "dark": "ТЕМНАЯ ТЕМА",
-        "light": "СВЕТЛАЯ ТЕМА"
+        "light": "СВЕТЛАЯ ТЕМА",
+        "menu" : "Открыть меню"
       },
       "title": {
         "a": "МАКСИМ ЕРШОВ",

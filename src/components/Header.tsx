@@ -56,22 +56,22 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <button type="button" id="burgerBtn" onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="2em" height="2em">
+      <button type="button" id="burgerBtn" aria-label={t("links.menu")} onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="2em" height="2em">
         <use xlinkHref="sprite.svg#Burger" />
       </svg></button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
-        <a title="To home" href="#home">
+        <a href="#home">
           {t("links.home")}
         </a>
-        <a title="To projects" href="#projects">
+        <a href="#projects">
           {t("links.projects")}
         </a>
-        <a title="To contacts" href="#contacts">
+        <a href="#contacts">
           {t("links.contacts")}
         </a>
-        <a title="To login" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           {t("links.login")}</a>
-        <button title="Change theme" type="button" onClick={() => chgTheme()}>
+        <button type="button" onClick={() => chgTheme()}>
           {t(modeTitle)}
           <label className="switch">
             <input
