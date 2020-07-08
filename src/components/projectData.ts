@@ -2,15 +2,15 @@
 import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as counterImg from "../images/counter.jpg";
-import * as covidImg from "../images/covid.jpg";
+import * as githubDashboardImg from "../images/githubDashboard.jpg";
 import * as CRMwebp from "../images/crm.webp";
 import * as siteWebp from "../images/site.webp";
 import * as counterWebp from "../images/counter.webp";
-import * as covidWebp from "../images/covid.webp";
+import * as githubDashboardWebp from "../images/githubDashboard.webp";
 
 const objCRM = {
   name: "CRM",
-  icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
+  icons: ["Preact", "React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
   linkLive: "https://react-crm-maxe.herokuapp.com/",
   src: [CRMimg, CRMwebp],
@@ -26,7 +26,7 @@ const objCRM = {
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
     "Backend: Express.js + helmet, Knex.js",
-    "Browserlist: >1% (Internet Explorer 11)"
+    "Browserslist: >1% (Internet Explorer 11)"
   ]
 };
 
@@ -38,7 +38,7 @@ const objThis = {
   idImg: "img-Site",
   src: [siteImg, siteWebp],
   id: "This-Site",
-  text: ["Framework: React(Preact)", "Language: TypeScript", "Routing: #", "Backend: Express.js", "L10n: i18next", "CSS: SASS, postCSS, Auto dark theme", "Linting: ESLint with Airbnb-TS config"]
+  text: ["Framework: Preact", "Language: TypeScript", "Routing: #", "Backend: Express.js", "L10n: i18next", "CSS: SASS, postCSS, Auto dark theme", "Linting: ESLint with Airbnb-TS config"]
 };
 
 
@@ -53,15 +53,15 @@ const objCounter = {
   text: ["Framework: Svelte", "Bundle: Webpack", "Backend: Express.js + helmet"]
 };
 
-const objCovid = {
-  name: "COVID-19 STATS",
-  icons: ["React", "TypeScript", "Heroku", "Webpack", "SCSS", "Babel"],
-  linkHub: "https://github.com/maxershov/covid-stats-site",
-  linkLive: "https://covidrus.herokuapp.com/",
-  idImg: "img-Covid",
-  src: [covidImg, covidWebp],
-  id: "Covid-Site",
-  text: ["Framework: React", "Language: TypeScript", "Bundle: Webpack and Babel", "Backend: Express.js", "CSS: SCSS", "API: covid-19-api"]
+const objGithub = {
+  name: "GITHUB DASHBOARD",
+  icons: ["Preact", "React", "Github", "Heroku", "Webpack", "Babel", "PostCSS", "IE11", "React-router"],
+  linkHub: "https://github.com/maxershov/gitHubDashboard",
+  linkLive: "https://max-github-dashboard.herokuapp.com/",
+  idImg: "img-GithubDashboard",
+  src: [githubDashboardImg, githubDashboardWebp],
+  id: "GithubDashboard",
+  text: ["Framework: Preact", "State: react-router to save state between pages in URL", "Bundle: Webpack and Babel", "Browserslist: >1% (Internet Explorer 11)", "Backend: Express.js", "API: Github API"]
 };
 
 
@@ -83,7 +83,7 @@ const ruCRM = {
     "Линтер: ESLint с Airbnb конфигурацией",
     "Тестирование: Jest, Puppeteer, Enzyme",
     "Сервер: Express.js + helmet, Knex.js",
-    "Поддержка браузеров: >1% и Internet Explorer 11"
+    "Поддержка браузеров: >1% (Internet Explorer 11)"
   ]
 };
 
@@ -110,15 +110,15 @@ const ruCounter = {
   text: ["Фреймворк: Svelte", "Сборка: Webpack", "Сервер: Express.js + helmet"]
 };
 
-const ruCovid = {
-  name: "COVID-19 СТАТИСТИКА",
-  icons: ["React", "TypeScript", "Heroku", "Webpack", "SCSS", "Babel"],
-  linkHub: "https://github.com/maxershov/covid-stats-site",
-  linkLive: "https://covidrus.herokuapp.com/",
-  idImg: "img-Covid",
-  src: [covidImg, covidWebp],
-  id: "Covid-Site",
-  text: ["Фреймворк: React", "Язык: TypeScript", "Сервер: Express.js", "Сборка: Webpack(custom config) и Babel", "CSS: SASS", "API: covid-19-api"]
+const ruGithub = {
+  name: "GITHUB DASHBOARD",
+  icons: ["Preact", "React", "Github", "Heroku", "Webpack", "Babel", "PostCSS", "IE11", "React-router"],
+  linkHub: "https://github.com/maxershov/gitHubDashboard",
+  linkLive: "https://max-github-dashboard.herokuapp.com/",
+  idImg: "img-GithubDashboard",
+  src: [githubDashboardImg, githubDashboardWebp],
+  id: "GithubDashboard",
+  text: ["Фреймворк: Preact", "Управление состоянием: URL-параметры react-router (для разнообразия)", "Сервер: Express.js", "Сборка: Webpack и Babel", "Поддержка браузеров: >1% (Internet Explorer 11)", "API: GitHub API"]
 };
 
-export { objCRM, objThis, objCounter, objCovid, ruCRM, ruThis, ruCounter, ruCovid };
+export { objCRM, objThis, objCounter, objGithub, ruCRM, ruThis, ruCounter, ruGithub };
