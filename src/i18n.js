@@ -12,7 +12,12 @@ const resources = {
         "login": "LOG IN",
         "dark": "DARK THEME",
         "light": "LIGHT THEME",
-        "menu" : "Open menu"
+        "menu": "Open menu"
+      },
+      "modal": {
+        "header": "Hey",
+        "text": "The page hosted on Heroku free plan and first loading can take up to 15 seconds",
+        "wait": "Thanks for your waiting"
       },
       "title": {
         "a": "HI",
@@ -39,7 +44,12 @@ const resources = {
         "login": " ВХОД",
         "dark": "ТЕМНАЯ ТЕМА",
         "light": "СВЕТЛАЯ ТЕМА",
-        "menu" : "Открыть меню"
+        "menu": "Открыть меню"
+      },
+      "modal": {
+        "header": "Внимание",
+        "text": "Страница на бесплатном сервере Heroku, и первая загрузка может занимать около 15 секунд",
+        "wait": "Пожалуйста, подождите"
       },
       "title": {
         "a": "МАКСИМ ЕРШОВ",

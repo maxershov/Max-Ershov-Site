@@ -53,8 +53,7 @@ body {
     --imgOpacity: 0.7;
 }
 
-
-/* Header */
+/************************* Header *************************/
 
 header {
     background-color: var(--bgcolor);
@@ -72,7 +71,7 @@ header {
     }
 }
 
-/* Main page */
+/************************* Main page *************************/
 
 .mainPage {
     text-align: center;
@@ -112,7 +111,7 @@ header {
     }
 }
 
-/* Projects */
+/************************* Projects *************************/
 
 .projectsPage {
     text-align: center;
@@ -219,7 +218,36 @@ header {
     }
 }
 
-/*  Static */
+/*************************  Modal *************************/
+
+[show-modal="true"] {
+    .modal {
+        position: fixed;
+        width: 65vw;
+        height: 40vh;
+        background-color: var(--bgcolor);
+        top: 10vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 1em;
+        animation: fadein 0.4s;
+        z-index: 100;
+        padding: 40px 15px;
+    }
+}
+
+.modal {
+    position: absolute;
+    left: -1000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*************************  Static *************************/
 .app img,
 svg {
     opacity: var(--imgOpacity);
@@ -236,7 +264,7 @@ svg {
     top: 0.1em;
 }
 
-/* Contacts */
+/************************* Contacts *************************/
 
 .contacts {
     color: var(--textColor);
@@ -326,7 +354,7 @@ svg {
     }
 }
 
-/* slider */
+/************************* slider *************************/
 
 .switch {
     display: inline-block;
@@ -377,7 +405,7 @@ input:checked {
     }
 }
 
-/* animations */
+/************************* animations *************************/
 
 @keyframes animated-text {
     from {
@@ -432,9 +460,6 @@ input:checked {
     height: 1px;
     overflow: hidden;
 }
-
-
-
 
 @media (max-width: 768px) {
     html {

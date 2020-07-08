@@ -17,10 +17,17 @@ export interface ProjectProps {
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { t } = useTranslation();
   const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
+
+  function showModal() {
+    document.documentElement.setAttribute('show-modal', 'true');
+    setTimeout(() => document.documentElement.setAttribute('show-modal', 'false'), 5000);
+  }
+
+
   return (
     <article id={id} className="projects__content">
       <div className="project-images">
-        <a href={linkLive || linkHub}>
+        <a onClick={showModal} onAuxClick={showModal} href={linkLive || linkHub}>
           <picture>
             <source srcSet={src[1]} type="image/webp" />
             <source srcSet={src[0]} type="image/jpeg" />
@@ -41,7 +48,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         </ul>
         <div className="project__links">
           {linkLive ? (
-            <a href={linkLive}>
+            <a onClick={showModal} onAuxClick={showModal} href={linkLive}>
               <svg id="herokuImg" width="1.6em" height="1.6em">
                 <use xlinkHref="sprite.svg#Heroku" />
               </svg>
