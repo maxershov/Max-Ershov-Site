@@ -10,13 +10,12 @@ export interface ProjectProps {
   src?: string[];
   id?: string;
   text: string[];
-  heroku?: string;
 }
 
 
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { t } = useTranslation();
-  const { name, icons, linkHub, linkLive, idImg, src, id, text, heroku } = props;
+  const { name, icons, linkHub, linkLive, idImg, src, id, text } = props;
 
   function showModal() {
     document.documentElement.setAttribute('show-modal', 'true');
@@ -62,7 +61,6 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           GitHub
         </a>
         </div>
-        <p className="last-line">{heroku}</p>
       </div>
     </article>
   );
