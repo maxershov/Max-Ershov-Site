@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import ProjectContent from "./ProjectContent";
 import Modal from "./Modal";
 import { useTranslation } from "react-i18next";
-import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub } from "./projectData";
+import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub, objTelegram, ruTelegram } from "./projectData";
 import i18next from "i18next";
 
 
@@ -12,8 +12,8 @@ import i18next from "i18next";
 const ProjectsPage: React.FC = () => {
   const { t } = useTranslation();
   const currLanguage = i18next.language;
-  const enObj = [objThis, objCRM, objCounter, objGithub];
-  const ruObj = [ruThis, ruCRM, ruCounter, ruGithub];
+  const enObj = [objCRM, objTelegram, objGithub, objCounter, objThis];
+  const ruObj = [ruCRM, ruTelegram, ruGithub, ruCounter, ruThis];
 
   useEffect(() => {
     let odd = true;

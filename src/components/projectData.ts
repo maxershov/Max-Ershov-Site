@@ -3,10 +3,12 @@ import * as CRMimg from "../images/crm.jpg";
 import * as siteImg from "../images/site.jpg";
 import * as counterImg from "../images/counter.jpg";
 import * as githubDashboardImg from "../images/githubDashboard.jpg";
+import * as telegramImg from "../images/telegram.jpg";
 import * as CRMwebp from "../images/crm.webp";
 import * as siteWebp from "../images/site.webp";
 import * as counterWebp from "../images/counter.webp";
 import * as githubDashboardWebp from "../images/githubDashboard.webp";
+import * as telegramWebp from "../images/telegram.webp";
 
 const objCRM = {
   name: "CRM",
@@ -17,8 +19,7 @@ const objCRM = {
   id: "CRM",
   idImg: "img-CRM",
   text: [
-    "Desktop version: Electron",
-    "Framework: React",
+    "Framework: React, Electron (desktop)",
     "Store: Redux, Redux Saga",
     "Bundle: Webpack(custom config) and Babel",
     "Routing: react-router-dom",
@@ -26,7 +27,8 @@ const objCRM = {
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
     "Backend: Express.js + helmet, Knex.js",
-    "Browserslist: >1% (Internet Explorer 11)"
+    "Browserslist: >1% (Internet Explorer 11)",
+    "Case: Used in crossfit club (accounting, RFID cards tracking, sorting and search)"
   ]
 };
 
@@ -64,6 +66,16 @@ const objGithub = {
   text: ["Framework: Preact", "State: react-router to save state between pages in URL", "Bundle: Webpack and Babel", "Browserslist: >1% (Internet Explorer 11)", "Backend: Express.js", "API: Github API"]
 };
 
+const objTelegram = {
+  name: "TELEGRAM MUSIC BOT",
+  icons: ["Telegram", "Puppeteer"],
+  linkHub: "https://github.com/maxershov/telegram-youtube-bot",
+  idImg: "img-Telegram",
+  src: [telegramImg, telegramWebp],
+  id: "Telegram",
+  text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "About: Сontrol YouTubeMusic playback by multiple people", "Case: Used in crossfit club. Clips playing on TV in the gym, employees change track/volume/list with bot"]
+};
+
 
 const ruCRM = {
   name: "CRM",
@@ -74,8 +86,7 @@ const ruCRM = {
   id: "CRM",
   idImg: "img-CRM",
   text: [
-    "Нативная версия: Electron",
-    "Фреймворк: React",
+    "Фреймворк: React, Electron",
     "Управление состоянием: Redux, Redux Saga",
     "Сборка: Webpack(custom config) и Babel",
     "Роутинг: react-router-dom",
@@ -83,7 +94,8 @@ const ruCRM = {
     "Линтер: ESLint с Airbnb конфигурацией",
     "Тестирование: Jest, Puppeteer, Enzyme",
     "Сервер: Express.js + helmet, Knex.js",
-    "Поддержка браузеров: >1% (Internet Explorer 11)"
+    "Поддержка браузеров: >1% (Internet Explorer 11)",
+    "Кейс: Используется в кроссфит клубе (учёт авансов, посещений, сроков, сканер RFID карт, сортировка и поиск)"
   ]
 };
 
@@ -118,7 +130,19 @@ const ruGithub = {
   idImg: "img-GithubDashboard",
   src: [githubDashboardImg, githubDashboardWebp],
   id: "GithubDashboard",
-  text: ["Фреймворк: Preact", "Управление состоянием: URL-параметры react-router (для разнообразия)", "Сервер: Express.js", "Сборка: Webpack и Babel", "Поддержка браузеров: >1% (Internet Explorer 11)", "API: GitHub API"]
+  text: ["Фреймворк: Preact", "Управление состоянием: URL-параметры react-router", "Сервер: Express.js", "Сборка: Webpack и Babel", "Поддержка браузеров: >1% (Internet Explorer 11)", "API: GitHub API"]
 };
 
-export { objCRM, objThis, objCounter, objGithub, ruCRM, ruThis, ruCounter, ruGithub };
+
+const ruTelegram = {
+  name: "TELEGRAM MUSIC BOT",
+  icons: ["Telegram", "Puppeteer"],
+  linkHub: "https://github.com/maxershov/telegram-youtube-bot",
+  idImg: "img-Telegram",
+  src: [telegramImg, telegramWebp],
+  id: "Telegram",
+  text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "О проекте: Telegram бот для контроля проигрываемой музыки", "Кейс: Используется в кроссфит клубе (вывод видео на ТВ в зал, сотрудники контролируют трек/плейлист/громкость через бот)"]
+};
+
+
+export { objCRM, objThis, objCounter, objGithub, ruCRM, ruThis, ruCounter, ruGithub, objTelegram, ruTelegram };
