@@ -23,12 +23,12 @@ const objCRM = {
     "Store: Redux, Redux Saga",
     "Bundle: Webpack(custom config) and Babel",
     "Routing: react-router-dom",
-    "CSS: postCSS(variables, autoprefixer)",
+    "Styles: postCSS, dark theme",
     "Linting: ESLint with Airbnb config",
     "Testing: Jest, Puppeteer, Enzyme",
-    "Backend: Express.js + helmet, Knex.js",
+    "Backend: Express.js + helmet, Knex.js, SQLite",
     "Browserslist: >1% (Internet Explorer 11)",
-    "Case: Used in crossfit club (accounting, RFID cards tracking, sorting and search)"
+    "Case: Used in crossfit club (accounting, RFID cards tracking, profiles sorting and search)"
   ]
 };
 
@@ -40,7 +40,7 @@ const objThis = {
   idImg: "img-Site",
   src: [siteImg, siteWebp],
   id: "This-Site",
-  text: ["Framework: Preact", "Language: TypeScript", "Routing: #", "Backend: Express.js", "L10n: i18next", "CSS: SASS, postCSS, Auto dark theme", "Linting: ESLint with Airbnb-TS config"]
+  text: ["Framework: Preact", "Language: TypeScript", "Backend: Express.js", "L10n: i18next", "Styles: SASS, postCSS, Auto dark theme", "Linting: ESLint with Airbnb-TS config"]
 };
 
 
@@ -90,10 +90,10 @@ const ruCRM = {
     "Управление состоянием: Redux, Redux Saga",
     "Сборка: Webpack(custom config) и Babel",
     "Роутинг: react-router-dom",
-    "CSS: postCSS(variables, autoprefixer)",
+    "Стили: postCSS, тёмная тема",
     "Линтер: ESLint с Airbnb конфигурацией",
     "Тестирование: Jest, Puppeteer, Enzyme",
-    "Сервер: Express.js + helmet, Knex.js",
+    "Backend: Express.js + helmet, Knex.js, SQLite",
     "Поддержка браузеров: >1% (Internet Explorer 11)",
     "Кейс: Используется в кроссфит клубе (учёт авансов, посещений, сроков, сканер RFID карт, сортировка и поиск)"
   ]
@@ -107,7 +107,7 @@ const ruThis = {
   idImg: "img-Site",
   src: [siteImg, siteWebp],
   id: "This-Site",
-  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Роутинг: #", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "CSS: postCSS, SASS + Автоматическая тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"]
+  text: ["Фреймворк: React(Preact)", "Язык: TypeScript", "Сервер: Express.js", "L10n: i18next", "Сборка: Webpack(custom config)", "Стили: postCSS, SASS + тёмная тема", "Линтер: ESLint с Airbnb-TS конфигурацией"]
 };
 
 
