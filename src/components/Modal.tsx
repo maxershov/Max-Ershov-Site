@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-const Modal: React.FC = () => {
+interface ModalProps {
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Modal: React.FC<ModalProps> = (props: ModalProps) => {
   const { t, i18n } = useTranslation();
+
+  function handleOutsideClick(event: Event) {
+    const clickedElement = event.target as HTMLElement;
+    if (!clickedElement.closest('.modal')) props.setShowModal(false);
+  }
+
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [])
 
   return (
     <div className="modal">

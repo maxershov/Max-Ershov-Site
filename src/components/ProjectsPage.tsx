@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProjectContent from "./ProjectContent";
 import Modal from "./Modal";
 import { useTranslation } from "react-i18next";
@@ -14,6 +14,8 @@ const ProjectsPage: React.FC = () => {
   const currLanguage = i18next.language;
   const enObj = [objCRM, objTelegram, objGithub, objCounter, objThis];
   const ruObj = [ruCRM, ruTelegram, ruGithub, ruCounter, ruThis];
+
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     let odd = true;
@@ -39,12 +41,12 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <section id="projects" className="projectsPage">
+      {showModal && <Modal setShowModal={setShowModal} />}
       <h2>{t("projects")}</h2>
-      <Modal />
       <div className="projects">
         {currLanguage === "ru"
-          ? ruObj.map(obj => <ProjectContent {...obj} />)
-          : enObj.map(obj => <ProjectContent {...obj} />)}
+          ? ruObj.map(obj => <ProjectContent {...obj} setShowModal={setShowModal} />)
+          : enObj.map(obj => <ProjectContent {...obj} setShowModal={setShowModal} />)}
       </div>
     </section>
   );

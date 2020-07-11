@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTranslation } from 'react-i18next';
 
-export interface ProjectProps {
+interface ProjectProps {
   name: string;
   icons: string[];
   linkHub: string;
@@ -10,23 +10,18 @@ export interface ProjectProps {
   src?: string[];
   id?: string;
   text: string[];
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   const { t } = useTranslation();
-  const { name, icons, linkHub, linkLive, idImg, src, id, text } = props;
-
-  function showModal() {
-    document.documentElement.setAttribute('show-modal', 'true');
-    setTimeout(() => document.documentElement.setAttribute('show-modal', 'false'), 5000);
-  }
-
+  const { name, icons, linkHub, linkLive, idImg, src, id, text, setShowModal } = props;
 
   return (
     <article id={id} className="projects__content">
       <div className="project-images">
-        <a onClick={showModal} onAuxClick={showModal} href={linkLive || linkHub}>
+        <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive || linkHub}>
           <picture>
             <source srcSet={src[1]} type="image/webp" />
             <source srcSet={src[0]} type="image/jpeg" />
@@ -47,7 +42,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         </ul>
         <div className="project__links">
           {linkLive ? (
-            <a onClick={showModal} onAuxClick={showModal} href={linkLive}>
+            <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive}>
               <svg id="herokuImg" width="1.6em" height="1.6em">
                 <use xlinkHref="sprite.svg#Heroku" />
               </svg>
