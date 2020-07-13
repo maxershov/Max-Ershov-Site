@@ -41,7 +41,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <section id="projects" className="projectsPage">
-      {showModal && <Modal setShowModal={setShowModal} />}
+      {showModal ? <Modal setShowModal={setShowModal}/> : undefined }
       <h2>{t("projects")}</h2>
       <div className="projects">
         {currLanguage === "ru"
