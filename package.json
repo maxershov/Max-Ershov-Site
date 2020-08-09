@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "webpack-dev-server --config ./devWebpack.config.js",
-        "lint": "eslint src/* --ext .ts,.tsx --fix",
+        "lint": "eslint **/*.tsx --parser-options={tsconfigRootDir:null}",
         "local": "node local.js",
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
         "start": "node server.js"
@@ -54,8 +54,8 @@
         "css-loader": "^4.2.0",
         "eslint": "^7.6.0",
         "eslint-config-airbnb-typescript": "^9.0.0",
+        "eslint-config-preact": "^1.1.1",
         "eslint-config-prettier": "^6.11.0",
-        "eslint-config-react-app": "^5.2.1",
         "eslint-loader": "^4.0.2",
         "eslint-plugin-flowtype": "^5.2.0",
         "eslint-plugin-import": "^2.22.0",
