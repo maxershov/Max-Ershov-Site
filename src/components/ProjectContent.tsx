@@ -1,21 +1,20 @@
 import * as React from "react";
-import { useTranslation } from 'react-i18next';
 
 interface ProjectProps {
   name: string;
   icons: string[];
   linkHub: string;
-  linkLive?: string;
-  idImg?: string;
-  src?: string[];
-  id?: string;
+  linkLive: string | undefined;
+  idImg: string;
+  src: string[];
+  id: string;
   text: string[];
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
+
 const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
-  const { t } = useTranslation();
   const { name, icons, linkHub, linkLive, idImg, src, id, text, setShowModal } = props;
 
   return (
@@ -29,10 +28,11 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           </picture>
         </a>
         <div className="icons">
-          {icons.map((icon) => <svg key={icon} width="2em" height="2em">
-            <title>{icon}</title>
-            <use xlinkHref={`sprite.svg#${icon}`} />
-          </svg>)}
+          {icons.map((icon) =>
+            <svg key={icon} width="2em" height="2em">
+              <title>{icon}</title>
+              <use xlinkHref={`sprite.svg#${icon}`} />
+            </svg>)}
         </div>
       </div>
       <div className="project-info">
@@ -46,15 +46,15 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
               <svg id="herokuImg" width="1.6em" height="1.6em">
                 <use xlinkHref="sprite.svg#Heroku" />
               </svg>
-            Live
+              Live
             </a>
           ) : undefined}
           <a href={linkHub}>
             <svg id="githubImg" width="1.8em" height="1.8em">
               <use xlinkHref="sprite.svg#Github" />
             </svg>
-          GitHub
-        </a>
+            GitHub
+          </a>
         </div>
       </div>
     </article>

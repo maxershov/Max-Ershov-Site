@@ -1,12 +1,12 @@
 import * as React from "react";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 
 const MainPage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="mainPage">
-      <div className="fixedImg"></div>
+      <div className="fixedImg" />
       <div className="mainPage__text">
         <h1>{t("title.a")}</h1>
         <h1>{t("title.b")}</h1>

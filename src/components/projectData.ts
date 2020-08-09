@@ -10,7 +10,20 @@ import * as counterWebp from "../images/counter.webp";
 import * as githubDashboardWebp from "../images/githubDashboard.webp";
 import * as telegramWebp from "../images/telegram.webp";
 
-const objCRM = {
+interface Project {
+  name: string;
+  icons: string[];
+  linkHub: string;
+  linkLive: string | undefined;
+  idImg: string;
+  src: string[];
+  id: string;
+  text: string[];
+}
+
+
+
+const objCRM: Project = {
   name: "CRM",
   icons: ["Preact", "React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
@@ -32,7 +45,7 @@ const objCRM = {
   ]
 };
 
-const objThis = {
+const objThis: Project = {
   name: "PORTFOLIO",
   icons: ["Preact", "React", "TypeScript", "Heroku", "PostCSS", "Webpack", "ESLint", "SCSS"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
@@ -44,7 +57,7 @@ const objThis = {
 };
 
 
-const objCounter = {
+const objCounter: Project = {
   name: "TIME COUNTER",
   icons: ["Svelte", "Heroku", "Webpack"],
   linkHub: "https://github.com/maxershov/svelte-time-counter",
@@ -55,7 +68,7 @@ const objCounter = {
   text: ["Framework: Svelte", "Bundle: Webpack", "Backend: Express.js + helmet"]
 };
 
-const objGithub = {
+const objGithub: Project = {
   name: "GITHUB DASHBOARD",
   icons: ["Preact", "React", "Github", "Heroku", "Webpack", "Babel", "PostCSS", "IE11", "React-router"],
   linkHub: "https://github.com/maxershov/gitHubDashboard",
@@ -66,18 +79,19 @@ const objGithub = {
   text: ["Framework: Preact", "State: react-router to save state between pages in URL", "Bundle: Webpack and Babel", "Browserslist: >1% (Internet Explorer 11)", "Backend: Express.js", "API: Github API"]
 };
 
-const objTelegram = {
+const objTelegram: Project = {
   name: "TELEGRAM MUSIC BOT",
   icons: ["Telegram", "Puppeteer"],
   linkHub: "https://github.com/maxershov/telegram-youtube-bot",
+  linkLive: undefined,
   idImg: "img-Telegram",
   src: [telegramImg, telegramWebp],
   id: "Telegram",
-  text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "About: Сontrol YouTubeMusic playback by multiple people", "Case: Used in crossfit club. Clips playing on TV in the gym, employees change track/volume/list with bot"]
+  text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "About: Control YouTubeMusic playback by multiple people", "Case: Used in crossfit club. Clips playing on TV in the gym, employees change track/volume/list with bot"]
 };
 
 
-const ruCRM = {
+const ruCRM: Project = {
   name: "CRM",
   icons: ["React", "Electron", "Redux", "Heroku", "Webpack", "ESLint", "Jest", "Knex.js", "PostCSS", "IE11", "React-router", "Redux-saga", "Babel"],
   linkHub: "https://github.com/maxershov/webcrm",
@@ -99,7 +113,7 @@ const ruCRM = {
   ]
 };
 
-const ruThis = {
+const ruThis: Project = {
   name: "ПОРТФОЛИО",
   icons: ["Preact", "React", "TypeScript", "Heroku", "PostCSS", "Webpack", "ESLint", "SCSS"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
@@ -111,7 +125,7 @@ const ruThis = {
 };
 
 
-const ruCounter = {
+const ruCounter: Project = {
   name: "TIME COUNTER",
   icons: ["Svelte", "Heroku", "Webpack"],
   linkHub: "https://github.com/maxershov/svelte-time-counter",
@@ -122,7 +136,7 @@ const ruCounter = {
   text: ["Фреймворк: Svelte", "Сборка: Webpack", "Сервер: Express.js + helmet"]
 };
 
-const ruGithub = {
+const ruGithub: Project = {
   name: "GITHUB DASHBOARD",
   icons: ["Preact", "React", "Github", "Heroku", "Webpack", "Babel", "PostCSS", "IE11", "React-router"],
   linkHub: "https://github.com/maxershov/gitHubDashboard",
@@ -134,10 +148,11 @@ const ruGithub = {
 };
 
 
-const ruTelegram = {
+const ruTelegram: Project = {
   name: "TELEGRAM MUSIC BOT",
   icons: ["Telegram", "Puppeteer"],
   linkHub: "https://github.com/maxershov/telegram-youtube-bot",
+  linkLive: undefined,
   idImg: "img-Telegram",
   src: [telegramImg, telegramWebp],
   id: "Telegram",

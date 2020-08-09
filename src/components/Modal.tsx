@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -6,7 +7,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = (props: ModalProps) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   function handleOutsideClick(event: Event) {
     const clickedElement = event.target as HTMLElement;

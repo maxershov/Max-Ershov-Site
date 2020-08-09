@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,16 +17,6 @@ const Header: React.FC = () => {
       chgMenu(false);
     }
   }
-  useEffect(() => {
-    window.addEventListener('click', handleClick);
-    return () => window.removeEventListener('click', handleClick);
-  }, []);
-
-
-  useEffect(() => {
-    // checks for dark theme
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
-  }, []);
 
 
   function chgLanguage(): void {
@@ -54,11 +45,24 @@ const Header: React.FC = () => {
   }
 
 
+  useEffect(() => {
+    window.addEventListener('click', handleClick);
+    return () => window.removeEventListener('click', handleClick);
+  }, []);
+
+
+  useEffect(() => {
+    // checks for dark theme
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) chgTheme();
+  }, []);
+
   return (
     <header>
-      <button type="button" id="burgerBtn" aria-label={t("links.menu")} onClick={() => chgMenu(!openMenu)}><svg id="burgerImg" width="2em" height="2em">
-        <use xlinkHref="sprite.svg#Burger" />
-      </svg></button>
+      <button type="button" id="burgerBtn" aria-label={t("links.menu")} onClick={() => chgMenu(!openMenu)}>
+        <svg id="burgerImg" width="2em" height="2em">
+          <use xlinkHref="sprite.svg#Burger" />
+        </svg>
+      </button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <a href="#home">
           {t("links.home")}
@@ -70,29 +74,32 @@ const Header: React.FC = () => {
           {t("links.contacts")}
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-          {t("links.login")}</a>
+          {t("links.login")}
+        </a>
         <button type="button" onClick={() => chgTheme()}>
           {t(modeTitle)}
-          <label className="switch">
+          <label htmlFor="change theme" className="switch">
             <input
               onClick={() => chgTheme()}
-              checked={modeTitle === "links.light" ? true : false}
+              checked={modeTitle === "links.light"}
               type="checkbox"
               id="checkbox"
+              name="change theme"
             />
-            <div className="slider round"></div>
+            <div className="slider round" />
           </label>
         </button>
         <button onClick={() => chgLanguage()} type="button">
           {toLanguage}
-          <label className="switch">
+          <label htmlFor="change language" className="switch">
             <input
               onClick={() => chgLanguage()}
-              checked={toLanguage === "РУССКИЙ" ? false : true}
+              checked={toLanguage !== "РУССКИЙ"}
               type="checkbox"
               id="checkbox"
+              name="change language"
             />
-            <div className="slider round"></div>
+            <div className="slider round" />
           </label>
         </button>
       </nav>

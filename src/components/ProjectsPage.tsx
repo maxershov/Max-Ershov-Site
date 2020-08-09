@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import ProjectContent from "./ProjectContent";
 import Modal from "./Modal";
-import { useTranslation } from "react-i18next";
 import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub, objTelegram, ruTelegram } from "./projectData";
-import i18next from "i18next";
 
 
 
@@ -41,7 +42,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <section id="projects" className="projectsPage">
-      {showModal ? <Modal setShowModal={setShowModal}/> : undefined }
+      {showModal ? <Modal setShowModal={setShowModal} /> : undefined}
       <h2>{t("projects")}</h2>
       <div className="projects">
         {currLanguage === "ru"

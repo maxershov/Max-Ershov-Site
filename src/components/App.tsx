@@ -9,19 +9,23 @@ require("./App.scss");
 
 
 const App: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     // Check for language
-    if (window.navigator.language == "ru" || window.navigator.language == "ru-RU") {
+    if (window.navigator.language === "ru" || window.navigator.language === "ru-RU") {
       i18n.changeLanguage("ru");
       document.getElementsByTagName('html')[0].setAttribute('lang', "ru");
     }
-  }, [])
+  }, [i18n])
 
   return (
     <main id="home" className="app">
-      <a id="toTop" title="Back to top" href="#home"><svg id="topArrowImg" width="1em" height="1em"><use xlinkHref="sprite.svg#TopArrow" /></svg></a>
+      <a id="toTop" title="Back to top" href="#home">
+        <svg id="topArrowImg" width="1em" height="1em">
+          <use xlinkHref="sprite.svg#TopArrow" />
+        </svg>
+      </a>
       <Header />
       <MainPage />
       <ProjectsPage />
