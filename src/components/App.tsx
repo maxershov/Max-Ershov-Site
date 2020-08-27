@@ -4,6 +4,7 @@ import MainPage from "./MainPage";
 import ContactsPage from "./ContactsPage";
 import ProjectsPage from "./ProjectsPage";
 import Header from "./Header";
+import * as sprite from "../images/sprite.svg";
 
 require("./App.scss");
 
@@ -23,7 +24,7 @@ const App: React.FC = () => {
     <main id="home" className="app">
       <a id="toTop" title="Back to top" href="#home">
         <svg id="topArrowImg" width="1em" height="1em">
-          <use xlinkHref="sprite.svg#TopArrow" />
+          <use xlinkHref={`${sprite}#TopArrow`} />
         </svg>
       </a>
       <Header />

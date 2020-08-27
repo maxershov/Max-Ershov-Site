@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as sprite from "../images/sprite.svg";
 
 interface ProjectProps {
   name: string;
@@ -31,7 +32,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           {icons.map((icon) =>
             <svg key={icon} width="2em" height="2em">
               <title>{icon}</title>
-              <use xlinkHref={`sprite.svg#${icon}`} />
+              <use xlinkHref={`${sprite}#${icon}`} />
             </svg>)}
         </div>
       </div>
@@ -44,7 +45,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           {linkLive ? (
             <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive}>
               <svg id="play-icon" width="1.7em" height="1.7em">
-                <use xlinkHref="sprite.svg#Play" />
+                <use xlinkHref={`${sprite}#Play`} />
               </svg>
               Live
             </a>
@@ -52,7 +53,7 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           {linkHub ? (
             <a href={linkHub}>
               <svg id="githubImg" width="1.8em" height="1.8em">
-                <use xlinkHref="sprite.svg#Github" />
+                <use xlinkHref={`${sprite}#Github`} />
               </svg>
               GitHub
             </a>

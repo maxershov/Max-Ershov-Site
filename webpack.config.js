@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-unused-vars */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -85,8 +83,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.join(__dirname, 'src', 'assets', 'index.html'),
-        title: "MaxErshov Page",
-        favicon: path.join(__dirname, "src", "assets", "favicon.ico"),
+        title: "Max's Portfolio",
         minify: {
             removeComments: true,
             collapseWhitespace: true,
@@ -98,14 +95,14 @@ module.exports = {
         }
     }),
     new CopyPlugin({
-        patterns:[
+        patterns: [
             { from: path.join(__dirname, "src", "assets"), to: path.join(__dirname, "dist") }
         ]
     }),
     new CompressionPlugin({
         algorithm: "gzip"
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' })
         // new WebpackMonitor({
         //     capture: true,
         //     launch: true,

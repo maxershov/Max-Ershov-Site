@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import * as sprite from "../images/sprite.svg";
 
 const Header: React.FC = () => {
 
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
     <header>
       <button type="button" id="burgerBtn" aria-label={t("links.menu")} onClick={() => chgMenu(!openMenu)}>
         <svg id="burgerImg" width="2em" height="2em">
-          <use xlinkHref="sprite.svg#Burger" />
+          <use xlinkHref={`${sprite}#Burger`} />
         </svg>
       </button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
