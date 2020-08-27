@@ -15,8 +15,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'main.js',
-        chunkFilename: "[name].bundle.js",
-        publicPath: '/'
+        chunkFilename: "[name].bundle.js"
     },
     resolve: {
         "alias": {
@@ -100,11 +99,7 @@ module.exports = {
     }),
     new CopyPlugin({
         patterns:[
-            { from: path.join(__dirname, "src", "assets", "apple-touch-icon.png"), to: path.join(__dirname, "dist") },
-            { from: path.join(__dirname, "src", "assets", "android-chrome-512x512.png"), to: path.join(__dirname, "dist") },
-            { from: path.join(__dirname, "src", "assets", "android-chrome-192x192.png"), to: path.join(__dirname, "dist") },
-            { from: path.join(__dirname, "src", "assets", "site.webmanifest"), to: path.join(__dirname, "dist") },
-            { from: path.join(__dirname, "src", "assets", "sprite.svg"), to: path.join(__dirname, "dist") }
+            { from: path.join(__dirname, "src", "assets"), to: path.join(__dirname, "dist") }
         ]
     }),
     new CompressionPlugin({
