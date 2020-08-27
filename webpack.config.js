@@ -14,7 +14,7 @@ module.exports = {
     entry: './src/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'main.js',
+        filename: 'main.[hash:8].js',
         chunkFilename: "[name].bundle.js"
     },
     resolve: {
