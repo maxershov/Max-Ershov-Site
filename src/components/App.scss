@@ -246,10 +246,10 @@ svg {
 }
 
 #githubImg,
-#herokuImg {
-    fill: var(--textColor);
+#play-icon {
+    fill: var(--anchorColor);
     position: relative;
-    top: 0.1em;
+    // top: 0.1em;
 }
 
 /************************* Contacts *************************/

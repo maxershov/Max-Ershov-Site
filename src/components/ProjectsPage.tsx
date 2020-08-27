@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import ProjectContent from "./ProjectContent";
 import Modal from "./Modal";
-import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub, objTelegram, ruTelegram } from "./projectData";
+import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub, objTelegram, ruTelegram, objBaza, ruBaza } from "./projectData";
 
 
 
@@ -13,8 +13,8 @@ import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGit
 const ProjectsPage: React.FC = () => {
   const { t } = useTranslation();
   const currLanguage = i18next.language;
-  const enObj = [objCRM, objTelegram, objGithub, objCounter, objThis];
-  const ruObj = [ruCRM, ruTelegram, ruGithub, ruCounter, ruThis];
+  const enObj = [objCRM, objBaza, objTelegram, objGithub, objCounter, objThis];
+  const ruObj = [ruCRM, ruBaza, ruTelegram, ruGithub, ruCounter, ruThis];
 
   const [showModal, setShowModal] = useState(false);
 

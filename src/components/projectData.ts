@@ -4,16 +4,18 @@ import * as siteImg from "../images/site.jpg";
 import * as counterImg from "../images/counter.jpg";
 import * as githubDashboardImg from "../images/githubDashboard.jpg";
 import * as telegramImg from "../images/telegram.jpg";
+import * as bazaImg from "../images/baza.jpg";
 import * as CRMwebp from "../images/crm.webp";
 import * as siteWebp from "../images/site.webp";
 import * as counterWebp from "../images/counter.webp";
 import * as githubDashboardWebp from "../images/githubDashboard.webp";
 import * as telegramWebp from "../images/telegram.webp";
+import * as bazaWebp from "../images/baza.webp";
 
 interface Project {
   name: string;
   icons: string[];
-  linkHub: string;
+  linkHub:  string | undefined;
   linkLive: string | undefined;
   idImg: string;
   src: string[];
@@ -47,9 +49,9 @@ const objCRM: Project = {
 
 const objThis: Project = {
   name: "PORTFOLIO",
-  icons: ["Preact", "React", "TypeScript", "Heroku", "PostCSS", "Webpack", "ESLint", "SCSS"],
+  icons: ["Preact", "React", "TypeScript", "PostCSS", "Webpack", "ESLint", "SCSS"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
-  linkLive: "https://maxershov.herokuapp.com/",
+  linkLive: "https://maksershov.ru/",
   idImg: "img-Site",
   src: [siteImg, siteWebp],
   id: "This-Site",
@@ -90,6 +92,17 @@ const objTelegram: Project = {
   text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "About: Control YouTubeMusic playback by multiple people", "Case: Used in crossfit club. Clips playing on TV in the gym, employees change track/volume/list with bot"]
 };
 
+const objBaza: Project = {
+  name: "KBTEAM PAGE",
+  icons: ["Pug", "PostCSS", "Webpack", "ESLint", "SCSS"],
+  linkHub: undefined,
+  linkLive: "https://kbteam.ru/",
+  idImg: "img-Baza",
+  src: [bazaImg, bazaWebp],
+  id: "Baza-page",
+  text: ["Preprocessor: Pug", "Styles: SASS, postCSS", "Linting: Pug-lint", "Case: Lightweight landing page for crossfit club"]
+};
+
 
 const ruCRM: Project = {
   name: "CRM",
@@ -115,9 +128,9 @@ const ruCRM: Project = {
 
 const ruThis: Project = {
   name: "ПОРТФОЛИО",
-  icons: ["Preact", "React", "TypeScript", "Heroku", "PostCSS", "Webpack", "ESLint", "SCSS"],
+  icons: ["Preact", "React", "TypeScript", "PostCSS", "Webpack", "ESLint", "SCSS"],
   linkHub: "https://github.com/maxershov/Max-Ershov-Site",
-  linkLive: "https://maxershov.herokuapp.com/",
+  linkLive: "https://maksershov.ru/",
   idImg: "img-Site",
   src: [siteImg, siteWebp],
   id: "This-Site",
@@ -159,5 +172,16 @@ const ruTelegram: Project = {
   text: ["API: Node Telegram Bot API", "Backend: Puppeteer", "О проекте: Telegram бот для контроля проигрываемой музыки", "Кейс: Используется в кроссфит клубе (вывод видео на ТВ в зал, сотрудники контролируют трек/плейлист/громкость через бот)"]
 };
 
+const ruBaza: Project = {
+  name: "KBTEAM PAGE",
+  icons: ["Pug", "PostCSS", "Webpack", "ESLint", "SCSS"],
+  linkHub: undefined,
+  linkLive: "https://kbteam.ru/",
+  idImg: "img-Baza",
+  src: [bazaImg, bazaWebp],
+  id: "Baza-page",
+  text: ["Препроцессор: Pug", "Стили: SASS, postCSS", "Линтер: Pug-lint", "Кейс: Быстрый лендинг для кроссфит клуба"]
+};
 
-export { objCRM, objThis, objCounter, objGithub, ruCRM, ruThis, ruCounter, ruGithub, objTelegram, ruTelegram };
+
+export { objCRM, objThis, objCounter, objGithub, objBaza, ruCRM, ruThis, ruCounter, ruGithub, objTelegram, ruTelegram, ruBaza };

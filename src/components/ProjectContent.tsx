@@ -43,18 +43,20 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         <div className="project__links">
           {linkLive ? (
             <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive}>
-              <svg id="herokuImg" width="1.6em" height="1.6em">
-                <use xlinkHref="sprite.svg#Heroku" />
+              <svg id="play-icon" width="1.7em" height="1.7em">
+                <use xlinkHref="sprite.svg#Play" />
               </svg>
               Live
             </a>
           ) : undefined}
-          <a href={linkHub}>
-            <svg id="githubImg" width="1.8em" height="1.8em">
-              <use xlinkHref="sprite.svg#Github" />
-            </svg>
-            GitHub
-          </a>
+          {linkHub ? (
+            <a href={linkHub}>
+              <svg id="githubImg" width="1.8em" height="1.8em">
+                <use xlinkHref="sprite.svg#Github" />
+              </svg>
+              GitHub
+            </a>
+          ) : undefined}
         </div>
       </div>
     </article>
