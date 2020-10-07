@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Project } from "./Project";
-import { Modal }  from "./Modal";
+import { Modal } from "./Modal";
 import Context from './Context';
+require(`intersection-observer`);
 
 
 const ProjectsPage: React.FC = () => {
@@ -22,7 +23,7 @@ const ProjectsPage: React.FC = () => {
                 observer.unobserve(entry.target);
             }
         }, { threshold: 0 });
-        
+
         t.projects.forEach(obj => {
             observer.observe(document.getElementById(obj.id));
         })
