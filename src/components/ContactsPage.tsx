@@ -1,13 +1,14 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useContext } from 'react';
 import ContactFields from "./ContactFields";
 import * as sprite from "../images/sprite.svg";
+import Context from './Context';
 
-const ContactsPage: React.FC = () => {
-  const { t } = useTranslation();
+const ContactsPage = () => {
+  const t = useContext(Context);
+
   return (
     <footer id="contacts" className="contacts">
-      <h3>{t("contacts.title")}</h3>
+      <h3>{t?.contacts?.title}</h3>
       <div className="contacts__container">
         <ContactFields />
         <div className="contacts__right">

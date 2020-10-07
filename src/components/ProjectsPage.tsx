@@ -1,56 +1,46 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
-import ProjectContent from "./ProjectContent";
-import Modal from "./Modal";
-import { objCRM, objThis, ruCRM, ruThis, objCounter, ruCounter, objGithub, ruGithub, objTelegram, ruTelegram, objBaza, ruBaza } from "./projectData";
-
-
+import React, { useEffect, useState, useContext } from "react";
+import { Project } from "./Project";
+import { Modal }  from "./Modal";
+import Context from './Context';
 
 
 const ProjectsPage: React.FC = () => {
-  const { t } = useTranslation();
-  const currLanguage = i18next.language;
-  const enObj = [objCRM, objBaza, objTelegram, objGithub, objCounter, objThis];
-  const ruObj = [ruCRM, ruBaza, ruTelegram, ruGithub, ruCounter, ruThis];
+    const t = useContext(Context);
+    const [showModal, setShowModal] = useState<boolean>(false);
 
-  const [showModal, setShowModal] = useState(false);
+    useEffect(() => {
+        let odd = true;
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                if (odd) {
+                    entry.target.classList.add("slideLeft");
+                    odd = false;
+                } else {
+                    entry.target.classList.add("slideRight");
+                    odd = true;
+                }
+                observer.unobserve(entry.target);
+            }
+        }, { threshold: 0 });
+        
+        t.projects.forEach(obj => {
+            observer.observe(document.getElementById(obj.id));
+        })
 
-  useEffect(() => {
-    let odd = true;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        if (odd) {
-          entry.target.classList.add("slideLeft");
-          odd = false;
-        } else {
-          entry.target.classList.add("slideRight");
-          odd = true;
-        }
-        observer.unobserve(entry.target);
-      }
-    }, { threshold: 0 });
+        return () => { observer.disconnect(); }
+    }, [t]);
 
-    enObj.forEach(obj => {
-      observer.observe(document.getElementById(obj.id));
-    })
-
-    return () => { observer.disconnect(); }
-  }, []);
-
-  return (
-    <section id="projects" className="projectsPage">
-      {showModal ? <Modal setShowModal={setShowModal} /> : undefined}
-      <h2>{t("projects")}</h2>
-      <div className="projects">
-        {currLanguage === "ru"
-          ? ruObj.map(obj => <ProjectContent {...obj} setShowModal={setShowModal} />)
-          : enObj.map(obj => <ProjectContent {...obj} setShowModal={setShowModal} />)}
-      </div>
-    </section>
-  );
+    return (
+        <section id="projects" className="projectsPage">
+            {showModal ? <Modal setShowModal={setShowModal} /> : undefined}
+            <h2>{t?.projectsName}</h2>
+            <div className="projects">
+                {
+                    t.projects.map(obj => (<Project {...obj} setShowModal={setShowModal} key={obj?.name} />))
+                }
+            </div>
+        </section>
+    );
 };
 
 

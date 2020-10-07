@@ -1,14 +1,20 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useEffect, useState, useContext } from "react";
 import * as sprite from "../images/sprite.svg";
+import Context from './Context';
 
-const Header: React.FC = () => {
 
-  const { t, i18n } = useTranslation();
+interface HeaderProps {
+  setLng: React.Dispatch<React.SetStateAction<string>>
+}
+
+
+const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
+
+  const t = useContext(Context);
+
   const [openMenu, chgMenu] = useState<boolean>(false);
   const [toLanguage, setToLanguage] = useState<string>("РУССКИЙ");
-  const [modeTitle, chgModeTitle] = useState<string>("links.dark");
+  const [modeTitle, chgModeTitle] = useState<"light" | "dark">("dark");
 
 
   function handleClick(event: MouseEvent) {
@@ -19,28 +25,24 @@ const Header: React.FC = () => {
   }
 
 
-  function chgLanguage(): void {
+  function chgLanguage() {
     if (toLanguage === "РУССКИЙ") {
       setToLanguage("ENGLISH");
-      i18n.changeLanguage("ru");
-      document.title = "Макс Ершов";
-      document.getElementsByTagName('html')[0].setAttribute('lang', "ru");
+      props.setLng("ru")
     } else {
       setToLanguage("РУССКИЙ");
-      i18n.changeLanguage("en");
-      document.getElementsByTagName('html')[0].setAttribute('lang', "en");
-      document.title = "Max Ershov"
+      props.setLng("en")
     }
   }
 
 
-  function chgTheme(): void {
-    if (modeTitle === "links.dark") {
+  function chgTheme() {
+    if (modeTitle === "dark") {
       document.documentElement.setAttribute('data-theme', 'dark');
-      chgModeTitle("links.light");
+      chgModeTitle("light");
     } else {
       document.documentElement.setAttribute('data-theme', 'light');
-      chgModeTitle("links.dark");
+      chgModeTitle("dark");
     }
   }
 
@@ -58,30 +60,30 @@ const Header: React.FC = () => {
 
   return (
     <header>
-      <button type="button" id="burgerBtn" aria-label={t("links.menu")} onClick={() => chgMenu(!openMenu)}>
+      <button type="button" id="burgerBtn" aria-label={t?.links?.menu} onClick={() => chgMenu(!openMenu)}>
         <svg id="burgerImg" width="2em" height="2em">
           <use xlinkHref={`${sprite}#Burger`} />
         </svg>
       </button>
       <nav className={openMenu ? "app__links_open" : "app__links"}>
         <a href="#home">
-          {t("links.home")}
+          {t?.links?.home}
         </a>
         <a href="#projects">
-          {t("links.projects")}
+          {t?.links?.projects}
         </a>
         <a href="#contacts">
-          {t("links.contacts")}
+          {t?.links?.contacts}
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-          {t("links.login")}
+          {t?.links?.login}
         </a>
         <button type="button" onClick={() => chgTheme()}>
-          {t(modeTitle)}
+          {t?.links ? t.links[modeTitle] : null}
           <label htmlFor="change theme" className="switch">
             <input
-              onClick={() => chgTheme()}
-              checked={modeTitle === "links.light"}
+              onChange={() => chgTheme()}
+              checked={modeTitle === "light"}
               type="checkbox"
               id="checkbox"
               name="change theme"
@@ -93,7 +95,7 @@ const Header: React.FC = () => {
           {toLanguage}
           <label htmlFor="change language" className="switch">
             <input
-              onClick={() => chgLanguage()}
+              onChange={() => chgLanguage()}
               checked={toLanguage !== "РУССКИЙ"}
               type="checkbox"
               id="checkbox"

@@ -1,45 +1,48 @@
 import * as React from "react";
 import * as sprite from "../images/sprite.svg";
 
-interface ProjectProps {
-  name: string;
-  icons: string[];
-  linkHub: string;
-  linkLive: string | undefined;
-  idImg: string;
-  src: string[];
+
+export interface IProject {
   id: string;
-  text: string[];
+  icons: string;
+  idImg: string;
+  linkHub: string;
+  linkLive: string;
+  name: string;
+  text: string;
+  imgjpg: ImgjpgOrImgwebp;
+  imgwebp: ImgjpgOrImgwebp;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }
+export interface ImgjpgOrImgwebp {
+  sourceUrl: string;
+  altText: string;
+}
 
-
-
-const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
-  const { name, icons, linkHub, linkLive, idImg, src, id, text, setShowModal } = props;
-
+export const Project: React.FC<IProject> = (props: IProject) => {
+  const { name, icons, linkHub, linkLive, idImg, imgjpg, imgwebp, id, text, setShowModal } = props;
   return (
     <article id={id} className="projects__content">
       <div className="project-images">
         <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive || linkHub}>
           <picture>
-            <source srcSet={src[1]} type="image/webp" />
-            <source srcSet={src[0]} type="image/jpeg" />
-            <img width="250px" loading="lazy" id={idImg} alt={idImg} src={src[0]} />
+            <source srcSet={imgwebp.sourceUrl} type="image/webp" />
+            <source srcSet={imgjpg.sourceUrl} type="image/jpeg" />
+            <img width="250px" loading="lazy" id={idImg} alt={imgjpg.altText} src={imgjpg.sourceUrl} />
           </picture>
         </a>
         <div className="icons">
-          {icons.map((icon) =>
+          {icons.split(",").map((icon) =>
             <svg key={icon} width="2em" height="2em">
               <title>{icon}</title>
-              <use xlinkHref={`${sprite}#${icon}`} />
+              <use xlinkHref={`${sprite}#${icon.replace(/\s/g, '')}`} />
             </svg>)}
         </div>
       </div>
       <div className="project-info">
         <p className="project-name">{name}</p>
         <ul>
-          {text.map(line => <li key={line}>{line}</li>)}
+          {text.split("\n").map(line => <li key={line}>{line}</li>)}
         </ul>
         <div className="project__links">
           {linkLive ? (
@@ -63,6 +66,3 @@ const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
     </article>
   );
 };
-
-
-export default Project;
