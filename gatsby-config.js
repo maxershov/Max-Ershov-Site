@@ -9,7 +9,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-preact",
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-zopfli',
+    {
+      resolve: 'gatsby-plugin-zopfli',
+      options: {
+        extensions: ['css', 'html', 'js', 'svg', 'json']
+      }
+    },
     {
       resolve: "gatsby-plugin-typescript",
       options: {
