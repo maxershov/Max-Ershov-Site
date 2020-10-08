@@ -30,6 +30,7 @@
         "gatsby-plugin-copy-files": "^1.0.3",
         "gatsby-plugin-react-helmet": "^3.3.13",
         "gatsby-plugin-sass": "^2.3.16",
+        "gatsby-plugin-uninline-styles": "^0.2.0",
         "gatsby-plugin-zopfli": "^2.0.0",
         "gatsby-source-filesystem": "^2.3.34",
         "intersection-observer": "^0.11.0",
