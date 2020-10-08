@@ -16,8 +16,8 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await updateL18n(lng);
-      setData({ ...data, loading: false });
+      const newData = await updateL18n(lng);
+      setData({ ...newData, loading: false });
     }
     fetchData()
     document.getElementsByTagName('html')[0].setAttribute('lang', lng);
@@ -57,7 +57,7 @@ export default function Home() {
         <meta property="twitter:image" content={`https://maksershov.ru/${siteImg}`} />
       </Helmet>
       <Header setLng={setLng} />
-      <MainPage></MainPage>
+      <MainPage />
       {data.loading ? null : (<ProjectsPage />)}
       <ContactsPage />
     </Context.Provider>

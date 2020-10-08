@@ -23,10 +23,10 @@ export const Modal: React.FC<ModalProps> = (props: ModalProps) => {
     }, [])
 
     return (
-        <div className="modal">
-            <h3>{t?.modal?.header}</h3>
-            <p>{t?.modal?.text}</p>
-            <p>{t?.modal?.wait}</p>
-        </div>
+      <div className="modal">
+        <h3>{t?.modal?.header}</h3>
+        <p>{t?.modal?.text}</p>
+        <p>{t?.modal?.wait}</p>
+      </div>
     );
 };

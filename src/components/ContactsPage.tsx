@@ -3,7 +3,7 @@ import ContactFields from "./ContactFields";
 import * as sprite from "../images/sprite.svg";
 import Context from './Context';
 
-const ContactsPage = () => {
+const ContactsPage: React.FC = () => {
   const t = useContext(Context);
 
   return (

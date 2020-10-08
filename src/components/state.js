@@ -1,93 +1,3 @@
-async function updateL18n(language) {
-  let newData = {};
-  if (language === 'ru') {
-    const data = await getProjectData("ru");
-    ruData.projects = data;
-    newData = ruData;
-  } else {
-    const data = await getProjectData("en");
-    enData.projects = data;
-    newData = enData;
-  }
-  return newData;
-}
-
-
-
-async function getProjectData(language) {
-  let query = '';
-  let projectDir = ''
-  const enQuery = `{
-    projects {
-      nodes {
-        projectsFields {
-          id
-          icons
-          imgid
-          linkhub
-          linklive
-          name
-          text
-          imgjpg {
-            sourceUrl
-            altText
-          }
-          imgwebp {
-            altText
-            sourceUrl
-          }
-        }
-      }
-    }
-}`
-  const ruQuery = `{
-  ruprojects {
-    nodes {
-      projectsFields {
-        id
-        icons
-        imgid
-        linkhub
-        linklive
-        name
-        text
-        imgjpg {
-          sourceUrl
-          altText
-        }
-        imgwebp {
-          altText
-          sourceUrl
-        }
-      }
-    }
-  }
-}`
-
-  if (language === 'ru') {
-    projectDir = 'ruprojects'
-    query = ruQuery
-  } else {
-    projectDir = 'projects'
-    query = enQuery
-  }
-
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      query
-    })
-  };
-
-  // const raw = await fetch(`http://localhost/mypage/graphql/`, options)
-  const raw = await fetch(`/dt/graphql/`, options)
-  const res = await raw.json();
-  const data = await res.data[projectDir].nodes.map((value) => value.projectsFields);
-  return data;
-}
 
 const enData = {
   "title": {
@@ -293,5 +203,95 @@ const ruData = {
   //   }
   // ]
 };
+
+async function getProjectData(language) {
+  let query = '';
+  let projectDir = ''
+  const enQuery = `{
+    projects {
+      nodes {
+        projectsFields {
+          id
+          icons
+          imgid
+          linkhub
+          linklive
+          name
+          text
+          imgjpg {
+            sourceUrl
+            altText
+          }
+          imgwebp {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+}`
+  const ruQuery = `{
+  ruprojects {
+    nodes {
+      projectsFields {
+        id
+        icons
+        imgid
+        linkhub
+        linklive
+        name
+        text
+        imgjpg {
+          sourceUrl
+          altText
+        }
+        imgwebp {
+          altText
+          sourceUrl
+        }
+      }
+    }
+  }
+}`
+
+  if (language === 'ru') {
+    projectDir = 'ruprojects'
+    query = ruQuery
+  } else {
+    projectDir = 'projects'
+    query = enQuery
+  }
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      query
+    })
+  };
+
+  // const raw = await fetch(`http://localhost/mypage/graphql/`, options)
+  const raw = await fetch(`http://cf13775.tmweb.ru/dt/graphql/`, options)
+  const res = await raw.json();
+  const data = await res.data[projectDir].nodes.map((value) => value.projectsFields);
+  return data;
+}
+
+async function updateL18n(language) {
+  let newData = {};
+  if (language === 'ru') {
+    const data = await getProjectData("ru");
+    ruData.projects = data;
+    newData = ruData;
+  } else {
+    const data = await getProjectData("en");
+    enData.projects = data;
+    newData = enData;
+  }
+  return newData;
+}
+
 
 export { updateL18n, ruData, enData };
