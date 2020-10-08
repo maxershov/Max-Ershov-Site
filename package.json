@@ -43,6 +43,8 @@
         "gatsby-cli": "^2.12.104",
         "gatsby-plugin-typescript": "^2.4.21",
         "node-sass": "^4.14.1",
+        "postcss": "^8.1.1",
+        "postcss-preset-env": "^6.7.0",
         "prettier": "2.1.2"
     }
 }

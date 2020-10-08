@@ -16,7 +16,17 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-sass"
+      resolve: "gatsby-plugin-sass",
+      options: {
+        postCssPlugins: [
+          require("postcss-preset-env")({
+            stage: 2,
+            features: {
+              "nesting-rules": true,
+            },
+          }),
+        ]
+      }
     }
   ]
 }
