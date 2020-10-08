@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     "gatsby-plugin-preact",
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-typescript",
       options: {
