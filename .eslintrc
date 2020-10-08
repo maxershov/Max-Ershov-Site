@@ -1,0 +1,33 @@
+{
+   "extends": [
+      "airbnb-typescript",
+      "plugin:@typescript-eslint/recommended",
+      "preact",
+      "prettier",
+      "prettier/@typescript-eslint"
+   ],
+   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "./" 
+  },
+   "plugins": [
+      "@typescript-eslint",
+      "react"
+   ],
+   "rules": {
+      "jsx-a11y/label-has-associated-control": [ "error", {
+         "required": {
+           "some": [ "nesting", "id"  ]
+         }
+       }],
+       "jsx-a11y/label-has-for": [ "error", {
+         "required": {
+           "some": [ "nesting", "id"  ]
+         }
+       }],
+      "@typescript-eslint/no-empty-interface": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-member-accessibility": "off"
+   }
+}
