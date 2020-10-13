@@ -6,11 +6,6 @@ const enData = {
     "c": "Live in Russia. Moscow",
     "d": "Thanks for your visit!"
   },
-  "modal": {
-    "header": "Hey",
-    "text": "The page hosted on Heroku free plan and first loading can take up to 15 seconds",
-    "wait": "Thanks for your waiting"
-  },
   "projectsName": "MY PROJECTS",
   "links": {
     "home": "HOME",
@@ -38,11 +33,6 @@ const ruData = {
     "dark": "ТЕМНАЯ ТЕМА",
     "light": "СВЕТЛАЯ ТЕМА",
     "menu": "Открыть меню"
-  },
-  "modal": {
-    "header": "Внимание",
-    "text": "Страница на бесплатном сервере Heroku, и первая загрузка может занимать около 15 секунд",
-    "wait": "Пожалуйста, подождите"
   },
   "title": {
     "a": "МАКСИМ ЕРШОВ",

@@ -12,7 +12,6 @@ export interface IProject {
   text: string;
   imgjpg: ImgjpgOrImgwebp;
   imgwebp: ImgjpgOrImgwebp;
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 export interface ImgjpgOrImgwebp {
   sourceUrl: string;
@@ -20,12 +19,11 @@ export interface ImgjpgOrImgwebp {
 }
 
 export const Project: React.FC<IProject> = (props: IProject) => {
-  const { name, icons, linkhub, linklive, imgid, imgjpg, imgwebp, id, text, setShowModal } = props;
-  console.log(props)
+  const { name, icons, linkhub, linklive, imgid, imgjpg, imgwebp, id, text } = props;
   return (
     <article id={id} className="projects__content">
       <div className="project-images">
-        <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linklive || linkhub}>
+        <a href={linklive || linkhub}>
           <picture>
             <source srcSet={imgwebp.sourceUrl} type="image/webp" />
             <source srcSet={imgjpg.sourceUrl} type="image/jpeg" />
@@ -47,7 +45,7 @@ export const Project: React.FC<IProject> = (props: IProject) => {
         </ul>
         <div className="project__links">
           {linklive ? (
-            <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linklive}>
+            <a href={linklive}>
               <svg id="play-icon" width="1.7em" height="1.7em">
                 <use xlinkHref={`${sprite}#Play`} />
               </svg>

@@ -8,11 +8,6 @@ interface ContextData {
     c: string;
     d: string;
   },
-  modal: {
-    header: string;
-    text: string;
-    wait: string;
-  },
   projectsName: string,
   links: {
     home: string;
@@ -39,11 +34,6 @@ const Context: React.Context<ContextData> = createContext(
       b: "I'M MAX. I'M A FRONTEND DEVELOPER",
       c: "Live in Russia. Moscow",
       d: "Thanks for your visit!"
-    },
-    modal: {
-      header: "Hey",
-      text: "The page hosted on Heroku free plan and first loading can take up to 15 seconds",
-      wait: "Thanks for your waiting"
     },
     projectsName: "MY PROJECTS",
     links: {
