@@ -43,7 +43,7 @@ export default function Home() {
         <meta name="title" content="Max's Portfolio" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <meta name="description" content="Hi! Check out my projects and contact me here" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maksershov.ru/" />
