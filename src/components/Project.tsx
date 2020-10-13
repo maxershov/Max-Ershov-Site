@@ -5,9 +5,9 @@ import * as sprite from "../images/sprite.svg";
 export interface IProject {
   id: string;
   icons: string;
-  idImg: string;
-  linkHub: string;
-  linkLive: string;
+  imgid: string;
+  linkhub: string;
+  linklive: string;
   name: string;
   text: string;
   imgjpg: ImgjpgOrImgwebp;
@@ -20,15 +20,16 @@ export interface ImgjpgOrImgwebp {
 }
 
 export const Project: React.FC<IProject> = (props: IProject) => {
-  const { name, icons, linkHub, linkLive, idImg, imgjpg, imgwebp, id, text, setShowModal } = props;
+  const { name, icons, linkhub, linklive, imgid, imgjpg, imgwebp, id, text, setShowModal } = props;
+  console.log(props)
   return (
     <article id={id} className="projects__content">
       <div className="project-images">
-        <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive || linkHub}>
+        <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linklive || linkhub}>
           <picture>
             <source srcSet={imgwebp.sourceUrl} type="image/webp" />
             <source srcSet={imgjpg.sourceUrl} type="image/jpeg" />
-            <img width="250px" loading="lazy" id={idImg} alt={imgjpg.altText} src={imgjpg.sourceUrl} />
+            <img width="250px" loading="lazy" id={imgid} alt={imgjpg.altText} src={imgjpg.sourceUrl} />
           </picture>
         </a>
         <div className="icons">
@@ -45,16 +46,16 @@ export const Project: React.FC<IProject> = (props: IProject) => {
           {text.split("\n").map(line => <li key={line}>{line}</li>)}
         </ul>
         <div className="project__links">
-          {linkLive ? (
-            <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linkLive}>
+          {linklive ? (
+            <a onClick={() => setShowModal(true)} onAuxClick={() => setShowModal(true)} href={linklive}>
               <svg id="play-icon" width="1.7em" height="1.7em">
                 <use xlinkHref={`${sprite}#Play`} />
               </svg>
               Live
             </a>
           ) : undefined}
-          {linkHub ? (
-            <a href={linkHub}>
+          {linkhub ? (
+            <a href={linkhub}>
               <svg id="githubImg" width="1.8em" height="1.8em">
                 <use xlinkHref={`${sprite}#Github`} />
               </svg>
