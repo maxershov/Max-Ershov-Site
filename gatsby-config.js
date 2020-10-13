@@ -36,20 +36,6 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-copy-files',
-      options: {
-        source: `${__dirname}/src/assets`,
-        destination: ''
-      }
-    },
     'gatsby-plugin-uninline-styles'
   ]
 }
