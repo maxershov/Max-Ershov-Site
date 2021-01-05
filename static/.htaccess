@@ -3,3 +3,6 @@ RewriteBase /
 RewriteCond %{HTTP:X-HTTPS} !1
 RewriteCond %{HTTP_HOST} ^maksershov\.ru$
 RewriteRule ^(.*)$ https://maksershov.ru/$1 [R=301,L]
+Redirect /wp-admin https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Redirect /admin https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Redirect /login https://www.youtube.com/watch?v=dQw4w9WgXcQ
