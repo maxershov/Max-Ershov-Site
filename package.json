@@ -61,7 +61,7 @@
         "gatsby-cli": "^2.12.107",
         "gatsby-plugin-preact": "^4.0.15",
         "gatsby-plugin-typescript": "^2.4.21",
-        "node-sass": "^4.14.1",
+        "node-sass": "^7.0.0",
         "postcss": "^8.2.10",
         "postcss-preset-env": "^6.7.0",
         "prettier": "2.1.2",
